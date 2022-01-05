@@ -15,13 +15,13 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
-      "oldURL": "/index"
+      "newURL": "https://mstudio.support.brightcove.com/media/help/index-video-details.html",
+      "oldURL": "/index-video-details"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/getting-started/",
-      "oldURL": "/index"
+      "newURL": "https://mstudio.support.brightcove.com/media/help/index-videos.html",
+      "oldURL": "/index-videos"
   },
 
   {
@@ -30,7 +30,17 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
