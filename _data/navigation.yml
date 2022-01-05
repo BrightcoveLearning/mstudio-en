@@ -8,6 +8,20 @@
     - name: 'Overview'
       url: '/getting-started/overview.html'
 - section: 
+  name: 'Managing Media'
+  url: '/media/'
+  docs:
+    - name: 'Getting Started with Media'
+      url: '/media/getting-started-media-module.html'
+    - name: 'Searching for Videos'
+      url: '/media/searching-videos.html'
+- section: 
+  name: 'Getting Started with Analytics'
+  url: '/analytics/'
+  docs:
+    - name: 'Overview'
+      url: '/analytics/getting-started-analytics-module.html'
+- section: 
   name: 'Support'
   url: '/support/'
   docs:
