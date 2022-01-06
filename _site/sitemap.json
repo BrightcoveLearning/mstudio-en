@@ -70,17 +70,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/index_for_launch.html",
-      "oldURL": "/index_for_launch"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
       "oldURL": "/known-issues"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
       "oldURL": "/known-issues"
   },
 
