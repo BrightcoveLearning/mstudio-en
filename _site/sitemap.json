@@ -10,8 +10,28 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/getting-started-analytics-module.html",
+      "oldURL": "/getting-started-analytics-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/getting-started-media-module.html",
+      "oldURL": "/getting-started-media-module"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/icons.html",
       "oldURL": "/icons"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/help/index-analytics.html",
+      "oldURL": "/index-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/help/index-media.html",
+      "oldURL": "/index-media"
   },
 
   {
@@ -20,22 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/help/index-videos.html",
-      "oldURL": "/index-videos"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://mstudio.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -45,17 +50,37 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/index_for_launch.html",
       "oldURL": "/index_for_launch"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
       "oldURL": "/known-issues"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
       "oldURL": "/known-issues"
   },
 
@@ -87,6 +112,11 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/search.html",
       "oldURL": "/search"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/searching-videos.html",
+      "oldURL": "/searching-videos"
   },
 
   {

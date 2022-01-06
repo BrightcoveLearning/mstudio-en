@@ -16,10 +16,10 @@
     - name: 'Searching for Videos'
       url: '/media/searching-videos.html'
 - section: 
-  name: 'Getting Started with Analytics'
+  name: 'Reviewing Analytics'
   url: '/analytics/'
   docs:
-    - name: 'Overview'
+    - name: 'Getting Started with Analytics'
       url: '/analytics/getting-started-analytics-module.html'
 - section: 
   name: 'Support'
