@@ -5,8 +5,8 @@
   name: 'Getting Started'
   url: '/getting-started/'
   docs:
-    - name: 'Overview'
-      url: '/getting-started/overview.html'
+    - name: 'Getting Started with Marketing Studio'
+      url: '/getting-started/getting-started-marketing-studio.html'
 - section: 
   name: 'Managing Media'
   url: '/media/'

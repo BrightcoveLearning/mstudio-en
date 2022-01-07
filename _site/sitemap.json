@@ -15,6 +15,16 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/media/getting-started-marketing-studio.html",
+      "oldURL": "/getting-started-marketing-studio"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/get-started/getting-started-marketing-studio.html",
+      "oldURL": "/getting-started-marketing-studio"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/media/getting-started-media-module.html",
       "oldURL": "/getting-started-media-module"
   },
@@ -40,17 +50,17 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/getting-started/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://mstudio.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -70,12 +80,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
       "oldURL": "/known-issues"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
       "oldURL": "/known-issues"
   },
 
