@@ -15,11 +15,6 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/getting-started-marketing-studio.html",
-      "oldURL": "/getting-started-marketing-studio"
-  },
-
-  {
       "newURL": "https://mstudio.support.brightcove.com/get-started/getting-started-marketing-studio.html",
       "oldURL": "/getting-started-marketing-studio"
   },
@@ -50,7 +45,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -60,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
