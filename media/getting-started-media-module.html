@@ -8,51 +8,43 @@ layout: staging
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <div class="training-video-player-ipx" data-experience="5a73630f7afd7a00101bc1b5" data-video-ids="4231656312001">&nbsp;</div>
-    <script src="https://players.brightcove.net/20318290001/experience_5a73630f7afd7a00101bc1b5/live.js"></script> 
+    <h2 id="open">Accessing the Media module</h2>
+    <p>To access the Media module, login to <a href="https://studio.brightcove.com">Video Cloud Studio</a> and click <strong>Media</strong> in the primary navigation.</p>
+    <p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/media-home.png" /></figure>
+    </p>
+    <p>By default, videos in the account will be displayed as a series of cards. The view icons <img class="bcls-image--no-border" alt="" src="/assets/images/media/icon-card-view.png" /> at the top of the page can be used to switch between <a href="#card_view">card view</a> and <a href="#list_view">list view</a>. </p>
   </section>
   <section class="bcls-section">
-    <h2 id="open">Accessing the Media module</h2>
-    <p>To access the Media module, login to <a href="https://studio.brightcove.com">Video Cloud Studio</a> and click <strong>Media</strong> in the navigation header.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-media-module.png" /></figure>
+    <h2 id="poster_view">Using card view</h2>
+    <p>To view the video list as a series of cards, click the card view icon <img class="bcls-image--no-border" alt="" src="/assets/images/media/icon-card-view.png" /> at the top of the page. </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/media-single-video-card.png" /></figure>
+    <p>Each  card will display the following information:</p>
+    <ul>
+      <li>Video poster image</li>
+      <li>Video length</li>
+      <li>Video title</li>
+      <li>Created date and time</li>
+      <li>Number of video tags</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="list_view">Using list view</h2>
+    <p>Click the list view icon <img class="bcls-image--no-border" alt="" src="/assets/images/media/icon-list-view.png" /> at the top of the page to view a list of videos in the account. </p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/media-list-view.png" /></figure>
     <p>The body of the page will display the following:</p>
     <ul>
-      <li>Video thumbnail and duration</li>
-      <li>Dynamic Delivery indicator 
-        <ul>
-          <li><img alt="" src="/assets/images/media/node14464-dd-icon.png" /> - Indicates that the video is enabled for <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a> (video was ingested using a Dynamic Delivery ingest profile)</li>
-          <li><img alt="" src="/assets/images/media/node14464-dd-icon-grey.png" /> - Indicates that the video is NOT enabled for Dynamic Delivery (video was ingested using a Legacy ingest profile)</li>
-        </ul>
-      </li>
-      <li>Video name</li>
-      <li>Video ID - System assigned video ID (unique across all Video Cloud accounts)</li>
-      <li><a href="#audit">Updated date and time and user ID</a></li>
-      <li><a href="#audit">Created date and time and user ID</a></li>
-      <li>Reference Id</li>
+      <li>Title</li>
       <li>Status
         <ul>
-          <li><img alt="" src="/assets/images/media/icon-green-eye.png" /> - Indicates the video is active</li>
-          <li><img alt="" src="/assets/images/media/icon-red-eye.png" /> - Indicates the video is inactive (can't be played)</li>
+          <li>ACTIVE - Indicates the video is active and can be played</li>
+          <li>INACTIVE - Indicates the video is inactive (can't be played)</li>
         </ul>
       </li>
+      <li>Video ID - System assigned video ID (unique across all Video Cloud accounts)</li>
+      <li>Created date and time</li>
+      <li>Last updated date and time</li>
     </ul>
-    <p>The video thumbnail will indicate whether a video is shared into the account, or shared out to another account. In the example below, the first video was shared into this account and the second video was shared out to another account.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-sharing.png" /></figure>
-    <p>Video thumbnails also indicate videos that are marked as 360 degree videos by adding a 360 badge. For more information on working with 360 degree videos, see <a href="/general/working-360deg-videos.html">Working with 360° Videos</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node14464-360-video.png" /></figure>
-    <p>Multiple videos can be selected by clicking on a checkbox and then shift-clicking on another checkbox. The list of videos can be sorted by clicking on a column header. The Media module uses a "sticky" sort and will remember the sort selection. When you navigate away and come back or login again, the Media module will default to the sort that was last selected.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="audit">Created and updated date and time information</h2>
-    <p>The user ID of the user who created and/or updated the video will be displayed in the Created Date/Updated Date columns. If the action was taken via the CMS API, <strong>Updated by API</strong> will be displayed. Note that if a user who performed an action is removed from an account, their ID will still appear.</p>
-    <p>There are cases where changes made to a video will not record a user ID and cases where a user ID may not be displayed:</p>
-    <ul>
-      <li>When a video is retranscoded or if the video source is replaced, the updated date for the video will be updated but the user who initiated the action will not be recorded</li>
-      <li>When the images (poster/thumbnail) and/or text tracks are updated, the updated date for the video will be updated but the user who initiated the action will not be recorded</li>
-      <li>When a video is shared to an affiliate account, the created date will not display an associated user ID</li>
-      <li>When a video clip is created using the Social or Live modules, the created date will not display an associated user ID</li>
-    </ul>
-    <p>This feature was enabled on December 7, 2018. Any videos uploaded or edited after this date will display user information.</p>
   </section>
   <section class="bcls-section">
     <h2 id="edit">Editing video properties</h2>
@@ -79,6 +71,6 @@ layout: staging
   </section>
   <section class="bcls-section">
     <h2 id="search">Searching for videos</h2>
-    <p>The Search field can be used to search the videos and playlists in your account. For more information, see <a href="/media/searching-videos.html">Searching Videos</a>.</p>
+    <p>The Search field at the top of the page can be used to search the videos in the account. For more information, see <a href="/media/searching-videos.html">Searching Videos</a>.</p>
   </section>
 </article>
