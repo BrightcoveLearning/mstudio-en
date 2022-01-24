@@ -8,11 +8,15 @@
     - name: 'Getting Started with Marketing Studio'
       url: '/get-started/getting-started-marketing-studio.html'
 - section: 
-  name: 'Managing Media'
+  name: 'Managing Videos'
   url: '/media/'
   docs:
+    - name: 'Editing Video Properties'
+      url: '/media/editing-video-properties.html'
     - name: 'Managing Media'
       url: '/media/managing-media.html'
+    - name: 'Publishing Videos and Playlists'
+      url: '/media/publishing-videos-and-playlists.html'
     - name: 'Searching for Videos'
       url: '/media/searching-videos.html'
 - section: 
