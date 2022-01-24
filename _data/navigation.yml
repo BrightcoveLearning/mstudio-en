@@ -11,16 +11,16 @@
   name: 'Managing Media'
   url: '/media/'
   docs:
-    - name: 'Getting Started with Media'
-      url: '/media/getting-started-media-module.html'
+    - name: 'Managing Media'
+      url: '/media/managing-media.html'
     - name: 'Searching for Videos'
       url: '/media/searching-videos.html'
 - section: 
   name: 'Reviewing Analytics'
   url: '/analytics/'
   docs:
-    - name: 'Getting Started with Analytics'
-      url: '/analytics/getting-started-analytics-module.html'
+    - name: 'Reviewing Analytics'
+      url: '/analytics/reviewing-analytics.html'
 - section: 
   name: 'Support'
   url: '/support/'
