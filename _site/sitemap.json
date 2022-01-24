@@ -10,18 +10,13 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/analytics/getting-started-analytics-module.html",
-      "oldURL": "/getting-started-analytics-module"
+      "newURL": "https://mstudio.support.brightcove.com/media/editing-video-properties.html",
+      "oldURL": "/editing-video-properties"
   },
 
   {
       "newURL": "https://mstudio.support.brightcove.com/get-started/getting-started-marketing-studio.html",
       "oldURL": "/getting-started-marketing-studio"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/media/getting-started-media-module.html",
-      "oldURL": "/getting-started-media-module"
   },
 
   {
@@ -45,7 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -55,7 +50,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -85,6 +80,11 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/media/managing-videos.html",
+      "oldURL": "/managing-videos"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
@@ -100,6 +100,11 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/media/publishing-videos-and-playlists.html",
+      "oldURL": "/publishing-videos-and-playlists"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/register-training.html",
       "oldURL": "/register-training"
   },
@@ -107,6 +112,11 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/support/reset-support-portal-password.html",
       "oldURL": "/reset-support-portal-password"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-analytics.html",
+      "oldURL": "/reviewing-analytics"
   },
 
   {
