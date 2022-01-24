@@ -11,8 +11,8 @@
   name: 'Managing Videos'
   url: '/media/'
   docs:
-    - name: 'Editing Video Properties'
-      url: '/media/editing-video-properties.html'
+    - name: 'Editing Video Details'
+      url: '/media/editing-video-details.html'
     - name: 'Managing Media'
       url: '/media/managing-media.html'
     - name: 'Publishing Videos and Playlists'
