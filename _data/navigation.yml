@@ -13,7 +13,7 @@
   docs:
     - name: 'Editing Video Details'
       url: '/media/editing-video-details.html'
-    - name: 'Managing Media'
+    - name: 'Managing Videos'
       url: '/media/managing-media.html'
     - name: 'Publishing Videos and Playlists'
       url: '/media/publishing-videos-and-playlists.html'
