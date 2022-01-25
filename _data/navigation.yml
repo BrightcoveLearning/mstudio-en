@@ -15,8 +15,8 @@
       url: '/media/editing-video-details.html'
     - name: 'Managing Videos'
       url: '/media/managing-media.html'
-    - name: 'Publishing Videos and Playlists'
-      url: '/media/publishing-videos-and-playlists.html'
+    - name: 'Publishing Videos'
+      url: '/media/publishing-videos.html'
     - name: 'Searching for Videos'
       url: '/media/searching-videos.html'
 - section: 

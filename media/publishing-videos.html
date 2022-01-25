@@ -1,6 +1,6 @@
 ---
-title: Publishing Videos and Playlists
-description: In this topic you will learn how to publish videos and playlists.
+title: Publishing Videos
+description: In this topic you will learn how to publish videos.
 parent: Managing Videos
 layout: staging
 ---
@@ -8,8 +8,8 @@ layout: staging
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-      <p>&nbsp;</p>
-    <p>To publish a video or playlist, follow these steps.</p>
+      <p>Publishing a video will generate embed code that is needed to embed the video in a web page. </p>
+    <p>To publish a video, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>Click <strong>Media</strong> in the navigation header to open the Media module.</li>
       <li>To publish a single video, click <strong>All videos</strong> in the side navigation panel and then do one of the following:
@@ -57,43 +57,5 @@ layout: staging
         For more information on the types of publishing code, see <a href="/publish/choosing-correct-embed-code.html">Choosing the Correct Embed&nbsp;Code</a>.</li>
       <li>Copy the publishing code. When finished, click <strong>Close</strong>.</li>
     </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="playlistprop">Setting playlist properties</h2>
-    <p>There are some playlist-related player properties that can be configured when working with playlists. <span class="BCL-objective">To configure the playlist-related player properties, </span>follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Players</strong> module.</li>
-      <li>Click on the player name to open the player properties.</li>
-      <li>As part of the <strong>Player Information</strong> properties, select a <strong>Player Type</strong> of <strong>Playlist</strong>. Click <strong>Save</strong>.</li>
-      <li>Click <strong>Styling</strong> in the left navigation menu.</li>
-      <li>Select a <strong>Playlist Type</strong>:
-        <ul>
-          <li><strong>Playlist (Vertical)</strong> - Playlist displays on the right side of the player.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node15473-v-playlist-example.png" /></figure>
-          </li>
-          <li><strong>Playlist (Horizontal)</strong> - Playlist displays on the bottom of the player.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node15473-h-playlist-example.png" /></figure>
-          </li>
-          <li><strong>Playlist (Hidden)</strong> - Playlist is not displayed.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node15473-hidden-playlist-example.png" /></figure>
-          </li>
-        </ul>
-      </li>
-      <li>When a <strong>Player Type</strong> of <strong>Playlist</strong> is selected as part of the <strong>Player Information</strong> properties, additional <strong>Playback</strong> properties can be configured:
-        <ul>
-          <li><strong>Randomize play order</strong> - Videos will be played in a random order</li>
-          <li><strong>Play video when selected</strong> - Clicking a thumbnail in the playlist menu will cause the video to play when loaded, even if the previous video in the player was paused</li>
-          <li><strong>Continuous play mode</strong> - Videos will advance automatically and repeat indefinitely</li>
-          <li><strong>Video Countdown</strong> - Only enabled when <strong>Continuous play mode</strong> is checked
-            <ul>
-              <li><strong>Up next card (auto advance)</strong> - An up next card is displayed in the player</li>
-              <li><strong>Up next endscreen (countdown)</strong> - An end screen countdown is displayed in the player</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Click <strong>Save</strong> to save changes. Remember to publish the player so the changes appear in the published player.</li>
-    </ol>
-    <p>When using the <strong>Standard (iframe)</strong> embed code, the playlist has a show/hide button and is automatically sized and positioned. When using the <strong>Advanced (in-page)</strong> embed code, you must insert the playlist as an HTML <code translate="No">&lt;div&gt;</code> element and write your own CSS to position and size the playlist. This gives you full control over the playlist's display. In the latter case, the playlist does not even need to be adjacent to the player if you don't want it to be. The <strong>Advanced (in-page embed) player</strong> section of the <a href="https://player.support.brightcove.com/general/implementing-playlists.html#Advanced_in_page_embed_player">Implementing Playlists</a>&nbsp;document has substantial content on formatting and styling a playlist.</p>
   </section>
 </article>
