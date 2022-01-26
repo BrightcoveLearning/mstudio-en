@@ -26,6 +26,12 @@
     - name: 'Reviewing Analytics'
       url: '/analytics/reviewing-analytics.html'
 - section: 
+  name: 'Administering Accounts'
+  url: '/admin/'
+  docs:
+    - name: 'Managing Profile Information'
+      url: '/admin/managing-profile-information.html'
+- section: 
   name: 'Support'
   url: '/support/'
   docs:

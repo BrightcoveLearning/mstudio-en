@@ -80,6 +80,11 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-profile-information.html",
+      "oldURL": "/managing-profile-information"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/media/managing-videos.html",
       "oldURL": "/managing-videos"
   },
