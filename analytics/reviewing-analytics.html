@@ -32,9 +32,11 @@ layout: staging
   </section>
   <section class="bcls-section">
     <h2 id="search" class="BCL_conceptTitle">Viewing reports</h2>
-    <p>When the Analytics page is opened,  a graph showing total video views per day for the time period selected will be displayed. </p>
-    <p>&nbsp;</p>
-    <p>The dropdown list associated with the graph can be used to select another metric:</p>
+    <p>When the Analytics page is opened,  a graph showing total video views per day for the time period selected will be displayed.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/video-views-graph.png" /></figure>
+    <p>The report details will be displayed below the graph.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/report-details.png" /></figure>
+    <p>The dropdown list above the graph can be used to select another metric:</p>
     <ul>
       <li><strong>Video Views</strong> - The number of times a video started playing, recorded when the stream is started (does not include rewind or replay); it is not a measure of individual viewers; for videos with pre-roll ads, a view is not recorded until the video starts to play</li>
       <li><strong>Viewed Minutes</strong> - Number of minutes the video was watched</li>
@@ -42,10 +44,25 @@ layout: staging
       <li><strong>Avg. Completion Rate</strong> - The average percent watched per video view (calculated by adding all the percentage watched divided by the number of video views)</li>
     </ul>
   </section>
-    <section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="compare">Compare to previous period</h2>
     <p>Selecting the <strong>Compare to previous period</strong> checkbox will add an overlay dashed line graph representing the data for the previous period.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/compare-previous.png" /></figure>
     <p>The previous period is based upon what is currently selected for the report date range. For example, if you select a date range of last 7 days, the previous period will be 2 weeks ago. When comparing trends over weeks, it is best to select date ranges that cover complete weeks. For example, if you select a date starting on a Monday, set the end date to a Sunday. If the start date is on a Friday, set the end date to a Thursday. You can also mouse over both the bars and dashed line to see the date and corresponding values.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details">Report details</h2>
+    <p>Report details will display below the graph. The first column that appears in the body of the report will vary based upon the report dimension that is selected (video name, player name, country, device type, etc.). All reports will display the following data:</p>
+    <ul>
+      <li><strong>Video Views</strong> - The number of times a video started playing, recorded when the stream is started (does not include rewind or replay); it is not a measure of individual viewers</li>
+      <li><strong>Video Impressions</strong> - The number of times the video was loaded into a player and ready for interaction</li>
+      <li><strong>Play Requests</strong> - The number of times playback was requested either by a user pressing the play button or an auto-play event</li>
+      <li><strong>Play Rate</strong> - The percentage of users that played the video after it was loaded (Video Views divided by Video Impressions)</li>
+      <li><strong>Viewed Minutes</strong> - Total number of minutes the video was viewed</li>
+      <li><strong>Engagement Score</strong> - The average percent watched per video view (calculated by adding all the percentage watched divided by the number of Video Views)</li>
+    </ul>
+    <p>The <strong>Video</strong> and <strong>Day</strong> dimensions will also display the <strong>Daily Unique Viewers</strong> which is the average daily unique viewers for the time period selected. This is calculated using the IP address and user agent of viewers.
+      <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="/analytics/analytics-module-ui-glossary.html">Analytics Glossary</a>.</aside>
+    </p>
   </section>
 </article>
