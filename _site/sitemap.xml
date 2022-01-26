@@ -97,6 +97,24 @@
       
     
       <url>
+        <loc>https://mstudio.support.brightcove.com/admin/</loc>
+        <lastmod>2022-01-26</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
+      
+        <url>
+          
+            <loc>https://mstudio.support.brightcove.com/admin/managing-profile-information.html</loc>
+          
+            <lastmod>2022-01-26</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+    
+      <url>
         <loc>https://mstudio.support.brightcove.com/support/</loc>
         <lastmod>2022-01-26</lastmod>
         <changefreq>daily</changefreq>

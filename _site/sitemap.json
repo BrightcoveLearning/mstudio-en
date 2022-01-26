@@ -40,7 +40,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -50,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
