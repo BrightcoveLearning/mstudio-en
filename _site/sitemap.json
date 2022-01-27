@@ -40,7 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -55,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -147,6 +147,11 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/get-started/uploading-publishing-your-first-video.html",
       "oldURL": "/uploading-publishing-your-first-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/uploading-videos.html",
+      "oldURL": "/uploading-videos"
   },
 
   {

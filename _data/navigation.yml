@@ -23,6 +23,8 @@
       url: '/media/publishing-videos.html'
     - name: 'Searching for Videos'
       url: '/media/searching-videos.html'
+    - name: 'Uploading Videos'
+      url: '/media/uploading-videos.html'
 - section: 
   name: 'Reviewing Analytics'
   url: '/analytics/'
