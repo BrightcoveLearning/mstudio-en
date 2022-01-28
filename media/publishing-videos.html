@@ -8,54 +8,26 @@ layout: staging
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-      <p>Publishing a video will generate embed code that is needed to embed the video in a web page. </p>
+    <p>Publishing a video will generate embed code that is needed to embed the video in a web page.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: Videos are published using the Brightcove Default Player. This player can be viewed and styled using the Players module in Video Cloud Studio. For information, see <a href="https://studio.support.brightcove.com/players/getting-started-players-module.html">Getting Started with the Players Module</a>.</aside>
     <p>To publish a video, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click <strong>Media</strong> in the navigation header to open the Media module.</li>
-      <li>To publish a single video, click <strong>All videos</strong> in the side navigation panel and then do one of the following:
+      <li>Click <strong>Media</strong> in the primary navigation.</li>
+      <li>To publish a single video, do one of the following:
         <ul>
-          <li>Click the checkbox next to the video and then click <strong>Publish and embed &gt; Publish to web</strong></li>
-          <li>Click on the video name and then click<strong> Publish and embed &gt; Publish to web </strong>on the video properties page</li>
+          <li>In card view, hover over a video card, click the action button (...) and then <strong>Embed on website</strong></li>
+          <li></li>
         </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-embed-dialog.png" /></figure>
       </li>
-      <li>To publish a playlist, click <strong>All playlists</strong> in the side navigation panel and then do one of the following:
-        <ul>
-          <li>Click the check box next to the playlist and then click <strong>Publish and embed &gt; Publish to web</strong></li>
-          <li>Click on the playlist name and then click <strong>Publish Playlist </strong>on the playlist videos page</li>
-        </ul>
-      </li>
-      <li>Confirm that the publishing dialog opens. The name of the video or playlist being published will appear in the publishing dialog title.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node15473-publish-video.png" /></figure>
-        <p>Known Issue: Since the preview player is being loaded over HTTPS within the Studio, if your content is being served over HTTP, the preview player will not playback the content and your browser will display an insecure scripts message. This is not a Studio bug but a browser security limitation.</p>
-      </li>
-      <li>Select a player to use. When publishing playlists, there are some playlist-related player properties that can be set to control <span class="BCL-objective"> appearance and behavior of the playlist</span>. See the <a href="#playlistprop">Setting playlist properties</a> section below for details.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/publish/node15473-player-id.png" /></figure>
-        <p>Note that the preview will update to display the player that was selected.</p>
-      </li>
-      <li>(Optional) The preview link below the preview player can be used to preview the player in another browser tab. Click the <strong>Shorten</strong> button to generate a shortened URL.</li>
-      <li>Choose an option for the player sizing:
-        <ul>
-          <li><strong>Responsive</strong> - The player size will adjust automatically based upon the browser size</li>
-          <li><strong>Fixed</strong> - The player size is based upon the width and height parameters</li>
-        </ul>
-      </li>
-      <li>Select an aspect ratio for the player.
-        <ul>
-          <li><strong>16:9 </strong>or <strong>4:3 - </strong>enter a player width (the height will be determined automatically)</li>
-          <li><strong>Custom</strong> - to manually enter the player width and height</li>
-        </ul>
-      </li>
-      <li>Enter the <strong>Player Width</strong> and <strong>Player Height</strong>.</li>
-      <li>Select the <strong>Units</strong> of measurement.</li>
+      <li>(Optional) Click the <strong>Preview</strong> link to preview the video in another browser tab.</li>
       <li>Select the type of publishing code to copy by clicking <strong>Standard</strong> or <strong>Advanced</strong>.
         <ul>
-          <li><strong>Standard - iframe embed code - Recommended for most cases.</strong> This type places the player inside an <code translate="No">&lt;iframe&gt;</code> tag. If player dimensions are specified, the iframe will be sized to the player dimensions. If no player dimensions are specified, the iframe can be placed inside of a <code translate="No">&lt;div&gt;</code> tag and the responsive nature of the player will resize the player to occupy the entire space of the <code translate="No">&lt;div&gt;</code>.
-            <aside class="bcls-aside bcls-aside--information">Note: The iframe width must be larger than 640px for the playlist to appear.</aside>
-          </li>
-          <li><strong>Advanced - In-page embed code</strong> - Allows the player to exist in the the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events. By using the in-page embed code, you lose the ease of use of the player as a single, contained unit in social media applications and sharing. This option is available only for the published player.</li>
+          <li><strong>iFrame  - Recommended for most cases.</strong> This type places the player inside an <code translate="No">&lt;iframe&gt;</code> tag.</li>
+          <li><strong>JavaScript</strong> - Allows the player to exist in the the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events.</li>
         </ul>
-        For more information on the types of publishing code, see <a href="/publish/choosing-correct-embed-code.html">Choosing the Correct Embed&nbsp;Code</a>.</li>
-      <li>Copy the publishing code. When finished, click <strong>Close</strong>.</li>
+        For more information on the types of embed code, see <a href="https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html">Choosing the Correct Embed&nbsp;Code</a>.</li>
+      <li>Copy the embed code. When finished, click <strong>Done</strong>.</li>
     </ol>
   </section>
 </article>
