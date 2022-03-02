@@ -25,11 +25,6 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/analytics/help/index-analytics.html",
-      "oldURL": "/index-analytics"
-  },
-
-  {
       "newURL": "https://mstudio.support.brightcove.com/media/help/index-media.html",
       "oldURL": "/index-media"
   },
@@ -40,7 +35,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -55,7 +50,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -75,12 +70,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
       "oldURL": "/known-issues"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
       "oldURL": "/known-issues"
   },
 
