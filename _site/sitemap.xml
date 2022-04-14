@@ -145,7 +145,7 @@
       
     
       <url>
-        <loc>https://mstudio.support.brightcove.com/support/</loc>
+        <loc>https://mstudio.support.brightcove.com/release-notes/</loc>
         <lastmod>2022-04-14</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -153,13 +153,21 @@
       
         <url>
           
-            <loc>https://mstudio.support.brightcove.com/support/known-issues.html</loc>
+            <loc>https://mstudio.support.brightcove.com/release-notes/marketing-studio-release-notes.html</loc>
           
             <lastmod>2022-04-14</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
         
+      
+    
+      <url>
+        <loc>https://mstudio.support.brightcove.com/support/</loc>
+        <lastmod>2022-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
       
         <url>
           

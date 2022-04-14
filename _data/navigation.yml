@@ -38,11 +38,15 @@
     - name: 'Managing Profile Information'
       url: '/admin/managing-profile-information.html'
 - section: 
+  name: 'Release Notes'
+  url: '/release-notes/'
+  docs:
+    - name: 'Marketing Studio Release Notes'
+      url: '/release-notes/marketing-studio-release-notes.html'
+- section: 
   name: 'Support'
   url: '/support/'
   docs:
-    - name: 'Known Issues'
-      url: '/support/known-issues.html'
     - name: 'Viewing the Brightcove System Status Page'
       url: '/support/viewing-brightcove-system-status-page.html'
     - name: 'Contact Sales'
