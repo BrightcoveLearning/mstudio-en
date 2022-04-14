@@ -17,7 +17,7 @@
   docs:
     - name: 'Editing Video Details'
       url: '/media/editing-video-details.html'
-    - name: 'Embedding a Video on a Website'
+    - name: 'Embedding a Video on a Webpage'
       url: '/media/embedding-videos-web.html'
     - name: 'Managing Videos'
       url: '/media/managing-media.html'
