@@ -15,6 +15,11 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/media/embedding-videos-web.html",
+      "oldURL": "/embedding-videos-web"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/get-started/getting-started-marketing-studio.html",
       "oldURL": "/getting-started-marketing-studio"
   },
@@ -35,7 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -50,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -70,12 +75,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
       "oldURL": "/known-issues"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/references/known-issues.html",
+      "newURL": "https://mstudio.support.brightcove.com/support/known-issues.html",
       "oldURL": "/known-issues"
   },
 
@@ -110,8 +115,8 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/publishing-videos.html",
-      "oldURL": "/publishing-videos"
+      "newURL": "https://mstudio.support.brightcove.com/media/publishing-videos-social.html",
+      "oldURL": "/publishing-videos-social"
   },
 
   {
