@@ -23,8 +23,6 @@
       url: '/media/managing-media.html'
     - name: 'Publishing Videos to Social'
       url: '/media/publishing-videos-social.html'
-    - name: 'Searching for Videos'
-      url: '/media/searching-videos.html'
     - name: 'Uploading Videos'
       url: '/media/uploading-videos.html'
 - section: 
