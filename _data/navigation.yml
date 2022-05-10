@@ -20,7 +20,7 @@
     - name: 'Embedding a Video on a Webpage'
       url: '/media/embedding-videos-web.html'
     - name: 'Managing Videos'
-      url: '/media/managing-media.html'
+      url: '/media/managing-videos.html'
     - name: 'Publishing Videos to Social'
       url: '/media/publishing-videos-social.html'
     - name: 'Uploading Videos'
