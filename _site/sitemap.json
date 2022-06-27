@@ -40,7 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
       "oldURL": "/index"
   },
 
@@ -55,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -102,11 +102,6 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/overview-video-content-types.html",
-      "oldURL": "/overview-video-content-types"
   },
 
   {
