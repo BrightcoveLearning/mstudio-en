@@ -8,7 +8,7 @@ layout: staging
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <p>Marketing Studio makes it easy to publish  videos out to YouTube, Facebook and Twitter. Before you can publish videos, you must create publishing destinations using Video Cloud Studio for the social accounts you wish to publish videos to. For information on creating publishing destinations, see <a href="https://studio.support.brightcove.com/social/creating-social-media-publishing-destinations.html">Creating Social Media Publishing Destinations</a>. </p>
+    <p>Marketing Studio makes it easy to publish  videos out to YouTube, Facebook, Twitter and LinkedIn. Before you can publish videos, you must create publishing destinations using Video Cloud Studio for the social accounts you wish to publish videos to. For information on creating publishing destinations, see <a href="https://studio.support.brightcove.com/social/creating-social-media-publishing-destinations.html">Creating Social Media Publishing Destinations</a>. </p>
     <p>To publish a video to a social media site, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
       <li>In the primary  navigation, click <strong>Media</strong>.</li>
@@ -30,6 +30,7 @@ layout: staging
           <li><a href="#youtube">YouTube</a></li>
           <li><a href="#facebook">Facebook</a></li>
           <li><a href="#twitter">Twitter</a></li>
+          <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
       </li>
       <li>Click <span class="button-blue">Next <i data-feather="arrow-right"></i></span>.</li>
@@ -103,6 +104,22 @@ layout: staging
       <ul>
         <li><a href="creating-social-media-publishing-destinations.html#twitter_defaults"> Default video properties for Twitter</a> can be set by editing the destination.</li>
         <li><span class="BCL-aside">After a video is published to Twitter, any updates to the source video in Studio will not update on the Twitter side.</span></li>
+      </ul>
+    </aside>
+  </section>
+<section class="bcls-section">
+    <h2 id="linkedin">Creating a post for LinkedIn</h2>
+    <p>When choosing a LinkedIn destination, the following video details can be entered:</p>
+    <ul>
+      <li><strong>Title</strong> - Title of the video (defaults to Marketing Studio title). YouTube supports up to 100 characters.</li>
+      <li><strong>Description</strong> - Description of the video (defaults to Marketing Studio short description). LinkedIn supports up to 255 characters.</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-social/linkedin-post.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information"> Notes:
+      <ul>
+        <li>Avoid special characters in the name and description of the video: using "&lt;" or "&gt;" are known to cause failure, but other special characters may cause problems as well.</li>
+        <li>Updates to thumbnail images in Video Cloud Studio will not update the thumbnail image on the LinkedIn side.</li>
+        <li>After a video is published to LinkedIn, any updates to the source video using Video Cloud Studio will not update on the LinkedIn side.</li>
       </ul>
     </aside>
   </section>
