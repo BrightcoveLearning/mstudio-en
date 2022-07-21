@@ -40,22 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://mstudio.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/release-notes/",
       "oldURL": "/index"
   },
 
@@ -75,6 +60,21 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
       "oldURL": "/known-issues-studio-brightcove-player-and-apis"
   },
@@ -82,6 +82,11 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/admin/managing-profile-information.html",
       "oldURL": "/managing-profile-information"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/managing-text-audio-tracks.html",
+      "oldURL": "/managing-text-audio-tracks"
   },
 
   {
