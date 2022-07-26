@@ -40,7 +40,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/",
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -70,7 +70,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "newURL": "https://mstudio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -127,6 +127,16 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-analytics.html",
       "oldURL": "/reviewing-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-social-analytics.html",
+      "oldURL": "/reviewing-social-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-web-analytics.html",
+      "oldURL": "/reviewing-web-analytics"
   },
 
   {
