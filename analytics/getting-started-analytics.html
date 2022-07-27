@@ -1,0 +1,77 @@
+---
+title: Getting Started with Analytics
+description: In this topic you will learn how to monitor the performance of your videos using the Analytics page.
+parent: Reviewing Analytics
+layout: staging
+---
+<article class="bcls-article">
+  <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <p>Regardless of your specific goals for online video, understanding your audience is a key to developing a successful video strategy. The better you understand your viewers, the easier it is to create content that will engage them. </p>
+    <p>The Analytics page offers fast, close to real-time access to analytics data about your videos. Various views are available and can be used to get analytics about your videos. Using these views, you can generate up-to-date reports about video views, play rates and complettion rates  for your videos.</p>
+    <p>To view the Analytics page:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Marketing Studio.</li>
+      <li>In the primary navigation, click <strong>Analytics</strong>.
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="analytics navigation" src="/assets/images/analytics/getting-started/primary-nav-analytics.png" /></figure>
+      </li>
+    </ol>
+    <p>Tabs across the tops of the page provide access to the different types of analytics that are available:</p>
+    <ul>
+      <li><strong>Web</strong> - The web analytics view includes analytics for videos that were published using a Brightcove Player. For information on web analytics, see <a href="reviewing-web-analytics.html">Reviewing Web Analytics</a>.</li>
+      <li><strong>Social</strong> - The social analytics view includes analytics for videos that were published out to social media sites. For information on social analytics, see <a href="reviewing-social-analytics.html">Reviewing Social Analytics</a>.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="timespan">Selecting a time span</h2>
+    <p>Use the <strong>DATE</strong> selector dropdown at the top of the page to specify the time period for the report. Note that when a single day is selected, the report graphs will display by hour.</p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="date selector" src="/assets/images/analytics/getting-started/date-selector.png" /></figure>
+    <div class="BCL-subsection">
+      <h3>Reporting time zone</h3>
+      <p>Data in the Analytics module is shown using the account's reporting time zone. The time zone is displayed at the top of the page.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="time zone" src="/assets/images/analytics/getting-started/reporting-timezone.png" /></figure>
+      <p>The reporting time zone is used to calculate day boundaries for reporting data. Changing the reporting time zone setting only affects data going forward, and changes are not applied retroactively. If you change this setting, you may see a flat spot or a spike in your data when looking at day boundaries where the change was applied. Updates to this setting may not take effect immediately, and analytics data may continue to refer to the old setting until the system processes the changes.</p>
+      <p>The reporting time zone is configured as part of the Video Cloud account settings. For information on changing the reporting time zone, see <a href="https://studio.support.brightcove.com/admin/managing-account-settings.html#account_settings">Managing Account Settings</a>.</p>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="filter">Filtering data</h2>
+    <p>Filters can be applied to limit the analytics data that is shown. Filters appear to the right of the date selector.</p>
+    <h3>Filtering on tags</h3>
+    <p>To filter based upon video tag, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the <strong>TAGS</strong> dropdown.</li>
+      <li>Enter one or more tags to filter on and press enter.</li>
+      <li>Select a condition:
+        <ul>
+          <li><strong>Match any</strong> - Videos with any of the tags will be included</li>
+          <li><strong>Match all</strong> - Videos with all of the tags will be included</li>
+        </ul>
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="date selector" src="/assets/images/analytics/getting-started/filter-tags.png" /></figure>
+      </li>
+    </ol>
+    <h3>Filtering on custom fields</h3>
+    <p>To filter based upon video custom fields, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the <strong>MORE</strong> dropdown.</li>
+      <li>Click on a custom field.</li>
+      <li>For <strong>list</strong> type custom fields, click on one or more values to select them.</li>
+      <li>Select a condition:
+        <ul>
+          <li><strong>Match any</strong> - Videos with any of the selected custom fields will be included</li>
+          <li><strong>Match all</strong> - Videos with all of the selected custom fields will be included</li>
+        </ul>
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="date selector" src="/assets/images/analytics/getting-started/filter-custom-fields.png" /></figure>
+      </li>
+    </ol>
+    <h3>Filtering on social platform</h3>
+    <p>When viewing the social analytics it's possible to filter based upon the social platform the videos were published to. To filter based upon the social platform, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the <strong>SOCIAL PLATFORM</strong> dropdown.</li>
+      <li>Click on one or more social platform.
+        <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="date selector" src="/assets/images/analytics/getting-started/filter-social-platform.png" /></figure>
+      </li>
+    </ol>
+  </section>
+</article>
