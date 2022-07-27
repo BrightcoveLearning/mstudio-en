@@ -27,8 +27,12 @@
   name: 'Reviewing Analytics'
   url: '/analytics/'
   docs:
-    - name: 'Reviewing Analytics'
-      url: '/analytics/reviewing-analytics.html'
+    - name: 'Getting Started with Analytics'
+      url: '/analytics/getting-started-analytics.html'
+    - name: 'Reviewing Social Analytics'
+      url: '/analytics/reviewing-social-analytics.html'
+    - name: 'Reviewing Web Analytics'
+      url: '/analytics/reviewing-web-analytics.html'
 - section: 
   name: 'Administering Accounts'
   url: '/admin/'

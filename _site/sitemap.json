@@ -20,6 +20,11 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/getting-started-analytics.html",
+      "oldURL": "/getting-started-analytics"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/get-started/getting-started-marketing-studio.html",
       "oldURL": "/getting-started-marketing-studio"
   },
@@ -122,11 +127,6 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/support/reset-support-portal-password.html",
       "oldURL": "/reset-support-portal-password"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-analytics.html",
-      "oldURL": "/reviewing-analytics"
   },
 
   {
