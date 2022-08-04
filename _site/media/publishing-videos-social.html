@@ -377,8 +377,39 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>Schedule</strong> - To choose an expiration date and time for the video</li>
         </ul>
       </li>
+      <li><strong>Captions</strong>
+        <ul>
+          <li><strong>Use Marketing Studio captions</strong> - Use the captions associated with the video in Marketing Studio</li>
+          <li><strong>No captions</strong> - No captions are sent to Facebook</li>
+          <li><strong>Upload captions</strong> - Allows you to <a href="#captions">manually upload a captions file</a></li>
+        </ul>
+      </li>
     </ul>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-social/facebook-post.png" /></figure>
+      <h3>Configuring advanced settings</h3>
+      <ul>
+        <li><strong>Audience Optimization Interests</strong> - Add tags to describe the interests of people who are most likely to enjoy your post. For more information, see the <a href="https://www.facebook.com/facebookmedia/get-started/interest-targeting">Facebook documentation</a>.</li>
+        <li><strong>Location Restrictions</strong> - Add countries to include or exclude from seeing the post</li>
+        <li><strong>Business partner for posts to this destination</strong> - Add a business partner for branded content posts. As you type, a list of matching businesses will appear. For information on Facebook branded content, see the <a href="https://www.facebook.com/facebookmedia/solutions/branded-content">Facebook documentation</a>.</li>
+        <li><strong>Allow business partner to boost posts</strong></li>
+        <li><strong>Detect Matching Content</strong> - Check to enable Facebook rights management. For information, see the <a href="https://rightsmanager.fb.com">Facebook documentation</a>.</li>
+        
+        <li><strong>Show in News Feed</strong> - Shows video in News Feed</li>
+        <li><strong>International Media</strong></li>
+        <li><strong>Add as Secret Video</strong> - Videos will be accessible only via a direct URL and are not searchable for people on Facebook
+          <ul>
+            <li><strong>Turn off Reactions, Comments and Shares</strong> - Disallows likes and comments</li>
+          </ul>
+        </li>
+        <li><strong>Tracking</strong> - Assigns a universal ID to track the video across systems. The following <strong>Universal ID</strong> options are available:
+          <ul>
+            <li>Do not assign a Universal ID</li>
+            <li>Use Video ID from Marketing Studio</li>
+            <li> Use Reference ID from Marketing Studio</li>
+          </ul>
+        </li>
+      </ul>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-social/facebook-advanced-settings.png" /></figure>
     <aside class="bcls-aside bcls-aside--information"> Notes:
       <ul>
         <li><a href="creating-social-media-publishing-destinations.html#facebook_defaults">Default video properties for Facebook</a> can be set by editing the destination.</li>
@@ -402,12 +433,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ul>
     </aside>
   </section>
-<section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="linkedin">Creating a post for LinkedIn</h2>
     <p>When choosing a LinkedIn destination, the following video details can be entered:</p>
     <ul>
       <li><strong>Title</strong> - Title of the video (defaults to Marketing Studio title). YouTube supports up to 100 characters.</li>
       <li><strong>Description</strong> - Description of the video (defaults to Marketing Studio short description). LinkedIn supports up to 255 characters.</li>
+      <li><strong>Captions</strong>
+        <ul>
+          <li><strong>Use Marketing Studio captions</strong> - Use the captions associated with the video in Marketing Studio</li>
+          <li><strong>No captions</strong> - No captions are sent to Facebook</li>
+          <li><strong>Upload captions</strong> - Allows you to <a href="#captions">manually upload a captions file</a></li>
+        </ul>
+      </li>
     </ul>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-social/linkedin-post.png" /></figure>
     <aside class="bcls-aside bcls-aside--information"> Notes:
@@ -417,6 +455,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>After a video is published to LinkedIn, any updates to the source video using Video Cloud Studio will not update on the LinkedIn side.</li>
       </ul>
     </aside>
+  </section>
+<section class="bcls-section">
+    <h2 id="captions">Manually uploading a captions file</h2>
+    <p>Some social destinations provide the option of upload captions when a video is being published to social media. Follow these steps to upload a caption file.</p>
+<ol class="bcls-tasklist-restart">
+      <li>When creating a social post, select the <strong>Upload captions</strong> option.</li>
+      <li>Click <span class="button-blue-text-bordered"> <i data-feather="upload-cloud"></i> Upload</span>.</li>
+      <li>Browse and select a captions file. The captions file should be in .VTT or .SRT format.</li>
+      <li>Select the caption <strong>Language</strong>.</li>
+      <li> Click <span class="button-blue"> <i data-feather="plus"></i> Add caption file</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/publish-social/upload-captions.png" /></figure></li>
+    </ol>
+    <p>Caption files can be removed by clicking the ellipsis next to the file and then by clicking <strong>Remove</strong>.</p>
   </section>
 </article>
 
