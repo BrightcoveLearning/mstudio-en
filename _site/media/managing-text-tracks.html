@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic you will learn how to use the web analytics page to monitor the performance of your videos.">
+  <meta name="description" content="In this topic you will learn how to manage text tracks.">
   
-  <title>Reviewing Web Analytics</title>
+  <title>Managing Text Tracks</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -62,9 +62,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Reviewing Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Reviewing Web Analytics</li>
+      <li class="breadcrumb-item active" aria-current="page">Managing Text Tracks</li>
     </ol>
   </nav>
 </header>
@@ -300,43 +300,66 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1>Reviewing Web Analytics</h1>
-  <summary>In this topic you will learn how to use the web analytics page to monitor the performance of your videos.</summary>
+  <h1>Managing Text Tracks</h1>
+  <summary>In this topic you will learn how to manage text tracks.</summary>
   <section class="bcls-section">
-    <p>The web analytics page includes analytics for videos that were published using a Brightcove Player. To view the <strong>Web</strong> analytics page:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to Marketing Studio.</li>
-      <li>In the primary navigation, click <strong>Analytics</strong>.
-        By default, the <strong>Web</strong> analytics will be displayed.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on the Social analytics, see <a href="reviewing-social-analytics.html">Reviewing Social Analytics</a></aside>
-    . </section>
-  <section class="bcls-section">
-    <h2 id="search" class="BCL_conceptTitle">Viewing web analytics</h2>
-    <p>The graph at the top of the page shows the total video views per day for the time period selected.</p>
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/web/video-views-graph.png" /></figure>
-    <p>Detailed video analytics will appear below the graph:</p>
-    <ul>
-      <li><strong>Title</strong> - Video name and video ID</li>
-      <li><strong>Video Views</strong> - The number of times the video started playing, recorded when the stream is started (does not include rewind or replay)</li>
-      <li><strong>Viewed Minutes</strong> - Total viewed minutes</li>
-      <li><strong>Play Rate</strong> - The percentage of users that played the video after it was loaded</li>
-      <li><strong>Avg. % Watched</strong> - The average percent watched per video view (calculated by adding all the percentage watched divided by the number of video views)</li>
-      <li><strong>Avg. Time Watched</strong> - The average time watched per video view (calculated by adding all the time watched divided by the number of video views)</li>
-      <li><strong>Created Date</strong> - Date the video was uploaded</li>
-    </ul>
-    <p>
-      <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="https://studio.support.brightcove.com/analytics/analytics-module-ui-glossary.html">Analytics Glossary</a>.</aside>
-    </p>
-    <figure class="bcls-figure">
-      <p><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/web/report-details.png" /></p>
+    <p>Text tracks provide additional or interpretive information to individuals who wish to access it. Captions are  one type of text track. Captions are necessary so the deaf and hard of hearing can access the audio portion of video presentations.</p>
+    <figure class="bcls-figure"><img class="bcls-image" alt="Example of Captions" src="/assets/images/media/managing-text-tracks/captions-sample.png" />
+      <figcaption class="bcls-caption--image">Example of Captions</figcaption>
     </figure>
+    <p>Such text may be used for accessibility, to provide translations of the audio track or some other purpose, but the underlying technology used is the same.</p>
+    <p>You should have a separate caption file for each language you need to support. The Brightcove Player supports Web Video Text Tracks Format (WebVTT), SRT, DFXP and SCC formats, although all non-WebVTT formats are converted to WebVTT when the captions are processed.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="compare">Compare to previous period</h2>
-    <p>Selecting the <strong>Compare to previous period</strong> checkbox will add an overlay dashed line graph representing the data for the previous period.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/compare-previous.png" /></figure>
-    <p>The previous period is based upon what is currently selected for the report date range. For example, if you select a date range of last 7 days, the previous period will be 2 weeks ago. When comparing trends over weeks, it is best to select date ranges that cover complete weeks. For example, if you select a date starting on a Monday, set the end date to a Sunday. If the start date is on a Friday, set the end date to a Thursday. You can also mouse over both the bars and dashed line to see the date and corresponding values.</p>
+    <h2 id="captionsfile">Creating caption files</h2>
+    <p>To add captions to a video, you first need to create a captions file. One option is to use Marketing Studio to generate captions for videos.  The Brightcove Player supports Web Video Text Tracks Format (WebVTT), SRT, DFXP and SCC formats, although all non-WebVTT formats are converted to WebVTT when the captions are processed.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Caption file names should only include letters (upper or lower case), numbers, dashes (-) and underscores (_).</aside>
+  </section>
+  <section class="bcls-section">
+    <p>To view and edit the text and audio tracks for a video, follow these steps:</p>
+    <ol  class="bcls-tasklist-restart">
+      <li>Open the <strong>Media</strong> page.</li>
+      <li>Click on the video card (card view) or the video name (list view). The video details page will open.</li>
+      <li>Click the <strong>Tracks</strong> tab at the top of the page. A list of text tracks (if any) for the video will be displayed.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/video-tracks.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add">Adding text tracks</h2>
+    <p>To add text tracks to a video, follow these steps.</p>
+    <ol  class="bcls-tasklist-restart">
+      <li>There are several ways to add text tracks to a video. </li>
+      <ul>
+        <li><strong>Drag and drop</strong> - Drag a text track file from your computer to the Media page. The body of the page will become the drop zone. Drop the file.
+          <figure class="bcls-figure">
+            <blockquote>
+              <p><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/drag-text-track.png" /></p>
+            </blockquote>
+          </figure>
+        </li>
+        <li><strong>File upload</strong> - Click <strong>+ Add</strong> &gt; Select files. Use the file picker to select one or more caption files.</li>
+      </ul>
+      <li>Select the <strong>Language</strong> of the track text data.</li>
+      <li>Enter the appropriate <strong>Label</strong> for the caption file. The label is displayed inside the player and allows the viewer to select a language. The label value will default to the code for the language that was selected.</li>
+      <li>Select the <strong>Kind</strong> of text track. Options include:
+        <ul>
+          <li><strong>Captions</strong> - Similar to subtitles, but may also include sound effects and other audio information</li>
+          <li><strong>Subtitles</strong> - The transcription or translation of the dialogue</li>
+          <li><strong>Descriptions</strong> - Intended to be a separate text file that describes the video through a screen reader</li>
+          <li><strong>Chapters</strong> - Intended to help the user navigate through the video</li>
+          <li><strong>Metadata</strong> - Information and content about the video which isn’t intended to be displayed to the viewer by default (though you may wish to do so using JavaScript)</li>
+        </ul>
+      </li>
+      <li>Select a <strong>Status</strong>:
+        <ul>
+          <li><strong>Publish</strong> - Text track will appear in players</li>
+          <li><strong>Draft</strong> - Text track will not appear in players</li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/text-track-details.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Add</span>.</li>
+    </ol>
   </section>
 </article>
 
@@ -355,7 +378,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 27 Jul 2022
+  Page last updated on 25 Aug 2022
 </div>
 
 

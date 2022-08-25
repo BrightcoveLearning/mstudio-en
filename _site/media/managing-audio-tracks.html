@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic you will learn how to use the web analytics page to monitor the performance of your videos.">
+  <meta name="description" content="In this topic you will learn how to manage audio tracks.">
   
-  <title>Reviewing Web Analytics</title>
+  <title>Managing Audio Tracks</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -62,9 +62,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/analytics/">Reviewing Analytics</a></li>
+      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Reviewing Web Analytics</li>
+      <li class="breadcrumb-item active" aria-current="page">Managing Audio Tracks</li>
     </ol>
   </nav>
 </header>
@@ -300,43 +300,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1>Reviewing Web Analytics</h1>
-  <summary>In this topic you will learn how to use the web analytics page to monitor the performance of your videos.</summary>
+  <h1>Managing Audio Tracks</h1>
+  <summary>In this topic you will learn how to manage audio tracks.</summary>
   <section class="bcls-section">
-    <p>The web analytics page includes analytics for videos that were published using a Brightcove Player. To view the <strong>Web</strong> analytics page:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Login to Marketing Studio.</li>
-      <li>In the primary navigation, click <strong>Analytics</strong>.
-        By default, the <strong>Web</strong> analytics will be displayed.</li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on the Social analytics, see <a href="reviewing-social-analytics.html">Reviewing Social Analytics</a></aside>
-    . </section>
-  <section class="bcls-section">
-    <h2 id="search" class="BCL_conceptTitle">Viewing web analytics</h2>
-    <p>The graph at the top of the page shows the total video views per day for the time period selected.</p>
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/web/video-views-graph.png" /></figure>
-    <p>Detailed video analytics will appear below the graph:</p>
+    <p>Videos can be configured with multiple audio tracks. Multiple audio tracks can be used to:</p>
     <ul>
-      <li><strong>Title</strong> - Video name and video ID</li>
-      <li><strong>Video Views</strong> - The number of times the video started playing, recorded when the stream is started (does not include rewind or replay)</li>
-      <li><strong>Viewed Minutes</strong> - Total viewed minutes</li>
-      <li><strong>Play Rate</strong> - The percentage of users that played the video after it was loaded</li>
-      <li><strong>Avg. % Watched</strong> - The average percent watched per video view (calculated by adding all the percentage watched divided by the number of video views)</li>
-      <li><strong>Avg. Time Watched</strong> - The average time watched per video view (calculated by adding all the time watched divided by the number of video views)</li>
-      <li><strong>Created Date</strong> - Date the video was uploaded</li>
+      <li>Play back the same video in different languages </li>
+      <li>Provide audio with descriptions for the visually challenged</li>
+      <li>Provide stereo vs. multi-channel (surround sound) audio</li>
     </ul>
-    <p>
-      <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="https://studio.support.brightcove.com/analytics/analytics-module-ui-glossary.html">Analytics Glossary</a>.</aside>
-    </p>
-    <figure class="bcls-figure">
-      <p><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/web/report-details.png" /></p>
-    </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="compare">Compare to previous period</h2>
-    <p>Selecting the <strong>Compare to previous period</strong> checkbox will add an overlay dashed line graph representing the data for the previous period.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/compare-previous.png" /></figure>
-    <p>The previous period is based upon what is currently selected for the report date range. For example, if you select a date range of last 7 days, the previous period will be 2 weeks ago. When comparing trends over weeks, it is best to select date ranges that cover complete weeks. For example, if you select a date starting on a Monday, set the end date to a Sunday. If the start date is on a Friday, set the end date to a Thursday. You can also mouse over both the bars and dashed line to see the date and corresponding values.</p>
+    <p>Multiple audio tracks are supported for HLS V4+ and DASH - with and without DRM protection. Videos with multiple audio tracks will display a headphone icon (<img alt="" src="/assets/images/media/managing-audio-tracks/icon-headphone.png" />) in the controlbar. When the icon is clicked, the viewer can select between audio tracks.</p>
+    <p>Below is an example of a video that has been configured with multiple audio tracks.</p>
+    <div style="position: relative; display: block; max-width: 640px;">
+      <div style="padding-top: 56.25%;">
+        <iframe src="https://players.brightcove.net/57838016001/default_default/index.html?videoId=5413700943001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe>
+      </div>
+    </div>
   </section>
 </article>
 
@@ -355,7 +334,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 27 Jul 2022
+  Page last updated on 25 Aug 2022
 </div>
 
 
