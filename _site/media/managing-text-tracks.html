@@ -312,7 +312,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="captionsfile">Creating caption files</h2>
-    <p>To add captions to a video, you first need to create a captions file. One option is to use Marketing Studio to generate captions for videos.  The Brightcove Player supports Web Video Text Tracks Format (WebVTT), SRT, DFXP and SCC formats, although all non-WebVTT formats are converted to WebVTT when the captions are processed.</p>
+    <!--    <p>To add captions to a video, you first need to create a captions file. One option is to use Marketing Studio to generate captions for videos.  The Brightcove Player supports Web Video Text Tracks Format (WebVTT), SRT, DFXP and SCC formats, although all non-WebVTT formats are converted to WebVTT when the captions are processed.</p>
+-->
+    <p>To add captions to a video, you first need to create a captions file. The Brightcove Player supports Web Video Text Tracks Format (WebVTT), SRT, DFXP and SCC formats, although all non-WebVTT formats are converted to WebVTT when the captions are processed.</p>
     <aside class="bcls-aside bcls-aside--information">Note: Caption file names should only include letters (upper or lower case), numbers, dashes (-) and underscores (_).</aside>
   </section>
   <section class="bcls-section">
@@ -338,7 +340,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </blockquote>
           </figure>
         </li>
-        <li><strong>File upload</strong> - Click <strong>+ Add</strong> &gt; Select files. Use the file picker to select one or more caption files.</li>
+        <li><strong>File upload</strong> - Click <strong>+ Add</strong> &gt; <strong>Select files</strong>. Use the file picker to select one or more caption files.</li>
+        <li><strong>Upload from URL</strong> - Click <strong>+ Add</strong> &gt; <strong>Upload from URL</strong>. Enter the <strong>URL</strong> to the caption file location.</li>
+        <li><strong>Remote URL</strong> - Click <strong>+ Add</strong> &gt; <strong>Remote URL</strong>. Enter the <strong>Remote URL</strong> to the caption file location.</li>
       </ul>
       <li>Select the <strong>Language</strong> of the track text data.</li>
       <li>Enter the appropriate <strong>Label</strong> for the caption file. The label is displayed inside the player and allows the viewer to select a language. The label value will default to the code for the language that was selected.</li>
@@ -346,14 +350,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
           <li><strong>Captions</strong> - Similar to subtitles, but may also include sound effects and other audio information</li>
           <li><strong>Subtitles</strong> - The transcription or translation of the dialogue</li>
-          <li><strong>Descriptions</strong> - Intended to be a separate text file that describes the video through a screen reader</li>
           <li><strong>Chapters</strong> - Intended to help the user navigate through the video</li>
-          <li><strong>Metadata</strong> - Information and content about the video which isn’t intended to be displayed to the viewer by default (though you may wish to do so using JavaScript)</li>
         </ul>
       </li>
       <li>Select a <strong>Status</strong>:
         <ul>
-          <li><strong>Publish</strong> - Text track will appear in players</li>
+          <li><strong>Published</strong> - Text track will appear in players</li>
           <li><strong>Draft</strong> - Text track will not appear in players</li>
         </ul>
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/text-track-details.png" /></figure>
