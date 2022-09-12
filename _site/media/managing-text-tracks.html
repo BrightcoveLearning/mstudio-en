@@ -21,16 +21,16 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
 <script translate="no">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-XBJC11HF8Z');
+  gtag('config', 'UA-2728311-17');
 </script>
-  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
 	<script src="https://unpkg.com/feather-icons"></script>
 </head>
 
@@ -49,8 +49,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 /* ]]> */
 </script>
 
+
+
 &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span>
     <br>
+    
   </div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb arr-right">
@@ -331,6 +334,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/video-tracks.png" /></figure>
       </li>
     </ol>
+    <p>For each text track, the following information will be displayed:</p>
+    <ul>
+      <li><strong>Language</strong> - Text track language</li>
+      <li><strong>Status</strong> - Text track status
+        <ul>
+          <li><strong>Published</strong> - Text track will appear in players</li>
+          <li><strong>Draft</strong> - Text track will not appear in players</li>
+        </ul>
+      </li>
+      <li><strong>Kind</strong> - Kind of text track</li>
+      <li><strong>Player label</strong> - Label that will appear in the video player</li>
+    </ul>
+    <p>The action menu (...) associated with each text track can be used to:</p>
+    <ul>
+      <li><a href="#publish">Publish/unpublish a text track</a></li>
+      <li><a href="#edit">Edit track details</a></li>
+      <li><a href="#download">Download a text track</a></li>
+    </ul>
   </section>
   <section class="bcls-section">
     <h2 id="add">Adding text tracks</h2>
@@ -367,6 +388,36 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Click <span class="button-blue">Add</span>.</li>
     </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="publish">Publishing and unpublishing text tracks</h2>
+    <p>Text tracks with a status of <strong>Published</strong> will appear in Brightcove Players. Text tracks with a status of <strong>Unpublished</strong> will not appear in Brightcove Players. You may want to set the status to Unpublished until you've had a chance to review the text track. To change the status of a text track, follow these steps:</p>
+    <ol  class="bcls-tasklist-restart">
+      <li>Click the action menu (...) associated with the text track.</li>
+      <li>Click <strong>Publish</strong> or <strong>Unpublish</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit">Editing text track details</h2>
+    <p>To edit the details for a text track, follow these steps.</p>
+    <ol  class="bcls-tasklist-restart">
+      <li>Click the action menu (...) associated with the text track.</li>
+      <li>Click <strong>Edit track details</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/text-track-details.png" /></figure>
+      </li>
+      <li>Make the appropriate changes.</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+    </ol>
+    <p>&nbsp;</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="download">Downloading text tracks</h2>
+    <p>To download a text track file, follow these steps.</p>
+    <ol  class="bcls-tasklist-restart">
+      <li>Click the action menu (...) associated with the text track.</li>
+      <li>Click<strong> Download</strong>.</li>
+    </ol>
+    <p>&nbsp;</p>
   </section>
 </article>
 
@@ -487,7 +538,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
   <script src="/assets/js/feedback.js"></script>
   
-  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  <script src="/assets/js/sajari-search-foot.js"></script>
   
   <script translate="no">
     feather.replace()
