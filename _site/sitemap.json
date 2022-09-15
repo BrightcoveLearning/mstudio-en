@@ -10,13 +10,13 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/editing-video-details.html",
-      "oldURL": "/editing-video-details"
+      "newURL": "https://mstudio.support.brightcove.com/media/editing-video-details-using-quick-edit.html",
+      "oldURL": "/editing-video-details-using-quick-edit"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/editing-video-properties-using-quick-edit.html",
-      "oldURL": "/editing-video-properties-using-quick-edit"
+      "newURL": "https://mstudio.support.brightcove.com/media/editing-video-details.html",
+      "oldURL": "/editing-video-details"
   },
 
   {
@@ -50,7 +50,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/analytics/",
+      "newURL": "https://mstudio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -70,7 +70,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "newURL": "https://mstudio.support.brightcove.com/analytics/",
       "oldURL": "/index"
   },
 
@@ -80,7 +80,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/",
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
