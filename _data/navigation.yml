@@ -35,6 +35,8 @@
   docs:
     - name: 'Getting Started with Analytics'
       url: '/analytics/getting-started-analytics.html'
+    - name: 'Reviewing Individual Viewers Analytics'
+      url: '/analytics/reviewing-individual-viewers-analytics.html'
     - name: 'Reviewing Social Analytics'
       url: '/analytics/reviewing-social-analytics.html'
     - name: 'Reviewing Web Analytics'

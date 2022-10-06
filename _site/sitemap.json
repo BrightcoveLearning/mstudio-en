@@ -50,7 +50,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "newURL": "https://mstudio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -80,7 +80,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/",
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
@@ -147,6 +147,11 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/support/reset-support-portal-password.html",
       "oldURL": "/reset-support-portal-password"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-individual-viewers-analytics.html",
+      "oldURL": "/reviewing-individual-viewers-analytics"
   },
 
   {
