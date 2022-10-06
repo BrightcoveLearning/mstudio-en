@@ -14,40 +14,26 @@ layout: staging
       <li>In the primary navigation, click <strong>Analytics</strong>. </li>
       <li>Click <strong>Individual viewers</strong> at the top of the page.</li>
     </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: Viewer level analytics are not available to all accounts. If you are interested in having this feature turned on for your account, contact your Account Manager.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="search" class="BCL_conceptTitle">Viewing individual viewers analytics</h2>
+    <p>If viewer IDs are not sent to the analytics data collector from the player, we will try to construct construct a viewer ID from the viewer's IP address and user-agent. Viewer analytics are most useful if you have logged in viewers and therefore can identify them reliably. For information on sending a viewer ID, see the <a href="https://apis.support.brightcove.com/analytics/general/analytics-api-unique-users.html#identifyUsers">Analytics API documentation</a>.</p>
     <p>The report will display the following data:</p>
     <ul>
-      <li><strong>Video views</strong> - The number of times a video started playing, recorded when the stream is started</li>
-      <li><strong>Viewed Minutes</strong> - The number of viewed minutes</li>
-      <li><strong>Play Rate</strong> - The percentage of videos that were loaded that were actually played</li>
-      <li><strong>Avg. % Watched</strong> - Average percent viewed for all videos; note that the average can be &gt; 100% if viewers rewatch or watch parts of a video over and over</li>
-      <li><strong>Avg. Time Watched</strong> - Average time viewed for all videos</li>
+      <li><strong>Total Viewers</strong> - Total number of viewers</li>
+      <li><strong>Known Viewers</strong> - The number of known viewer</li>
+      <li><strong>Anaonymous Viewers</strong> - The number of anonymmous viewers</li>
+      <li><strong>Unique Viewers</strong> - The number of unique viewers</li>
     </ul>
-    <p>The graph at the top of the page shows the total video views per day for the time period selected.</p>
-    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/web/video-views-graph.png" /></figure>
-    <p>Detailed video analytics will appear below the graph:</p>
+    <p>The <strong>Viewers</strong> table will list all of details for the viewers.</p>
     <ul>
-      <li><strong>Title</strong> - Video name and video ID</li>
+      <li><strong>Viewer ID </strong> - Viewer identifier</li>
       <li><strong>Video Views</strong> - The number of times the video started playing, recorded when the stream is started (does not include rewind or replay)</li>
-      <li><strong>Viewed Minutes</strong> - Total viewed minutes</li>
-      <li><strong>Play Rate</strong> - The percentage of users that played the video after it was loaded</li>
-      <li><strong>Avg. % Watched</strong> - The average percent watched per video view (calculated by adding all the percentage watched divided by the number of video views)</li>
-      <li><strong>Avg. Time Watched</strong> - The average time watched per video view (calculated by adding all the time watched divided by the number of video views)</li>
-      <li><strong>Created Date</strong> - Date the video was uploaded</li>
+      <li><strong>Total Minutes Watched</strong> - The total number of minutes watched</li>
+      <li><strong>Videos Watched</strong> - Number of videos watched</li>
+      <li><strong>Last Viewed</strong> - Date and time of the last video view</li>
     </ul>
-    <p>
-      <aside class="bcls-aside bcls-aside--information">Note: For a complete list of all analytics terms and definitions, see the <a href="https://studio.support.brightcove.com/analytics/analytics-module-ui-glossary.html">Analytics Glossary</a>.</aside>
-    </p>
-    <figure class="bcls-figure">
-      <p><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/web/report-details.png" /></p>
-    </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="compare">Compare to previous period</h2>
-    <p>Selecting the <strong>Compare to previous period</strong> checkbox will add an overlay dashed line graph representing the data for the previous period.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Compare previous period" src="/assets/images/analytics/compare-previous.png" /></figure>
-    <p>The previous period is based upon what is currently selected for the report date range. For example, if you select a date range of last 7 days, the previous period will be 2 weeks ago. When comparing trends over weeks, it is best to select date ranges that cover complete weeks. For example, if you select a date starting on a Monday, set the end date to a Sunday. If the start date is on a Friday, set the end date to a Thursday. You can also mouse over both the bars and dashed line to see the date and corresponding values.</p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" alt="" src="/assets/images/analytics/individual/viewer.png" /></figure>
   </section>
 </article>
