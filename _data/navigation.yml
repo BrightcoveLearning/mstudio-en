@@ -27,6 +27,8 @@
       url: '/media/managing-videos.html'
     - name: 'Publishing Videos to Social Media'
       url: '/media/publishing-videos-social.html'
+    - name: 'Reviewing Social Activity'
+      url: '/media/reviewing-social-activity.html'
     - name: 'Uploading Videos'
       url: '/media/uploading-videos.html'
 - section: 
