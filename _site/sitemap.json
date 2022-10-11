@@ -25,6 +25,11 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/media/generating-captions-videos.html",
+      "oldURL": "/generating-captions-videos"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/analytics/getting-started-analytics.html",
       "oldURL": "/getting-started-analytics"
   },
@@ -50,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/",
+      "newURL": "https://mstudio.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
@@ -75,12 +80,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/",
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "newURL": "https://mstudio.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -182,6 +187,11 @@
   {
       "newURL": "https://mstudio.support.brightcove.com/media/uploading-videos.html",
       "oldURL": "/uploading-videos"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/using-the-caption-editor.html",
+      "oldURL": "/using-the-caption-editor"
   },
 
   {
