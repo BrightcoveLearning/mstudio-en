@@ -3,22 +3,23 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic you will learn how to edit captions using the caption editor.">
+  <meta name="description" content="">
   
-  <title>Using the Caption Editor</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <title></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
-  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   
 <!-- Google tag (gtag.js) -->
@@ -31,9 +32,8 @@
   gtag('config', 'G-XBJC11HF8Z');
 </script>
   <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
-	<script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-
 
 <body class="body">
 
@@ -155,11 +155,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item"><a href="/media/">Media</a></li>
+        <li class="breadcrumb-item"><a href="/assets/">Assets</a></li>
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Using the Caption Editor</li>
+        <li class="breadcrumb-item"><a href="/assets/s-site-assets-stylesheets/">S site assets stylesheets</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page"></li>
       
     
   </nav>
@@ -268,7 +272,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     
-                    <li><a href="/media/using-the-caption-editor.html" aria-current="page">Using the Caption Editor</a></li>
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
                     
                   
                 
@@ -386,73 +390,449 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<article class="bcls-article">
-  <h1>Using the Caption Editor</h1>
-  <summary>In this topic you will learn how to edit captions using the caption editor.</summary>
-  <section class="bcls-section">
-    <p>Captions can be added to videos and provide additional or interpretive information to individuals who wish to access it. Marketing Studio provides the ability to <a href="/media/generating-captions-videos.html">auto-generate captions</a> for a video or captions can be <a href="/media/managing-text-tracks.html">manually associated</a> with videos. </p>
-    <p>Once captions have been added to videos, the caption editor can be used to edit the caption files. The <strong>Tracks</strong> tab on the video details page can be configured to provide captions for a video. </p>
-    <aside class="bcls-aside bcls-aside--information">Note: Any type of text tracks (i.e.  chapters) can be edited using the caption editor as long as it is a VTT file. When editing, the text will appear in the preview player as a caption but that is not necessarily how it will display to the end viewer.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="open">Opening the caption editor</h2>
-    <p>To open the caption editor, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the <strong>Media</strong> module.</li>
-      <li>Click a video name  to open the video details page.</li>
-      <li>Click the <strong>Tracks</strong> tab at the top of the page. A list of text tracks for the video will be displayed. </li>
-      <li>Click the action menu (...) associated with the text track.</li>
-      <li>Click<strong> Edit track</strong>.</li>
-    </ol>
-    <p>The first text track will be loaded into the editor.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/caption-editor/captions-loaded.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: If you would like to disable the caption editor for your account, contact Brightcove Support.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit">Editing a caption file</h2>
-    <p>To edit a caption file, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the caption editor.</li>
-      <li>The caption editor will load the first text track into the editor. The editor will display the tracks and the associated start and end times.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/caption-editor/caption-lines.png" /></figure>
-      </li>
-      <li>Edit the text track content as needed. The preview player can be used to preview changes to the text track.
-        <aside class="bcls-aside bcls-aside--information">Note: You must click out of the caption line and then back in to view your changes in the preview player.</aside>
-        <aside class="bcls-aside bcls-aside--information">Note: For videos longer than one hour, the timecode format will change to 00:00:00:000.</aside>
-      </li>
-      <li>Click <span class="button-blue">Publish</span> to save the changes. Marketing Studio will upload the updated text tracks file.</li>
-      <aside class="bcls-aside bcls-aside--information">Note: There will be a slight delay before  updates to text tracks appear in players.</aside>
-    </ol>
-  </section>
-  <!--<section class="bcls-section">
-    <h2 id="auto-caption">Generating captions</h2>
-    <p>The caption editor can be used to generate captions for a video. To generate captions for a video, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Open the caption editor.</li>
-      <li>Click <span class="button-blue">Auto caption</span>.</li>
-      <li>Select the <strong>Language</strong> to generate the captions in. If a <strong>Language</strong> is not selected, the video language is auto-detected. Selecting a language will improve the caption file generation time and may improve overall accuracy.</li>
-      <li>Enter a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-media-img/capedit-caption-settings.png" /></figure>
-      </li>
-      <li>Click <span class="button-blue">Done</span>.</li>
-    </ol>
-    <p>The page will need to be refreshed when the captions are complete for them to populate in the caption editor. The generated captions will have a <strong>Published</strong> status after they are generated.</p>
-  </section>-->
-  <section class="bcls-section">
-    <h2 id="draft">Saving drafts</h2>
-    <p>When a caption file is saved as a draft, it will not be displayed to viewers. Drafts are useful when you are in the process of editing or reviewing a caption file. To save a caption file as a draft, open the caption editor and click <span class="button-blue-text-bordered">Save draft</span>. The top of the caption editor will indicate that the caption has a status of <strong>Draft</strong>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/caption-editor/draft.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="issues">Known issues and feature gaps</h2>
-    <p>Because the caption Editor is not yet a finished feature, there are some known issues/feature gaps that you may want to be aware of. These are listed below and will be resolved in the coming weeks. </p>
-    <ul>
-      <li><strong>Publish and Unsave workflow</strong> - We recognize that it is not ideal to have to publish a text track and then unpublish separately to hide the captions from end viewers. We are working on making this a single action.</li>
-      <li><strong>Overlapping captions</strong> - If one caption has a start time with the same timecode as the previous caption’s end time, they will appear to overlap in the caption player. It will not appear that way to end viewers - the caption line with the same start timecode will win the conflict.</li>
-      <li><strong>Timecode errors</strong> - Only numbers and colons are allowed in the timecode field. If you enter in any other character-types (e.g. letters, commas), it will result in an error. To fix this, replace the disallowed characters with a number or colon. </li>
-    </ul>
-  </section>
-</article>
+--- 
+layout: null--- 
+
+@import url(https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap);
+
+body, .body {
+	font-family: 'Public Sans', sans-serif;
+	font-size: 14px;
+	counter-reset: figure 0 table 0 step 0;
+	background-color: white;
+	color: rgb(1, 5, 14);
+	margin: 16px 24px;
+	position: relative;
+}
+
+h1 {
+	height: auto;
+	color: rgb(1, 5, 14);
+	font-size: 2.5rem;
+	font-weight: 800;
+	letter-spacing: -0.5px;
+	margin-top: 16px;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+summary {
+	display: block;
+}
+
+.breadcrumb {
+	padding: 0 1rem;
+	margin-left: 2px;
+}
+
+.breadcrumb-item, .breadcrumb-item.active {
+	font-size: 1em;
+	/* line-height: 16px; */
+	color: rgb(8, 8, 140);
+}
+
+.breadcrumb-item * {
+	color: rgb(8, 8, 140);
+}
+
+.bcls-article {
+	font-size: 14px;
+}
+
+.bcls-section {
+	/*  padding-top: .5em; */
+}
+
+.external-link-icon {
+	height: .9em;
+	margin-left: .2rem;
+	vertical-align: text-top;
+}
+
+#breadcrumbs {
+	margin-left: -15px;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+#breadcrumbs>ol {
+	background-color: rgb(255, 255, 255);
+	color: rgb(8, 8, 140);
+	z-index: 9999;
+}
+
+article>summary {
+	margin-bottom: 16px;
+	font-size: 14px;
+	cursor: auto;
+}
+
+p, div, ul, ol {
+	margin-bottom: 1em !important;
+	font-size: 14px;
+}
+
+a, section a {
+	color: rgb(8, 8, 140) !important;
+	text-decoration: none;
+	background-color: transparent
+}
+
+a, .a, a::visited, a::hover {
+	color: rgb(8, 8, 140)!important;
+}
+
+.bcls-section a, .bcls-section a::visited, .bcls-section a::hover {
+	color: rgb(8, 8, 140)!important;
+}
+
+a::hover {
+	text-decoration: underline;
+}
+
+ul.doc-links {
+	list-style: none;
+	margin-left: -2em;
+}
+
+/* details */
+
+*, details::before, details::after {
+	box-sizing: border-box;
+}
+
+details {
+	background-color: rgb(255, 255, 255);
+	margin: 0 auto 0;
+	padding: 0;
+	width: 100%;
+	/* max-width: calc(100% - 48px); */
+	position: relative;
+	border-bottom: 1px solid rgb(229, 230, 230);
+	border-right: none;
+	border-left: none;
+	border-radius: 0;
+}
+
+details.details-section:first-of-type {
+	border-top: 1px solid rgb(229, 230, 230);
+}
+details.details-item:first-of-type {
+	border-top: 1px solid rgb(229, 230, 230);
+}
+
+details.details-nested:last-of-type {
+	border-bottom: none;
+}
+
+details::before {
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .15;
+	pointer-events: none;
+	transition: opacity .2s;
+	z-index: -1;
+}
+
+details[open] {
+	/* background-color: whitesmoke; */
+}
+
+details[open]::before {
+	/* opacity: .6; */
+}
+
+details>summary {
+	padding: 16px .5em 20px .5em;
+	display: block;
+	position: relative;
+	font-size: 14px;
+	font-weight: normal;
+	cursor: pointer;
+	outline: none;
+	margin: 0 0 -8px 0;
+}
+
+details>summary::after {
+	float: right;
+	height: .5rem;
+	width: .5rem;
+	margin-right: 1rem;
+	content: url(https://support.brightcove.com/site-assets/images/site/aside-icons/chevron-down-blue.svg);
+}
+details>summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open]>summary::after {
+	float: right;
+	height: .5rem;
+	width: .5rem;
+	content: url(https://support.brightcove.com/site-assets/images/site/aside-icons/chevron-up-blue.svg);
+}
+
+details[open]>summary {
+	border: none;
+	outline: none;
+}
+
+details.details-section>summary {
+	color: rgb(1, 5, 14);
+	font-weight: bold;
+}
+
+details.details-item>summary, details.details-item>summary {
+	color: rgb(8, 8, 140);
+}
+
+details>summary::before, details>summary::after {
+	/* width: .75em;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: '';
+    background-color: currentColor;
+    text-align: right; */
+	transform: translateY(-50%);
+	transition: transform .2s ease-in-out;
+}
+
+details.details-section[open]>summary {
+	background-color: rgb(249, 249, 249);
+}
+
+details.details-item[open]>summary  {
+	background-color: rgb(242, 244, 249);
+}
+
+details.details-nested[open]>summary  {
+	background-color: rgb(242, 244, 249);
+}
+
+details.details-item>summary {
+	color: rgb(8, 8, 140);
+}
+
+details.details-nested>summary {
+	color: rgb(8, 8, 140);
+}
+
+details section {
+	background-color: rgb(255, 255, 255);
+	border: none;
+	margin: 16px 0;
+	padding: 16px 0 8px 0;
+	padding-top: 0;
+}
+
+details section p {
+	margin-left: 1rem;
+}
+
+details::after {
+	transform: translateY(-50%) rotate(90deg);
+}
+
+details[open] {
+	/* transform: translateY(-50%) rotate(180deg); */
+}
+
+.-webkit-details-marker {
+	display: none;
+}
+
+/* task list for steps */
+
+.bcls-tasklist {
+	list-style: none;
+	list-style-type: none;
+	margin-left: 0;
+	padding-top: 24px;
+}
+
+.bcls-tasklist>li::before {
+	color: rgb(1, 5, 14);
+	content: counters(step, ".") " ";
+	font-size: 1.3em;
+	font-weight: bold;
+	left: -2em;
+	line-height: 1;
+	position: absolute;
+	text-align: right;
+	top: 0;
+	width: 1.5em;
+}
+
+.bcls-tasklist>li {
+	border-left: 4px solid rgb(229, 230, 230);
+	list-style: none;
+	margin-bottom: 16px;
+	margin-left: -1em;
+	min-height: 1.7em;
+	padding-left: 1em;
+	position: relative;
+	counter-increment: step;
+}
+
+.bcls-tasklist-restart {
+	list-style: none;
+	list-style-type: none;
+	margin-left: 0;
+	padding-top: 24px;
+	counter-reset: rstep calc(var(--s) - 1);
+}
+
+.bcls-tasklist-restart>li {
+	border-left: 4px solid rgb(229, 230, 230);
+	list-style: none;
+	margin-bottom: 16px;
+	margin-left: -1em;
+	min-height: 1.7em;
+	padding-left: 1em;
+	position: relative;
+	counter-increment: rstep;
+}
+
+.bcls-tasklist-restart>li::before {
+	color: rgb(1, 5, 14);
+	content: counters(rstep, ".") " ";
+	/* counter-increment: rstep; */
+	font-size: 1.3em;
+	font-weight: bold;
+	left: -2em;
+	line-height: 1;
+	position: absolute;
+	text-align: right;
+	top: 0;
+	width: 1.5em;
+}
+
+.bcls-tasklist-restart ul, .bcls-tasklist-restart ol {
+	margin-bottom: 1rem;
+	;
+}
+
+.bcl-highlight, .bcls-highlight {
+	background-color: rgb(255, 255, 201);
+	border: 1px rgb(255, 204, 52) solid;
+	padding: 1px;
+}
+
+.ui-image {
+	cursor: not-allowed;
+	width: auto;
+	vertical-align: middle;
+	height: 1.5em;
+}
+
+.imageWithText {
+	width: auto;
+	vertical-align: middle;
+	height: 1.5em;
+}
+
+/* in-app help text buttons */
+.button-blue, .button-blue-text, .button-blue-text-bordered, .button-red, .button-red-text, .button-gray {
+	/* font-family: 'Public Sans'; */
+	font-weight: bold;
+	font-size: .9rem;
+	padding: .4rem;
+	white-space: nowrap;
+}
+.button-blue {
+	color: rgb(255, 255, 255);
+	background-color: rgb(9, 45, 189);
+}
+.button-blue-text {
+	color: rgb(8, 8, 140);
+	background-color: rgb(255, 255, 255);
+}
+.button-blue-text-bordered {
+	color: rgb(8, 8, 140);
+	background-color: rgb(255, 255, 255);
+  border: 1px rgb(229,230,230) solid;
+  border-radius: 1px;
+}
+.button-red {
+	color: rgb(255, 255, 255);
+	background-color: rgb(211, 61, 0);
+}
+.button-red-text {
+	color: rgb(211, 61, 0);
+	background-color: rgb(255, 255, 255);
+}
+.button-red-text-border {
+  color: rgb(211, 61, 0);
+  background-color: rgb(255, 255, 255);
+  border: 1px rgb(211, 61, 0) solid;
+  border-radius: 2px;
+	padding: 4px;;
+}
+.button-gray {
+	background-color: rgb(242, 244, 249);
+}
+.button-icon {
+	white-space: nowrap;
+  padding-right: .15rem;
+  height: 1rem;
+}
+
+/* info, tips, warnings */
+
+aside, .bcls-aside {
+  margin-bottom: 1em;
+  padding: 1em 2em 1em 3.5em;
+}
+
+.bcls-aside--information {
+  background-color: #f2f4f9;
+  border-left: 4px solid #092dbd;
+}
+
+.bcls-aside--information:before {
+  content: url(https://support.brightcove.com/site-assets/images/site/aside-icons/info-aqua.svg);
+  float: left;
+  margin-left: -2.5em;
+}
+
+
+.bcls-aside--tip {
+  background-color: #d7f6e6;
+  border-left: 4px solid #009e4f;
+}
+
+.bcls-aside--tip:before {
+  content: url(https://support.brightcove.com/site-assets/images/site/aside-icons/lightbulb-blue.svg);
+  float: left;
+  /* color: rgb(8, 8, 139);
+  height: 28px; */
+  margin-left: -2.5em;
+}
+
+
+.bcls-aside--warning {
+  background-color: #fffbf2;
+  border-left: 4px solid #ffba00;
+}
+
+.bcls-aside--warning:before {
+  content: url(https://support.brightcove.com/site-assets/images/site/aside-icons/alert-triangle-gray.svg);
+  float: left;
+  margin-left: -2.5em;
+}
+
 
 <!-- complete bootstrap layout -->
     </div>
@@ -469,7 +849,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Oct 2022
+  Page last updated on 04 Oct 2022
 </div>
 
 

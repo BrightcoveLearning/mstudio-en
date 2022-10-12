@@ -55,7 +55,7 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/media/",
+      "newURL": "https://mstudio.support.brightcove.com/analytics/",
       "oldURL": "/index"
   },
 
@@ -75,12 +75,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/analytics/",
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "newURL": "https://mstudio.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
