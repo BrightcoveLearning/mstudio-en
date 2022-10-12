@@ -19,6 +19,8 @@
       url: '/media/editing-video-details.html'
     - name: 'Embedding a Video on a Webpage'
       url: '/media/embedding-videos-web.html'
+    - name: 'Generating Captions for Videos'
+      url: '/media/generating-captions-videos.html'      
     - name: 'Managing Text and Audio Tracks'
       url: '/media/managing-text-audio-tracks.html'
     - name: 'Managing Text Tracks'
@@ -31,6 +33,8 @@
       url: '/media/reviewing-social-activity.html'
     - name: 'Uploading Videos'
       url: '/media/uploading-videos.html'
+    - name: 'Using the Caption Editor'
+      url: '/media/using-the-caption-editor.html'
 - section: 
   name: 'Reviewing Analytics'
   url: '/analytics/'
