@@ -21,7 +21,7 @@
 title: Marketing Studio Documentation
 email: training@brightcove.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This site is under construction.
+   Brightcove Marketing Studio is a new video communications solution that makes it easy for your entire marketing team to access, implement, and measure video content across all kinds of programs, from brand to demand generation and customer retention.
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: "https://mstudio.support.brightcove.com"
 site_domain: "mstudio.support.brightcove.com"
