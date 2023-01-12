@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Brightcove {{ site.product_short }} is designed to simplify the process of publishing your videos so that your single upload plays beautifully on the desktop, mobile device, and connected TV, no matter the content, resolution, or connection speed.">
+  
+  <title>Best Practices: The Video Creating, Transcoding, and Uploading Workflow</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <span class="product-logo">
+      <a href="https://support.brightcove.com/"><img src="/assets/s-site-assets-images/blogo-svg/black.svg" alt="Documentation Home" style="max-width: 2rem;min-width: 1rem;margin-right: 1rem;"></a>
+      <a href="/"><img src="/assets/s-site-assets-images/MarketingStudio_H_K.svg" alt="Brightcove" style="max-width: 200px;min-width: 100px;"></a>
+    </span>
+    <select id="site_select" class="bcls-select" style="margin-left: 1rem;max-width: 250px;">
+      <option value="">Other Brightcove Docs</option>
+      
+        
+          <option value="https://support.brightcove.com">Documentation Home</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+        
+      
+        
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+      
+        
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+      
+        
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+      
+        
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+        
+      
+    </select>
+
+<!-- GTranslate: https://gtranslate.io/ -->    
+<select class="bcls-select" onchange="doGTranslate(this);"><option value="">Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script translate="no">
+/* <![CDATA[ */  
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+<!-- &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span> -->
+    <br>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
+      
+        <li class="breadcrumb-item"><a href="/general/">General</a></li>
+      
+    
+      
+        <li class="breadcrumb-item"><a href="/general/references/">References</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Best Practices: The Video Creating, Transcoding, and Uploading Workflow</li>
+      
+    
+  </nav>
+</header>
+<main>
+<div class="container">
+  <div id="bc_veggie_burger_wrapper" style="margin-top: .5rem;margin-bottom: 1rem;z-index: 9999"><img id="bc_veggie_burger" src="/assets/images/s-feather-img/x.svg" alt="Navigation Menu" aria-expanded="false" aria-label="Menu" aria-controls="mainnav" style="min-height: 30px;z-index:99999"></div>
+
+  <!-- <div id="side_nav" class="col-sm-3 left-side-bar" style="margin-left: -500px; margin-right: 6em;">
+  <div id="side_nav" class="col-sm-3 left-side-bar"> -->
+
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em;display: inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+      
+        <nav class="sidenav" aria-label="Main">
+          
+            
+              
+              <h5><a href="/">Home</a></h5>
+              
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Getting Started</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/get-started/getting-started-marketing-studio.html">Getting Started with Marketing Studio</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/marketing-studio-training-videos.html">Marketing Studio Training Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Uploading and Publishing Your First Video</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Managing Videos</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details.html">Editing Video Details</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details-using-quick-edit.html">Editing Video Details using Quick Edit</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/embedding-videos-web.html">Embedding a Video on a Webpage</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-audio-tracks.html">Managing Text and Audio Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-tracks.html">Managing Text Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-videos.html">Managing Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/publishing-videos-social.html">Publishing Videos to Social Media</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/reviewing-social-activity.html">Reviewing Social Activity</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/uploading-videos.html">Uploading Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Reviewing Analytics</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/analytics/getting-started-analytics.html">Getting Started with Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-individual-viewers-analytics.html">Reviewing Individual Viewers Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-social-analytics.html">Reviewing Social Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-web-analytics.html">Reviewing Web Analytics</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administering Accounts</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/admin/managing-profile-information.html">Managing Profile Information</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Release Notes</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/release-notes/marketing-studio-release-notes.html">Marketing Studio Release Notes</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Support</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" id="main_content">
+  <!-- bootstrap layout -->
+
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;margin-left:3em;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>Best Practices: The Video Creating, Transcoding, and Uploading Workflow</h1>
+  <summary>Brightcove {{ site.product_short }} is designed to simplify the process of publishing your videos so that your single upload plays beautifully on the desktop, mobile device, and connected TV, no matter the content, resolution, or connection speed.</summary>
+  <section class="bcls-section">
+    <p>When you upload your video, Marketing Studio automatically transcodes your single video into a collection of renditions, each suitable for the typical range of your viewers’ bandwidth and resolution. Then, Marketing Studio dynamically detects the screen size and connection speed from the environment where your video plays, and serves the right rendition of your video to maximize quality given the speed and power available to each individual viewer. This article offers best practices for recording, exporting, uploading and publishing your Marketing Studio videos that assures optimum playback of your content everywhere it plays.</p>
+    <p>The tables below summarize the settings that you can use when creating video content:</p>
+    <h3 class="BCL_subsectionTitle">Video</h3>
+    <table class="bcls-table">
+      <tbody class="bcls-table__body">
+        <tr>
+          <td  style="width:25%"><strong>Format</strong></td>
+          <td  style="width:75%">MP4, M4V, MOV</td>
+        </tr>
+        <tr>
+          <td ><strong>Codec</strong></td>
+          <td >H.264, H.265 (HEVC)<sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+        </tr>
+        <tr>
+          <td ><strong>Bitrate</strong></td>
+          <td >2x the bitrate of the highest rendition</td>
+        </tr>
+        <tr>
+          <td ><strong>Frame rate</strong></td>
+          <td >Constant, usually between 15 - 60 frames per second</td>
+        </tr>
+        <tr>
+          <td ><strong>Aspect ratio</strong></td>
+          <td >Your video aspect ratio will be preserved. An aspect ratio of 16:9 is common.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Notes</h4>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> HEVC support is a paid add-on. Contact your Customer Success Manager if you are interested in adding HEVC support to your account. See <a href="https://apis.support.brightcove.com/ingest-profiles/guides/hevc-video.html">HEVC Video</a> for more information. Also note that <strong>HDR video is not currently supported with any codec</strong>.</li>
+    </ul>
+    <h3 class="BCL_subsectionTitle">Audio</h3>
+    <table class="bcls-table">
+      <tbody class="bcls-table__body">
+        <tr>
+          <td  style="width:25%"><strong>Codec</strong></td>
+          <td  style="width:75%">AAC (Advanced Audio Codec)</td>
+        </tr>
+        <tr>
+          <td ><strong>Bit rate</strong></td>
+          <td >Constant, 128 kbps</td>
+        </tr>
+        <tr>
+          <td ><strong>Channels</strong></td>
+          <td >Stereo</td>
+        </tr>
+      </tbody>
+    </table>
+    &nbsp;
+    <p>Now, you are ready to look further into the details of these settings:</p>
+    <p>The Marketing Studio publication workflow includes the following processes:</p>
+    <ul>
+      <li><a href="#beforerecord">Step 1: Before you Record</a></li>
+      <li><a href="#recording">Step 2: Recording</a></li>
+      <li><a href="#exporting">Step 3: Exporting</a></li>
+      <li><a href="#uploading">Step 4: Uploading</a></li>
+      <li><a href="#transcoding">Step 5: Transcoding</a></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="beforerecord">Step 1: Before you Record</h2>
+    <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">Source Encoding</h3>
+      <p>There are many factors that impact the overall results of transcoded media. It is not realistic to provide a one-size-fits-all recommendation, so this step will list some of the more important considerations and how they affect the output.</p>
+      <div class="BCL_subsection">
+        <h4 class="BCL_subsectionTitle">General</h4>
+        <ul>
+          <li>Try to start with the highest possible source media if possible. Successive transcode passes reduce the overall quality exponentially. If possible, start with the uncompressed source. Because of increased file transfer and ingestion times, it may not always make sense to send a raw source. In these cases, it is best to upload a source with 2-3x the bitrate of the highest rendition you expect to generate. So if you intend to have a top rendition with a video bitrate of 3 Mbps, then you would want to upload a source video with a bitrate of 6-9 Mbps.</li>
+          <li>If the raw source must be compressed before uploading, H.264 and AAC are the preferred video and audio codecs.</li>
+          <li>Do not use multiple video or audio streams. Occasionally we see source media that may have more than one audio or video stream. This is often the case with media copied directly from a DVD. While we make a best guess as to which stream to use, there is no way for us to know what stream was preferred.</li>
+          <li>Avoid stream delays. For example, some video editing tools will inject a start time for the audio stream such that the audio starts playing at some time after the video. We have found that some tools introduce audio sync issues during this process.</li>
+        </ul>
+      </div>
+      <div class="BCL_subsection">
+        <h4 class="BCL_subsectionTitle">Video</h4>
+        <ul>
+          <li>The frame size should be at least as large as the largest anticipated rendition. However, do not scale media to a frame size larger than the original.</li>
+          <li>H.264 requires that frame sizes are multiples of 4 and is optimized for multiples of 16. We will scale transcodes to meet this requirement, but for best results source media should already be encoded in multiples of 16. Multiples of 8 or 4 will also work though with a slight performance decrease.</li>
+          <li>Avoid interlacing. Most web and mobile video players do not handle interlaced content well. While we will detect and remove interlacing, there can be a quality loss during the conversion.</li>
+          <li>Avoid anamorphic video. Anamorphic video, or video with a non-square Pixel Aspect Ratio, does not play correctly in some mobile and Web players. We attempt to detect anamorphic video and convert it, but occasionally the original source metadata is incorrect. This can prevent us from converting the material correctly.</li>
+          <li>If you are creating a screencast with a tool such as Camtasia, see <a href="/publish/general/creating-and-publishing-high-quality-screencasts.html">Creating and Publishing High Quality Screencasts</a> for some best practices and tips when exporting your screencast and uploading it to Marketing Studio.</li>
+        </ul>
+      </div>
+      <div class="BCL_subsection">
+        <h4 class="BCL_subsectionTitle">Audio</h4>
+        <ul>
+          <li>For maximum compatibility, use stereo or mono audio and avoid 5.1.</li>
+          <li>Normalize the audio tracks to standard levels such that you avoid "clipping" while also avoiding a low volume.</li>
+          <li>Make sure that audio levels are consistent across media that might be viewed together.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="recording">Step 2: Recording</h2>
+    <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">What is my content and where will it play?</h3>
+      <p>In most cases, when you publish your videos using Marketing Studio, they look great across all distribution targets, whether they are playing amid other content within a browser, in full-screen mode, in the confines of small mobile device screens, or spread out across large monitors. Still, it's best when recording your video to make a practice of considering both the nature of your content and the viewing conditions of your audience. You can take some measures when recording tricky content to show under challenging conditions, such as an instructional screen cast with small text you would like to make crisp and legible from both a player included with other browser content and as a full screen video, or an HD news cast shown to countries with populations having low bandwidth Internet access.</p>
+      <p>Here are some recommendations for recording practices to avoid issues with content and playback:</p>
+      <ul>
+        <li><strong>De-interlace at record-time</strong>. For the best quality playback, Marketing Studio de-interlaces all content. When recording with a camcorder, set the record setting to progressive not interlace. If you are working with an already recorded interlaced video as a source file, opt to check the de-interlace setting within your video editing software at compression time in preparation for uploading to Marketing Studio. If you do not transcode your video with Marketing Studio, and you shot an interlaced video, de-interlace the video file before uploading it.</li>
+        <li><strong>Capture at a constant frame rate.</strong> To best avoid stuttering during playback, record video at a constant frame rate and avoid a variable frame rate when creating your source files. Also, shoot progressive and use the same frame-rate you will publish to - 30 fps is a good place to start.</li>
+        <li><strong>Adopt a strategy for screencasts.</strong> Creating recordings with clear, crisp, and legible text is especially challenging when creating software tutorial videos you intend to play both from a player within a browser and in a full-screen mode. See <a href="/publish/general/creating-and-publishing-high-quality-screencasts.html">Creating and Publishing High Quality Screencasts</a> for some best practices and tips when exporting your screencast and uploading it to Marketing Studio.</li>
+        <li><strong>Avoid camera shake.</strong> While this may seem obvious for viewing, shaking actually impacts the encoder's ability to compress material using motion estimation algorithms. In other words, lower compression and lower quality.</li>
+        <li><strong>Avoid noisy backgrounds.</strong> This applies to video as well as audio. In the case of video, things like background movement (e.g. traffic) and complex background images (e.g. noisy wallpaper) all impact compression negatively. Similarly, background noise during an interview reduces audio compression.</li>
+        <li><strong>Use proper lighting.</strong> Darker scenes can be more difficult to encode without quality loss.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="exporting">Step 3: Exporting</h2>
+      <h3 class="BCL_subsectionTitle">What compression format do I upload to Marketing Studio?</h3>
+      <p>Brightcove recommends uploading a video source file encoded as an H.264 format to leverage optimum quality for the widest range of delivery targets. The H.264 codec offers the maximum opportunity for Marketing Studio's transcoding engine to create the highest quality renditions for the range of resolutions and bandwidths where your video plays. See <a href="/general/references/supported-video-and-audio-formats-codecs-and-containers.html">Supported Video Codecs and Containers</a> for more on the distinction between codecs, containers, and file types. For detailed specifics on the best format for your Marketing Studio video uploads, see <a href="/general/references/video-source-file-specifications-and-recommendations.html">Video Source File Specifications and Recommendations</a>.</p>
+      <h3 id="quicktime" class="BCL_subsectionTitle">Checking your video's codec</h3>
+      <p>To be sure your video source file is encoded in a H.264 format, you can verify the format in the QuickTime player's movie inspector:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Open QuickTime Player. You can get QuickTime for free at <a href="https://www.apple.com/quicktime/download/">https://www.apple.com/quicktime/download/</a>.</li>
+        <li>Select <strong>File</strong> &gt; <strong>Open File... </strong>and choose your exported video file.</li>
+        <li>From your opened video in the QuickTime player, select <strong>Window </strong>&gt; <strong>Show Movie Inspector</strong>.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-general-img/node6187-inspector.png" /></figure>
+        </li>
+        <li>In the movie inspector window for your video, check that the <strong>Format</strong> is H.264/MPEG-4 AVC (Advanced Video Coding).</li>
+      </ol>
+      <p>The QuickTime movie inspector is a handy tool for reporting the format, resolution, frame rate, and other properties of your compressed video source file.</p>
+      <h3 id="principles" class="BCL_subsectionTitle">Guiding principles when exporting from video editing software</h3>
+      <p>When compressing and exporting videos from your favorite video editors, we recommend compressing your videos using an H.264 codec and letting Marketing Studio automatically create renditions best for multiple resolutions and bit rates. In addition, we recommend:</p>
+      <ul type="square">
+        <li><strong>Opt out of Flash</strong>. When rendering your videos from video production software, select an H.264 codec option, that is a codec, or container<em> other than</em> Flash or SWF.</li>
+        <li><strong>Avoid single-target formatting</strong>. Avoid the streamlined encoding options that come with your editing software offering a one-click solution to encode your video for a specific target such as the web, iPhone, YouTube, DVD, or BlueRay. To let Marketing Studio take care of distribution for you, format your video using QuickTime conversion settings that creates the most flexible native H.264 codec, and let Marketing Studio create multiple renditions from your single H.264 upload to serve to multiple distribution targets including the web, iPhone, and YouTube, as well as multiple resolutions and connection speeds.</li>
+        <li><strong>Multi-pass, if you have the time</strong>. Best practices advise uploading the highest quality video possible, and multi-pass processing is one of the best practices for creating a quality source file. Under some conditions, the marginally improved quality of your video might not justify the time it takes to encode using a two-pass process. Two-pass encoding can reduce the incidence of video artifacts and provides the most benefit to videos that have areas of high motion.</li>
+        <li><strong>Don't be stingy with file size.</strong> Marketing Studio is built to handle large file uploads. If you're used to compressing files for the sake of successful uploads, don't. Be sure to upload a high quality source file.</li>
+        <li><strong>Get us a high quality file. </strong>We recommend a source with 2-3x the bitrate of the highest rendition you expect to generate. So if you intend to have a top rendition with a video bitrate of 3 Mbps, the you would want to upload a source video with a bitrate of 6-9 Mbps. Also remember, sometimes videos that have too much data do not stream via HTTP smoothly. Excessively high quality video can cause buffering.</li>
+        <li><strong>Stay consistent with the frame rate</strong>. Export at the frame rate you shot at to avoid stuttering. Also, if the export frame rate setting is not the same as the source, you risk asynchronous video and audio tracks.</li>
+        <li><strong>Keep a copy of your native file</strong>: It's a great practice to save your native video files in case you want to edit them, compress them anew, or re-encode them. Use a profile from the <a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">list of Standard Ingest Profiles</a> that matches your target audience, or create your own ingest profile. </li>
+        <li><strong>Consider action and size when exporting for high resolution</strong>: High resolution videos especially benefit from using minimum bit rates while maintaining quality play. See <a href="video-source-file-specifications-and-recommendations.html#highres">High resolution encoding recommendations</a> for bit rate minimums when considering video size, aspect ratio, and the amount of action in the content.</li>
+        <li><strong>Adopt a mobile strategy</strong>. If you want to show your videos on mobile devices in addition to desktop monitors, you must encode your videos to the flexible H.264 format and consider other encoding options. </li>
+      </ul>
+      <h3 class="BCL_subsectionTitle">Step-by-Step export instructions</h3>
+      <p>For recommended specific instructions for exporting videos from tools like Apple Final Cut Pro X, Telestream ScreenFlow, Adobe Premiere Pro or Techsmith Camtasia Studio, refer to the detailed instructions provided by these software packages.</p>
+  </section>
+    <section class="bcls-section">
+    <h2 id="uploading">Step 4: Uploading</h2>
+    <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">How do I get the flexibility I need from my source file?</h3>
+      <p>Upload your video or videos using the Upload module in Marketing Studio Studio. &nbsp;See&nbsp;<a href="/media/manage/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a>&nbsp;for more information.&nbsp;Alternatively, you can upload a batch of videos using the <a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html">Dynamic Ingest API</a>.</p>
+      <p>When you upload a video to the Marketing Studio platform, Marketing Studio stores it as a digital master. This digital master is the source for all renditions Marketing Studio creates. The digital master is also the source if you should ever elect to <a href="/media/manage/retranscoding-videos-using-media-module.html">retranscode your video</a> in order to change your transcode settings.</p>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="transcoding">Step 5: Transcoding</h2>
+      <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">How long will it take to process my video?</h3>
+      <p>It can take up to three times the duration of the video for the transcoding process to complete.</p>
+    </div>
+    <div class="BCL_subsection">
+      <h3 class="BCL_subsectionTitle">What is my content, where is my audience watching it, and what is my audience watching it on?</h3>
+      <p>If you want your videos to play beautifully across a range of screen sizes such as in the three screen strategy of publishing to desktop, mobile device, and wide monitor TVs, and if you want your videos to play smoothly across a range of connection speeds from dial-up, to cellular, to high speed cable, you must start with a video file that plays as optimally as possible in each of those environments. To assure that your video shows as beautifully as possible across the variety of the size and speed conditions of your viewers, Marketing Studio creates a collection of video files, called multi-bitrate renditions, each of various sizes and qualities. When Marketing Studio detects the resolution, bandwidth, and other conditions of the device requesting to play your video, it serves the best rendition of your video for that environment, be it a smaller and slower version to fit the constraints of a mobile device screen or low bandwidth connection, or be it a full-quality version that takes advantage of wide screen monitors with high speed, and high definition capabilities.</p>
+      <p>You have fine grain control of the speed, size, and encoding quality of these rendition files. If you know the connection rates, devices and screen resolutions of your audience, you can tailor each rendition file of your videos to create a collection of renditions that targets size and speed conditions of those viewers.</p>
+      <h3 class="BCL_subsectionTitle">Further reading on setting multi-bitrate renditions</h3>
+      <ul>
+        <li>See <a href="/general/architecture/overview-dynamic-delivery.html">Overview of Dynamic Delivery</a> for an overview of Dynamic Delivery transcoding</li>
+        <li>See <a href="/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles</a> for detailed information on recommended transcode setting</li>
+        <li>See <a href="video-source-file-specifications-and-recommendations.html#highres">High resolution encoding recommendations</a> for best practices for setting renditions for high resolution videos</li>
+        <li>See <a href="https://player.support.brightcove.com/playback/determining-which-rendition-will-play.html">Determining Which Rendition Will Play</a> to learn how the Brightcove Player will determine which rendition will be played</li>
+        <li>See <a href="/general/references/optimal-video-dimensions.html">Optimal Video Dimensions</a> for recommended video width and height for 16:9 and 4:3 aspect ratio sizing</li>
+      </ul>
+    </div>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 12 Oct 2022
+</div>
+
+
+
+</main>
+<div class="footer-container">
+  <footer class="bcls-footer" role="contentinfo">
+    <div class="row">
+      <div class="region region-footer-top-center col-md-12">
+        <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+          <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
+  
+          <h2>Brightcove Support</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://status.brightcove.com">System Status</a>
+            </li>
+            <li>
+              <a href="https://supportportal.brightcove.com">Contact Support</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/search.html">Search all Documentation</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+  
+          <h2>Training</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online Courses</a>
+            </li>
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a>
+            </li>
+            <li>
+              <a href="https://university.brightcove.com/">Brightcove University</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+  
+          <h2>Brightcove</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://www.brightcove.com">Brightcove.com</a>
+            </li>
+            <li>
+              <a href="https://community.brightcove.com/s/">Bright Spot Community Forum</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/product-updates.html">Product Release Notes</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/doc-updates.html">Documentation Updates</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="region region-footer-bottom-center col-md-12">
+        <div class="bcls-copyright footer-menu">
+          <table>
+            <tr>
+              <td>
+                <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              </td>
+              <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+              <td>
+                <div class="gf-links-cols footer-menu">
+                  <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

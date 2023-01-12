@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic you will learn how to view the billing information for an account.">
+  
+  <title>Viewing Billing Information</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <span class="product-logo">
+      <a href="https://support.brightcove.com/"><img src="/assets/s-site-assets-images/blogo-svg/black.svg" alt="Documentation Home" style="max-width: 2rem;min-width: 1rem;margin-right: 1rem;"></a>
+      <a href="/"><img src="/assets/s-site-assets-images/MarketingStudio_H_K.svg" alt="Brightcove" style="max-width: 200px;min-width: 100px;"></a>
+    </span>
+    <select id="site_select" class="bcls-select" style="margin-left: 1rem;max-width: 250px;">
+      <option value="">Other Brightcove Docs</option>
+      
+        
+          <option value="https://support.brightcove.com">Documentation Home</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+        
+      
+        
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+      
+        
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+      
+        
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+      
+        
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+        
+      
+    </select>
+
+<!-- GTranslate: https://gtranslate.io/ -->    
+<select class="bcls-select" onchange="doGTranslate(this);"><option value="">Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script translate="no">
+/* <![CDATA[ */  
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+<!-- &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span> -->
+    <br>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
+      
+        <li class="breadcrumb-item"><a href="/admin/">Admin</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Viewing Billing Information</li>
+      
+    
+  </nav>
+</header>
+<main>
+<div class="container">
+  <div id="bc_veggie_burger_wrapper" style="margin-top: .5rem;margin-bottom: 1rem;z-index: 9999"><img id="bc_veggie_burger" src="/assets/images/s-feather-img/x.svg" alt="Navigation Menu" aria-expanded="false" aria-label="Menu" aria-controls="mainnav" style="min-height: 30px;z-index:99999"></div>
+
+  <!-- <div id="side_nav" class="col-sm-3 left-side-bar" style="margin-left: -500px; margin-right: 6em;">
+  <div id="side_nav" class="col-sm-3 left-side-bar"> -->
+
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em;display: inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+      
+        <nav class="sidenav" aria-label="Main">
+          
+            
+              
+              <h5><a href="/">Home</a></h5>
+              
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Getting Started</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/get-started/getting-started-marketing-studio.html">Getting Started with Marketing Studio</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/marketing-studio-training-videos.html">Marketing Studio Training Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Uploading and Publishing Your First Video</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Managing Videos</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details.html">Editing Video Details</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details-using-quick-edit.html">Editing Video Details using Quick Edit</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/embedding-videos-web.html">Embedding a Video on a Webpage</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-audio-tracks.html">Managing Text and Audio Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-tracks.html">Managing Text Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-videos.html">Managing Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/publishing-videos-social.html">Publishing Videos to Social Media</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/reviewing-social-activity.html">Reviewing Social Activity</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/uploading-videos.html">Uploading Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Reviewing Analytics</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/analytics/getting-started-analytics.html">Getting Started with Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-individual-viewers-analytics.html">Reviewing Individual Viewers Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-social-analytics.html">Reviewing Social Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-web-analytics.html">Reviewing Web Analytics</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administering Accounts</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/admin/managing-profile-information.html">Managing Profile Information</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Release Notes</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/release-notes/marketing-studio-release-notes.html">Marketing Studio Release Notes</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Support</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" id="main_content">
+  <!-- bootstrap layout -->
+
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;margin-left:3em;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+
+  
+    
+
+
+<h1>Viewing Billing Information</h1>
+<article class="bcls-article">
+  <summary>In this topic you will learn how to view the billing information for an account.</summary>
+  <section class="bcls-section">
+    <p>You can use Video Cloud Studio to view the billing information for an account. Note that to access the Billing page, you must be a Video Cloud Studio user with the Administrator role and you must have an annual contract associated with your account.</p>
+    <p>To access the Billing page:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Login to Video Cloud Studio.</li>
+      <li>Open the <strong>Admin</strong> module and then <strong>Billing</strong>.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: The Billing page is not available for trial accounts.</aside>
+    <p>The main Billing page will display.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Main billing page" src="/assets/images/s-admin-img/node16461-billing-main.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>If a <strong>Billing Account</strong> dropdown list appears at the top of the page, this indicates you have multiple contracts with Brightcove. Use the dropdown to select a contract to view billing details.</li>
+        <li>If you have one or more Zencoder accounts as well as Video Cloud Studio accounts, VOD Zencoder Minutes Used items may appear on your Video Cloud Studio billing statement. The information is included as a convenience, just to give you a complete picture of your billing - these charges are not related to Video Cloud Studio.</li>
+        <li>Updating of billing information: Analytic and usage data is collected continuously and can be viewed in the Analytics Module in Video Cloud Studio.  Daily rollups of usage data are available 2-3 days later to account for late arriving data (such as, but not limited to, bandwidth usage from CDN logs).  Data used specifically for billing is generated from the analytic and usage data on a regular schedule at the time invoices are created.</li>
+      </ul>
+    </aside>
+    <h3>Expired accounts</h3>
+    <p>If you have older, expired accounts, you can also select those from the <strong>Billing Account</strong> dropdown:</p>
+    <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/s-admin-img/billing-expired-account.png" alt="Expired Accounts"> </figure>
+    <p>With expired accounts, there is an issue where the last period of an expired contract is not available. In the above example, if the expired contract is selected, data for August 2020 will not be available.  Contact your Customer Success Manager or Brightcove Support if this information is needed. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="metrics">Billing metrics</h2>
+    <p>The data displayed on the Billing page will vary based upon the number of accounts you have and your account entitlements. For example, if you do not use DRM, that information will not be displayed.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Billing information for the previous month will not be available until the 7th of the current month.</aside>
+    <p>The Contract Overview section may display the following billing metrics.</p>
+    <h3>Bandwidth</h3>
+    <p>The Bandwidth metric consists of 2 submetrics which are <strong>VOD</strong> Edge bandwidth plus <strong>Live</strong> Edge bandwidth. It displays total bandwidth / contracted bandwidth. Total bandwidth includes video and player loads. The name for this metric name will match what you see in your billing invoice to track the bandwidth usage (i.e. it may not display as Bandwidth). If the bandwidth amount is over quota, the graphic will appear in red. The bar chart can be used to view the bandwidth <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Bandwidth data is delayed by up to 3-5 days, though usually it is available sooner. The data is partly dependent on information from CDNs, so there may be delays on their side that are beyond our control.</aside>
+    <h3>Streams</h3>
+    <p>The Streams metric displays the total stream starts / contracted stream starts. This should match the number of video views in the Analytics module. If the number of stream starts is over quota, the graphic will appear in red. The bar chart can be used to view the streams (in thousands) <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The number of stream starts corresponds to the number of video views in the Analytics module.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: You may notice discrepancies when comparing billing data to analytics data. This can be due to comparing reconciled billing data to unreconciled analytics data. The reconciliation process requires server logs provided by the CDNs and there may be a delay in getting the server logs and processing the data.</aside>
+    <h3>Encryption Licenses</h3>
+    <p>The Encryption Licenses metric will display the total DRM licenses / contracted licenses. If the number of licenses used is over quota, the graphic will appear in red. The bar chart can be used to view the number of licenses used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Regardless of the Player Preload setting, encryption is always loaded even before the video is streamed to avoid delay in loading the video. For this reason, you may see more Encryption Licenses than Streams in your billing metrics.</aside>
+    <h3>Auto Captions</h3>
+    <p>The Auto Captions metric will display the total number of auto captioning minutes used / contracted amount.</p>
+    <h3>APS and ANS</h3>
+    <p>Active Paying Subscribers (APS) and Active NonPaying Subscribers (ANS) metrics for  Brightcove Beacon Evergent Billing.</p>
+    <h3>Managed Content/Storage</h3>
+    <p>The Storage metric will display the total storage / contracted storage. If the storage used is over quota, the graphic will appear in red. The bar chart can be used to view the storage used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <aside class="bcls-aside bcls-aside--information">
+      <p>Notes:</p>
+      <ul>
+        <li>Storage is only displayed for Professional and Enterprise accounts</li>
+        <li>Video renditions/assets and digital masters are stored separately, but the Storage metric represents the total combined storage for both renditions/assets and digital masters</li>
+      </ul>
+    </aside>
+    <h3>Transcoding</h3>
+    <p>Transcoding refers to the total amount of output GBs processed by Brightcove in connection with the conversion of a video file to additional video formats or bit rates. If the transcoding used is over quota, the graphic will appear in red. The bar chart can be used to view the transcoding used <strong>Contract to Date</strong> or <strong>Month to Date</strong>.</p>
+    <h3>Origin Serving Bandwidth</h3>
+    <p>Bandwidth usage for bytes delivered only (applies to BYO CDN publishers). This is the bandwidth from the Brightcove Origin. If you are using your own CDN, Brightcove does not track the amount of  bandwidth from that CDN, you will need to ask your CDN for the bandwidth data.</p>
+    <h3>Ads Delivered</h3>
+    <p>Total number of ads delivered. This also ties to the overall value of the product. This metric also provides data for downstream collateral or information regarding ROI for a publisher using the Live module.</p>
+    <h3>Alive Bandwidth</h3>
+    <p>Input hours transcoded of your content.</p>
+    <h3>Brightcove Live Output Tiers</h3>
+    <p>The Brightcove Live Output Tiers metric will display the total live hours/ contracted live hours. If the number of hours is over quota, the graphic will appear in red. The bar chart can be used to view the number of hours used <strong>Contract to Date</strong> or <strong>Month to Date</strong>. When this metric is selected, the output hours for each tier will be displayed above the bar chart.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-live-output-tiers.png" /></figure>
+    <p>It will take 3 days after an event for the Live module hours used and live bandwidth to appear in the Billing UI. Billing by ingestion tier is as follows:</p>
+    <ul>
+      <li>Tier 1 is charged at 1.0x hours</li>
+      <li>Tier 2 is charged at 1.5x hours</li>
+      <li>Tier 3 is charged at 2.0x hours</li>
+    </ul>
+    <p>When using <a href="https://live.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html">custom Live ingest profiles</a>, the tier will be decided by the total bitrate of the Live profile. Note that with RTMP outputs, billing begins when a job starts to when it ends, including any Reconnect Timeout if an encoder is  shut off.</p>
+    <h3>Brightcove Live DVR Hours</h3>
+    <p>The <strong> Brightcove Live DVR Hours</strong> displays the input hours transcoded + the Live video hours with DVR enabled. If the number of hours is over quota, the graphic will appear in red.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-live-dvr-hours.png" /></figure>
+    <h3>Live Origin</h3>
+    <p>Live origin bandwidth is defined as a cache-miss from the CDN and requests that need to be fulfilled by the live origin. It has cost implications on the system when reselling bandwidth and will help assess margins per customer and overall profitability of the platform to drive future pricing discussions.</p>
+    <h3>VOD Origin</h3>
+    <p>Live VOD origin bandwidth (BYO CDN).</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="details">Viewing account details</h2>
+    <p>The Account Details section of the page will display the details for the selected metric. To select a metric to view, click an item in the Contract Overview section or select one using the dropdown list in the Account Details section.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select metric" src="/assets/images/s-admin-img/node16461-select-metric.png" /></figure>
+    <p>The bar chart will update to display the details for the selected metric. Data for the current month and past 12 months will be displayed. Hovering over the chart will display the details for that month.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="graph details" src="/assets/images/s-admin-img/node16461-graph-details.png" /></figure>
+    <p>If you hover over the current month, however, note that this is <strong>not</strong> realtime data. The data for the current month is only as recent as four days prior to the current date, and is only an estimate.</p>
+    <p>A list of all accounts will appear below the bar chart. By default, if you have multiple accounts, the data for all accounts will be displayed. To view data for a single account, select an account by clicking the radio button for the account or by clicking on the row.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="export">Exporting data</h2>
+    <p>To download <strong>invoiced</strong> billing data in a CSV format, click <strong>CSV</strong> in the page header.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="export data" src="/assets/images/s-admin-img/billing-export.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="deleted_videos">Deleted videos and digital masters</h2>
+    <p>Note that when you delete videos, digital masters, and other assets, the physical files are not removed immediately. We keep the content for 12-14 days (for Dynamic Delivery) and even longer for Legacy. This is done for two reasons:</p>
+    <ul>
+      <li>In case the videos were deleted by mistake and you want to restore them</li>
+      <li>So  you can still get the metadata and analytics for the videos</li>
+    </ul>
+    <p>As long as the physical files are still in place, you <strong>will</strong> see deleted media assets reflected in your billing.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Brightcove has purge capability allowing customers to skip the 12-14 days grace period for deleted videos. You can ask <a href="https://supportportal.brightcove.com/s/login/?language=en_US&startURL=%2Fs%2F&ec=302l">Support</a> to do it.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="locked_accounts">Locked accounts</h2>
+    <p>Storage for locked accounts will continue to be reflected in the Billing data for up to 60 days.</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 17 Nov 2022
+</div>
+
+
+
+</main>
+<div class="footer-container">
+  <footer class="bcls-footer" role="contentinfo">
+    <div class="row">
+      <div class="region region-footer-top-center col-md-12">
+        <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+          <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
+  
+          <h2>Brightcove Support</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://status.brightcove.com">System Status</a>
+            </li>
+            <li>
+              <a href="https://supportportal.brightcove.com">Contact Support</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/search.html">Search all Documentation</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+  
+          <h2>Training</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online Courses</a>
+            </li>
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a>
+            </li>
+            <li>
+              <a href="https://university.brightcove.com/">Brightcove University</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+  
+          <h2>Brightcove</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://www.brightcove.com">Brightcove.com</a>
+            </li>
+            <li>
+              <a href="https://community.brightcove.com/s/">Bright Spot Community Forum</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/product-updates.html">Product Release Notes</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/doc-updates.html">Documentation Updates</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="region region-footer-bottom-center col-md-12">
+        <div class="bcls-copyright footer-menu">
+          <table>
+            <tr>
+              <td>
+                <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              </td>
+              <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+              <td>
+                <div class="gf-links-cols footer-menu">
+                  <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic you will learn about troubleshooting techniques when using the Campaign module.">
+  
+  <title>Troubleshooting Campaign Issues</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <span class="product-logo">
+      <a href="https://support.brightcove.com/"><img src="/assets/s-site-assets-images/blogo-svg/black.svg" alt="Documentation Home" style="max-width: 2rem;min-width: 1rem;margin-right: 1rem;"></a>
+      <a href="/"><img src="/assets/s-site-assets-images/MarketingStudio_H_K.svg" alt="Brightcove" style="max-width: 200px;min-width: 100px;"></a>
+    </span>
+    <select id="site_select" class="bcls-select" style="margin-left: 1rem;max-width: 250px;">
+      <option value="">Other Brightcove Docs</option>
+      
+        
+          <option value="https://support.brightcove.com">Documentation Home</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+        
+      
+        
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+      
+        
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+      
+        
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+      
+        
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+        
+      
+    </select>
+
+<!-- GTranslate: https://gtranslate.io/ -->    
+<select class="bcls-select" onchange="doGTranslate(this);"><option value="">Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script translate="no">
+/* <![CDATA[ */  
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+<!-- &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span> -->
+    <br>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
+      
+        <li class="breadcrumb-item"><a href="/campaign/">Campaign</a></li>
+      
+    
+      
+        <li class="breadcrumb-item"><a href="/campaign/admin/">Admin</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Troubleshooting Campaign Issues</li>
+      
+    
+  </nav>
+</header>
+<main>
+<div class="container">
+  <div id="bc_veggie_burger_wrapper" style="margin-top: .5rem;margin-bottom: 1rem;z-index: 9999"><img id="bc_veggie_burger" src="/assets/images/s-feather-img/x.svg" alt="Navigation Menu" aria-expanded="false" aria-label="Menu" aria-controls="mainnav" style="min-height: 30px;z-index:99999"></div>
+
+  <!-- <div id="side_nav" class="col-sm-3 left-side-bar" style="margin-left: -500px; margin-right: 6em;">
+  <div id="side_nav" class="col-sm-3 left-side-bar"> -->
+
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em;display: inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+      
+        <nav class="sidenav" aria-label="Main">
+          
+            
+              
+              <h5><a href="/">Home</a></h5>
+              
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Getting Started</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/get-started/getting-started-marketing-studio.html">Getting Started with Marketing Studio</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/marketing-studio-training-videos.html">Marketing Studio Training Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Uploading and Publishing Your First Video</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Managing Videos</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details.html">Editing Video Details</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details-using-quick-edit.html">Editing Video Details using Quick Edit</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/embedding-videos-web.html">Embedding a Video on a Webpage</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-audio-tracks.html">Managing Text and Audio Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-tracks.html">Managing Text Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-videos.html">Managing Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/publishing-videos-social.html">Publishing Videos to Social Media</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/reviewing-social-activity.html">Reviewing Social Activity</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/uploading-videos.html">Uploading Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Reviewing Analytics</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/analytics/getting-started-analytics.html">Getting Started with Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-individual-viewers-analytics.html">Reviewing Individual Viewers Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-social-analytics.html">Reviewing Social Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-web-analytics.html">Reviewing Web Analytics</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administering Accounts</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/admin/managing-profile-information.html">Managing Profile Information</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Release Notes</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/release-notes/marketing-studio-release-notes.html">Marketing Studio Release Notes</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Support</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" id="main_content">
+  <!-- bootstrap layout -->
+
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;margin-left:3em;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+    <h1>Troubleshooting Campaign Issues</h1>
+    <summary>In this topic you will learn about troubleshooting techniques when using the Campaign module.</summary>
+    <section class="bcls-section">
+      <h2 id="logging">Enabling verbose logging</h2>
+      <p>Enabling verbose logging allows you to view Campaign related information in the browser console. This is helpful when trying to debug Campaign issues. Verbose logging can be enabled by adding&nbsp;<code translate="No">bcverbose=1</code> to the URL of the page with the Campaign-enabled player or by configuring the Campaign plugin with the <code translate="No">"verbose": true</code> option:</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="configure plugin" src="/assets/images/s-campaign-img/admin/node18487-plugin.png" /></figure>
+      <p>Log messages can be viewed in the console.</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="console" src="/assets/images/s-campaign-img/admin/node18487-console.png" /></figure>
+    </section>
+    <section class="bcls-section">
+      <h2 id="leadform">Lead form issues</h2>
+      <p>Below are some common issues and questions we have seen with lead forms.</p>
+      <h3>Why do lead forms continue to show for Marketo Munchkin integrations even after the form has been submitted?</h3>
+      <p>The Munchkin integration doesn't have an API that we can use to ask if the user is known or not. Since we don't know if they’re a known user, we always display the lead form. The Marketo REST integration does offer APIs so we can determine known vs. unknown users. Switching to a Marketo REST integration is recommended and can avoid this issue.</p>
+      <h3>My custom lead form is set to redirect on submit. Why do I see the page that’s redirected to for a second or two after submitting the form?</h3>
+      <p>We have to wait until the page that’s redirected to has fully loaded before dismissing the lead form. One solution is to redirect to a page that is lightweight (doesn’t have many images or JavaScript), or the blank page we set up (located at <code translate="No">https://map.brightcove.com/lead/complete</code>) specifically to address this problem.</p>
+      <h3>I configured my lead form with confirmation HTML. Why do I see a black screen for a couple seconds after submission?</h3>
+      <p>Make sure to change the text color of the HTML. The confirmation HTML is probably visible, you just can’t see it because the default text color is black.</p>
+      <h3>Why doesn't my HubSpot lead form dismiss after submission?</h3>
+      <p>Make sure the lead form in HubSpot is configured to redirect to <code translate="No"><strong>http://map.brightcove.com/lead/complete</strong></code>. If you want to display a confirmation message, configure this within Campaign and not HubSpot.</p>
+      <h3>Why is my lead form not displaying?</h3>
+      <p>If your lead form is not displaying, first ensure all the criteria for showing a lead form have been met. Note that criteria that depend on multiple videos being watched will not work across page refreshes. They are meant for use cases where the next video is automatically queued in the same player.</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Confirm that the Campaign plugin has been added to the player. For information, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a>.</li>
+        <li>Confirm that the integration has been correctly set up and is sent to the plugin.</li>
+        <li>Confirm that the lead form has been added to that player. The response to the call the plugin makes for its config should contain lead form display information under the leadForm property if a lead form has been added to the player.
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="leadform debug" src="/assets/images/s-campaign-img/admin/node18487-leadform-debug.png" /></figure>
+        </li>
+        <li>Confirm that the viewer is not already a lead. The lead form will only be shown if Campaign has identified that the viewer is not already a lead in the marketing automation platform (MAP) or has not already filled out a lead form. The plugin makes a separate JSONP call to the Campaign server to check if the viewer is a lead. If the viewer is a lead, the server responds with a status of 1 and any other identifiers that could be useful in syncing the view data to the MAP. If the viewer is not a lead, the server responds with a status of 0.
+          <ul>
+            <li>Example response for a viewer that is not a lead:
+              <pre>
+  /**/ typeof jsonpCallback_2935650618 === 'function' &amp;&amp;
+   jsonpCallback_2935650618({"status":0});</pre>
+            </li>
+            <li>Example response for a viewer that is a lead:
+              <pre>
+  /**/ typeof jsonpCallback_45936049288 === 'function' &amp;&amp;
+   jsonpCallback_45936049288({"status":1,"eloqua":{"contactId":"5","internalId":"CTCPB000000000005"}});</pre>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="sync">Sync issues</h2>
+      <p>Below are some common sync issues we have seen.</p>
+      <h3>Marketo REST view events fail to sync with the error Activity type id ‘000000’ not found</h3>
+      <p>This happens when the custom Marketo activity associated with the integration has been deleted. When a Marketo REST integration is created, we fetch the activity, store its ID, and use that ID to sync events. The solution (assuming a new Brightcove Video View activity has been created) is to disconnect and re-create the integration to pick up the ID of the new activity.</p>
+      <h3>View Events not Syncing</h3>
+      <p>When the integration is correctly set up with a MAP, viewing data from a Campaign-enabled player should populate the <strong>All Recent Activity</strong> page and view events corresponding to a known lead in the respective MAP should eventually sync to the tool.</p>
+      <p>First, ensure view data is being displayed on the <strong>All Recent Activity</strong> page:</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="viewer activity" src="/assets/images/s-campaign-img/admin/node18487-viewer-activity.png" /></figure>
+      <p>If view events are listed but are not in the MAP, the user may have authorized Campaign with their MAP as a user that doesn’t have sufficient permissions to import view data into the MAP via the API or the integration is not correctly configured. The Campaign homepage lists the status of recent view event sync operations. Feedback should be available there to indicate why view events are not syncing to the MAP.</p>
+      <p>If view events are showing up in Campaign, check to see if the <strong>Status</strong> column is <strong>synced</strong>. This indicates that Campaign was able to successfully deliver the data into your MAP. If you see a status of <strong>unknown_contact</strong>, this means the user was not known and your MAP cannot receive it. Most MAPs only accept third-party data for known users. The solution is to use a custom lead form created in your MAP to ensure you are indeed a known user.</p>
+      <p>If view events are not listed, Campaign may have not been setup with a Campaign-enabled player. Using a browser with developer tools enabled, visit a page that contains the problematic video and ensure that certain HTTP calls are made by the Campaign plugin.</p>
+      <p>When the player loads, the plugin should make a call to the Campaign config endpoint to obtain parameters that determine the behavior of the plugin based on the integration:</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="plugin config" src="/assets/images/s-campaign-img/admin/node18487-debug-config.png" /></figure>
+      <p>If this call is missing from the network traffic, it means the player has not been assigned an integration. For information on how to do this, see <a href="/campaign/general/creating-campaign-enabled-player.html">Creating a Campaign-enabled Player</a>.</p>
+      <p>This call is made using JSONP. If the JSONP response is an empty object, then it is possible the embed code is incorrect and specifies the wrong account ID. An empty object will be returned from this endpoint if the config request fails to include both account and player URL parameters or if the specified account could not be retrieved from the Campaign-specific database (most likely the wrong account was specified in the URL/embed code and it was not found in the database).</p>
+      <pre>
+  /**/ typeof jsonpCallback_78754666587 === 'function' &amp;&amp; jsonpCallback_78754666587({});</pre>
+      <p>If the object has an ID parameter, but is missing an integration parameter, the user has not set up an integration with their marketing automation tool and view events will not be recorded.</p>
+      <p>You will also have data sync issues if the Standard Embed (iframe) code was used when publishing the Campaign-enabled player. Use the Advanced Embed (in-page) code when publishing your player. Standard Embed (iframe) publishing code will not work as the Campaign plugin will be running inside of an iframe and therefore will be unable to access the parent page cookies or&nbsp;URL parameters.</p>
+    </section>
+    <section class="bcls-section">
+      <h2 id="connection">Connection issues</h2>
+      <h3>The Campaign module says that it can’t setup an Eloqua integration</h3>
+      <p>Check the<a href="/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html#requirements"> requirements for Eloqua</a>. If you are using the IP whitelist security feature, Campaign won’t be able to communicate with Eloqua unless you whitelist the specified IP addresses to allow Campaign - Eloqua traffic. Contact <a href="https://supportportal.brightcove.comlanguage=en_US/create">Brightcove Support</a> for more information.</p>
+      <h3>Campaign says that my Marketo REST custom activity is missing fields, but when I look in Marketo, I can see that all fields exist</h3>
+      <p>There are a few things to check:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>The field names must match exactly. "Event 1" is not the same as "Event1".</li>
+        <li>The activity must be approved and not in a draft state.</li>
+        <li>If you deleted the custom activity and re-created it without setting up a new Marketo REST integration, you must disconnect your old integration and create a new one. We lookup the custom activity and store its ID value for each integration. If the ID changes by deleting it, we won’t be able to pick up the new one automatically.</li>
+        <li>If new fields were recently added to the activity it could take up to 24 hours for the change to take effect in Marketo’s system.</li>
+      </ol>
+    </section>
+  </article>
+  
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 06 Jun 2022
+</div>
+
+
+
+</main>
+<div class="footer-container">
+  <footer class="bcls-footer" role="contentinfo">
+    <div class="row">
+      <div class="region region-footer-top-center col-md-12">
+        <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+          <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
+  
+          <h2>Brightcove Support</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://status.brightcove.com">System Status</a>
+            </li>
+            <li>
+              <a href="https://supportportal.brightcove.com">Contact Support</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/search.html">Search all Documentation</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+  
+          <h2>Training</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online Courses</a>
+            </li>
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a>
+            </li>
+            <li>
+              <a href="https://university.brightcove.com/">Brightcove University</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+  
+          <h2>Brightcove</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://www.brightcove.com">Brightcove.com</a>
+            </li>
+            <li>
+              <a href="https://community.brightcove.com/s/">Bright Spot Community Forum</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/product-updates.html">Product Release Notes</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/doc-updates.html">Documentation Updates</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="region region-footer-bottom-center col-md-12">
+        <div class="bcls-copyright footer-menu">
+          <table>
+            <tr>
+              <td>
+                <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              </td>
+              <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+              <td>
+                <div class="gf-links-cols footer-menu">
+                  <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

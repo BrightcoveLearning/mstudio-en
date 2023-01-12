@@ -46,3 +46,69 @@
   path = assets/s-site-assets-template-stylesheets
   url = https://github.com/BrightcoveLearning/s-site-assets-template-stylesheets
   branch = main
+[submodule "_includes/s-admin"]
+	path = _includes/s-admin
+	url = https://github.com/BrightcoveLearning/s-admin
+[submodule "_includes/s-cloudplayout"]
+	path = _includes/s-cloudplayout
+	url = https://github.com/BrightcoveLearning/s-cloudplayout
+[submodule "_includes/s-social"]
+	path = _includes/s-social
+	url = https://github.com/BrightcoveLearning/s-social
+[submodule "_includes/s-players"]
+	path = _includes/s-players
+	url = https://github.com/BrightcoveLearning/s-players
+[submodule "_includes/s-publish"]
+	path = _includes/s-publish
+	url = https://github.com/BrightcoveLearning/s-publish
+[submodule "_includes/s-general"]
+	path = _includes/s-general
+	url = https://github.com/BrightcoveLearning/s-general
+[submodule "_includes/s-campaign"]
+	path = _includes/s-campaign
+	url = https://github.com/BrightcoveLearning/s-campaign
+[submodule "_includes/s-training"]
+	path = _includes/s-training
+	url = https://github.com/BrightcoveLearning/s-training
+[submodule "_includes/s-live"]
+	path = _includes/s-live
+	url = https://github.com/BrightcoveLearning/s-live
+[submodule "_includes/s-web-conferencing"]
+	path = _includes/s-web-conferencing
+	url = https://github.com/BrightcoveLearning/s-web-conferencing
+[submodule "_includes/s-brightcove-interactivity"]
+	path = _includes/s-brightcove-interactivity
+	url = https://github.com/BrightcoveLearning/s-brightcove-interactivity
+[submodule "assets/images/s-admin-img"]
+	path = assets/images/s-admin-img
+	url = https://github.com/BrightcoveLearning/s-admin-img
+[submodule "assets/images/s-cloudplayout-img"]
+	path = assets/images/s-cloudplayout-img
+	url = https://github.com/BrightcoveLearning/s-cloudplayout-img
+[submodule "assets/images/s-social-img"]
+	path = assets/images/s-social-img
+	url = https://github.com/BrightcoveLearning/s-social-img
+[submodule "assets/images/s-players-img"]
+	path = assets/images/s-players-img
+	url = https://github.com/BrightcoveLearning/s-players-img
+[submodule "assets/images/s-publish-img"]
+	path = assets/images/s-publish-img
+	url = https://github.com/BrightcoveLearning/s-publish-img
+[submodule "assets/images/s-general-img"]
+	path = assets/images/s-general-img
+	url = https://github.com/BrightcoveLearning/s-general-img
+[submodule "assets/images/s-campaign-img"]
+	path = assets/images/s-campaign-img
+	url = https://github.com/BrightcoveLearning/s-campaign-img
+[submodule "assets/images/s-training-img"]
+	path = assets/images/s-training-img
+	url = https://github.com/BrightcoveLearning/s-training-img
+[submodule "assets/images/s-live-img"]
+	path = assets/images/s-live-img
+	url = https://github.com/BrightcoveLearning/s-live-img
+[submodule "assets/images/s-web-conferencing-img"]
+	path = assets/images/s-web-conferencing-img
+	url = https://github.com/BrightcoveLearning/s-web-conferencing-img
+[submodule "assets/images/s-brightcove-interactivity-img"]
+	path = assets/images/s-brightcove-interactivity-img
+	url = https://github.com/BrightcoveLearning/s-brightcove-interactivity-img

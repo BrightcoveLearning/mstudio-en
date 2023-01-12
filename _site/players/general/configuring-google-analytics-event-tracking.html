@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic you will learn how to configure Google Analytics event tracking in the Players module.">
+  
+  <title>Configuring Google Analytics Event Tracking</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <span class="product-logo">
+      <a href="https://support.brightcove.com/"><img src="/assets/s-site-assets-images/blogo-svg/black.svg" alt="Documentation Home" style="max-width: 2rem;min-width: 1rem;margin-right: 1rem;"></a>
+      <a href="/"><img src="/assets/s-site-assets-images/MarketingStudio_H_K.svg" alt="Brightcove" style="max-width: 200px;min-width: 100px;"></a>
+    </span>
+    <select id="site_select" class="bcls-select" style="margin-left: 1rem;max-width: 250px;">
+      <option value="">Other Brightcove Docs</option>
+      
+        
+          <option value="https://support.brightcove.com">Documentation Home</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+        
+      
+        
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+      
+        
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+      
+        
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+      
+        
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+        
+      
+    </select>
+
+<!-- GTranslate: https://gtranslate.io/ -->    
+<select class="bcls-select" onchange="doGTranslate(this);"><option value="">Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script translate="no">
+/* <![CDATA[ */  
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+<!-- &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span> -->
+    <br>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
+      
+        <li class="breadcrumb-item"><a href="/players/">Players</a></li>
+      
+    
+      
+        <li class="breadcrumb-item"><a href="/players/general/">General</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Configuring Google Analytics Event Tracking</li>
+      
+    
+  </nav>
+</header>
+<main>
+<div class="container">
+  <div id="bc_veggie_burger_wrapper" style="margin-top: .5rem;margin-bottom: 1rem;z-index: 9999"><img id="bc_veggie_burger" src="/assets/images/s-feather-img/x.svg" alt="Navigation Menu" aria-expanded="false" aria-label="Menu" aria-controls="mainnav" style="min-height: 30px;z-index:99999"></div>
+
+  <!-- <div id="side_nav" class="col-sm-3 left-side-bar" style="margin-left: -500px; margin-right: 6em;">
+  <div id="side_nav" class="col-sm-3 left-side-bar"> -->
+
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em;display: inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+      
+        <nav class="sidenav" aria-label="Main">
+          
+            
+              
+              <h5><a href="/">Home</a></h5>
+              
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Getting Started</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/get-started/getting-started-marketing-studio.html">Getting Started with Marketing Studio</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/marketing-studio-training-videos.html">Marketing Studio Training Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Uploading and Publishing Your First Video</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Managing Videos</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details.html">Editing Video Details</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details-using-quick-edit.html">Editing Video Details using Quick Edit</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/embedding-videos-web.html">Embedding a Video on a Webpage</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-audio-tracks.html">Managing Text and Audio Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-tracks.html">Managing Text Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-videos.html">Managing Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/publishing-videos-social.html">Publishing Videos to Social Media</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/reviewing-social-activity.html">Reviewing Social Activity</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/uploading-videos.html">Uploading Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Reviewing Analytics</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/analytics/getting-started-analytics.html">Getting Started with Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-individual-viewers-analytics.html">Reviewing Individual Viewers Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-social-analytics.html">Reviewing Social Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-web-analytics.html">Reviewing Web Analytics</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administering Accounts</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/admin/managing-profile-information.html">Managing Profile Information</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Release Notes</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/release-notes/marketing-studio-release-notes.html">Marketing Studio Release Notes</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Support</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" id="main_content">
+  <!-- bootstrap layout -->
+
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;margin-left:3em;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>Configuring Google Analytics Event Tracking</h1>
+  <summary>In this topic you will learn how to configure Google Analytics event tracking in the Players module.</summary>
+  <section class="bcls-section">
+    <p>The Players module provides the ability to easily integrate Brightcove Players with Google Analytics. This allows player events and custom dimension data to be sent to a Google Analytics account for reporting purposes. Note that when the integration is configured, only analytics for video events will be passed to Google Analytics.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Each analytics system gathers data and calculates metrics differently. Marketing Studio analytics data will not be identical to what appears in Google Analytics.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The Google Analytics plugin is not supported when using the Brightcove Player SDKs.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: The Players Module supports Google's Universal Analytics data model. The newer Google Analytics 4 update is not supported. See the <a href="#version">Google Analytics Versions</a> section below for more information.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure">Configuring Google Analytics</h2>
+    <p>To configure Google Analytics integration, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Players</strong> module.</li>
+      <li>Click the player name you want to configure to open the player properties.</li>
+      <li>Click <strong>Third-Party Analytics &gt; Google Analytics </strong>in the left navigation menu.</li>
+      <li>Check <strong>Enable Google Analytics</strong>.</li>
+      <li>Click <strong>Sign In to Google Account</strong>.</li>
+      <li>Select the Google account to sign in with and enter your credentials if prompted.</li>
+      <li>Click <strong>Allow</strong> to let Brightcove access your Google account.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18804-permissions.png" /></figure>
+      </li>
+      <li>Use the <strong>Select Account</strong> dropdown to select the Google account to send tracking data to.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18804-select-account.png" /></figure>
+      </li>
+      <li>Select the <strong>Events for Tracking</strong>. See the <a href="#events">Events and custom dimensions </a> section below for a description of the events.</li>
+      <li>Click  <span class="button-blue">Save</span>. This will configure the player with the Google Analytics plugin and create any needed custom dimensions in your Google Analytics account.
+        <aside class="bcls-aside bcls-aside--information">Note: You must have the <strong>Edit</strong> permission in your Google Analytics account in order to create dimensions.</aside>
+      </li>
+    </ol>
+    <p>Make sure to publish the changes to the player.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: Use the Advanced embed (in-page) code when publishing your player. The Standard embed (iframe) code will not work as the plugin will be running inside of an iframe and therefore will be unable to interact with the needed JavaScript.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="events">Events &amp; custom dimensions</h2>
+    <p>Both events and custom dimension data can be passed to Google Analytics.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18804-select-events.png" /></figure>
+    <p>The following events can be passed.</p>
+    <h3>Basic Events</h3>
+    <ul>
+      <li><strong>Video Impression</strong> - Sent when a video has been loaded into a player and is ready for playback</li>
+      <li><strong>Play Request</strong> - Sent when playback is initiated either by the user expressly clicking the play button, or automatically when the platform triggers playback in an auto-play scenario</li>
+      <li><strong>Video Engagement</strong> - A user watched a range of seconds of a video's timeline. This event is a heartbeat for tracking video engagement and will likely be sent many times during playback, depending on the user interaction and the length of the video.</li>
+    </ul>
+    <h3>Advertising Events</h3>
+    <ul>
+      <li><strong>Ad Start</strong> - Sent when control is handed over to an advertising agent by the playback platform</li>
+      <li><strong>Ad End</strong> - Sent when control is handed back from the advertising agent to the playback platform</li>
+    </ul>
+    <h3>Advanced Events</h3>
+    <ul>
+      <li><strong>Player Load</strong> - A player session has been initiated by an end-user</li>
+      <li><strong>Error</strong> - Sent when fatal errors which disrupt the playback experience are encountered</li>
+    </ul>
+    <h3>Custom Dimensions</h3>
+    <p>Custom dimensions allow you to combine Google Analytics data with non-Analytics data. Custom dimensions collect data that Google Analytics doesn't automatically track. The following custom dimensions are available.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For more information on custom dimensions, see the <a href="https://support.google.com/analytics/answer/2709828?hl=en">Google Analytics Help</a>.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-players-img/general/node18804-select-dimensions.png" /></figure>
+    <ul>
+      <li><strong>Video Seconds Viewed</strong> - Count of watched seconds (only available if the <strong>Video Engagement</strong> event was selected)</li>
+      <li><strong>Range</strong> - The range of seconds viewed (only available if the <strong>Video Engagement</strong> event was selected)</li>
+      <li><strong>Video Duration</strong> - The duration of the video in seconds (only available if the <strong>Video Engagement</strong> event was selected)</li>
+      <li><strong>Player ID and Player Name</strong> - Player ID and Name</li>
+      <li><strong>Account Name</strong> - Brightcove Account ID</li>
+      <li><strong>Session</strong> - The session identifier; the session value should be constant for the lifecycle of an experience and sent for all events from that experience</li>
+      <li><strong>Player Version</strong> - Brightcove Player version</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="version">Google Analytics Versions</h2>
+    <p>The Players module supports Google's Universal Analytics data model. Currently, the newer Google Analytics 4 update is not supported. Brightcove recommends using Universal Analytics when integrating with the Players module and  Brightcove Players.</p>
+    <p>Following are high level steps to creating a Universal Analytics property within Google Analytics.</p>
+    <ul>
+      <li>Create property</li>
+      <li>Show advanced options</li>
+      <li>Toggle <strong>Create a Universal Analytics property</strong> on (toggle switch is on the right)</li>
+      <li>Enter a website URL</li>
+      <li>Make sure <strong>Create a Universal Analytics property only</strong> is selected</li>
+      <li> Fill out the rest of the form; you will be provided with a new property ID beginning with <strong>UA-</strong></li>
+    </ul>
+    <p>Note that Google also provides the ability to create a hybrid selection with both a Google Analytics 4 and a Universal Analytics property. Brightcove has not fully tested this scenario.</p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 10 Jan 2023
+</div>
+
+
+
+</main>
+<div class="footer-container">
+  <footer class="bcls-footer" role="contentinfo">
+    <div class="row">
+      <div class="region region-footer-top-center col-md-12">
+        <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+          <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
+  
+          <h2>Brightcove Support</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://status.brightcove.com">System Status</a>
+            </li>
+            <li>
+              <a href="https://supportportal.brightcove.com">Contact Support</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/search.html">Search all Documentation</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+  
+          <h2>Training</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online Courses</a>
+            </li>
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a>
+            </li>
+            <li>
+              <a href="https://university.brightcove.com/">Brightcove University</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+  
+          <h2>Brightcove</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://www.brightcove.com">Brightcove.com</a>
+            </li>
+            <li>
+              <a href="https://community.brightcove.com/s/">Bright Spot Community Forum</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/product-updates.html">Product Release Notes</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/doc-updates.html">Documentation Updates</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="region region-footer-bottom-center col-md-12">
+        <div class="bcls-copyright footer-menu">
+          <table>
+            <tr>
+              <td>
+                <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              </td>
+              <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+              <td>
+                <div class="gf-links-cols footer-menu">
+                  <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

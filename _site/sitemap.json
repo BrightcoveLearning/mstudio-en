@@ -5,8 +5,493 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/account-settings.html",
+      "oldURL": "/account-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/adding-3play-media-interactive-transcript-video.html",
+      "oldURL": "/adding-3play-media-interactive-transcript-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/adding-application-id-player-embed-code.html",
+      "oldURL": "/adding-application-id-player-embed-code"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/third-party/adding-brightcove-player-facebook-fan-page.html",
+      "oldURL": "/adding-brightcove-player-facebook-fan-page"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/adding-bumpers-to-vod.html",
+      "oldURL": "/adding-bumpers-to-vod"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/adding-chapters-video.html",
+      "oldURL": "/adding-chapters-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/adding-display-rule.html",
+      "oldURL": "/adding-display-rule"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/adding-facebook-button-brightcove-player.html",
+      "oldURL": "/adding-facebook-button-brightcove-player"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/adding-image-overlay.html",
+      "oldURL": "/adding-image-overlay"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/adding-poll-video.html",
+      "oldURL": "/adding-poll-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/adding-quiz-annotation.html",
+      "oldURL": "/adding-quiz-annotation"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/adding-sentiment-video.html",
+      "oldURL": "/adding-sentiment-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/adding-sign-in-video.html",
+      "oldURL": "/adding-sign-in-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/adding-text-overlay.html",
+      "oldURL": "/adding-text-overlay"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/adding-thumbnail-seeking-player.html",
+      "oldURL": "/adding-thumbnail-seeking-player"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/adding-time-triggered-action.html",
+      "oldURL": "/adding-time-triggered-action"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/adding-transparent-overlay.html",
+      "oldURL": "/adding-transparent-overlay"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ingest-profiles/advanced-editor.html",
+      "oldURL": "/advanced-editor"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/help/analytics.html",
+      "oldURL": "/analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/annotation-options.html",
+      "oldURL": "/annotation-options"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/api-auth.html",
+      "oldURL": "/api-auth"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/templates/applying-templates-projects.html",
+      "oldURL": "/applying-templates-projects"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/audio-only-live-events.html",
+      "oldURL": "/audio-only-live-events"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ingest-profiles/audio-renditions.html",
+      "oldURL": "/audio-renditions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/authenticating-studio-users-using-single-sign.html",
+      "oldURL": "/authenticating-studio-users-using-single-sign"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/auto-load-url.html",
+      "oldURL": "/auto-load-url"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/help/autosync.html",
+      "oldURL": "/autosync"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/best-practices-video-creating-transcoding-and-uploading-workflow.html",
+      "oldURL": "/best-practices-video-creating-transcoding-and-uploading-workflow"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/projects/branching-overview.html",
+      "oldURL": "/branching-overview"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/brightcove-live-training-videos.html",
+      "oldURL": "/brightcove-live-training-videos"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/bulk-annotation-edit.html",
+      "oldURL": "/bulk-annotation-edit"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/campaign-faq.html",
+      "oldURL": "/campaign-faq"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/campaign-fields-and-data-definitions.html",
+      "oldURL": "/campaign-fields-and-data-definitions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/campaign-plugin-faq.html",
+      "oldURL": "/campaign-plugin-faq"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/captions-with-live-streams.html",
+      "oldURL": "/captions-with-live-streams"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/changing-video-player-without-changing-embed-code.html",
+      "oldURL": "/changing-video-player-without-changing-embed-code"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/help/channel-edit.html",
+      "oldURL": "/channel-edit"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/channel-live-redundancy.html",
+      "oldURL": "/channel-live-redundancy"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/help/channel.html",
+      "oldURL": "/channel"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/china-delivery-overview.html",
+      "oldURL": "/china-delivery-overview"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/choosing-correct-embed-code.html",
+      "oldURL": "/choosing-correct-embed-code"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/client-side-preroll-with-live-ssai.html",
+      "oldURL": "/client-side-preroll-with-live-ssai"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/cloud-playout-add-content.html",
+      "oldURL": "/cloud-playout-add-content"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/cloud-playout-overview.html",
+      "oldURL": "/cloud-playout-overview"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/cloud-playout-stream-vod.html",
+      "oldURL": "/cloud-playout-stream-vod"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/cloud-playout-stream-vod.html",
+      "oldURL": "/cloud-playout-stream-vod"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/configuring-adobe-analytics-event-tracking.html",
+      "oldURL": "/configuring-adobe-analytics-event-tracking"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/configuring-annotation-links.html",
+      "oldURL": "/configuring-annotation-links"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/configuring-campaign-settings.html",
+      "oldURL": "/configuring-campaign-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/configuring-google-analytics-event-tracking.html",
+      "oldURL": "/configuring-google-analytics-event-tracking"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/configuring-language-settings.html",
+      "oldURL": "/configuring-language-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/configuring-player-advertising-using-players-module.html",
+      "oldURL": "/configuring-player-advertising-using-players-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/properties/configuring-player-content-restrictions.html",
+      "oldURL": "/configuring-player-content-restrictions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/configuring-player-controls.html",
+      "oldURL": "/configuring-player-controls"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/configuring-player-endscreen.html",
+      "oldURL": "/configuring-player-endscreen"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/configuring-player-localization.html",
+      "oldURL": "/configuring-player-localization"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/configuring-player-overlay-using-overlay-plugin.html",
+      "oldURL": "/configuring-player-overlay-using-overlay-plugin"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/properties/configuring-player-playback-properties.html",
+      "oldURL": "/configuring-player-playback-properties"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/getting-started/configuring-player-plugin.html",
+      "oldURL": "/configuring-player-plugin"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/configuring-player-plugins.html",
+      "oldURL": "/configuring-player-plugins"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/configuring-playlist-endscreen-using-plugin.html",
+      "oldURL": "/configuring-playlist-endscreen-using-plugin"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/projects/configuring-project-settings.html",
+      "oldURL": "/configuring-project-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/configuring-s3-buckets.html",
+      "oldURL": "/configuring-s3-buckets"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
+      "oldURL": "/configuring-server-side-ad-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/configuring-social-properties-player.html",
+      "oldURL": "/configuring-social-properties-player"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/contact-sales.html",
       "oldURL": "/contact-sales"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/content-delivery-options.html",
+      "oldURL": "/content-delivery-options"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/creating-and-managing-live-events-using-live-module.html",
+      "oldURL": "/creating-and-managing-live-events-using-live-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/projects/creating-and-managing-projects.html",
+      "oldURL": "/creating-and-managing-projects"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/templates/creating-and-managing-templates.html",
+      "oldURL": "/creating-and-managing-templates"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/creating-and-publishing-high-quality-screencasts.html",
+      "oldURL": "/creating-and-publishing-high-quality-screencasts"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/creating-audio-only-renditions-low-bandwidth-delivery.html",
+      "oldURL": "/creating-audio-only-renditions-low-bandwidth-delivery"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/experiences/creating-branching-experience.html",
+      "oldURL": "/creating-branching-experience"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/creating-campaign-enabled-player.html",
+      "oldURL": "/creating-campaign-enabled-player"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/creating-campaign-lead-form.html",
+      "oldURL": "/creating-campaign-lead-form"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/non-map/creating-custom-integrations-campaign-module.html",
+      "oldURL": "/creating-custom-integrations-campaign-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/hubspot/creating-custom-lead-forms-hubspot.html",
+      "oldURL": "/creating-custom-lead-forms-hubspot"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/marketo/creating-custom-lead-forms-marketo.html",
+      "oldURL": "/creating-custom-lead-forms-marketo"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/eloqua/creating-custom-lead-forms-oracle-eloqua.html",
+      "oldURL": "/creating-custom-lead-forms-oracle-eloqua"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/salesforce/creating-custom-lead-forms-salesforce.html",
+      "oldURL": "/creating-custom-lead-forms-salesforce"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/creating-custom-live-ingest-profiles.html",
+      "oldURL": "/creating-custom-live-ingest-profiles"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/creating-custom-metadata-fields.html",
+      "oldURL": "/creating-custom-metadata-fields"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html",
+      "oldURL": "/creating-ingest-profiles-context-aware-encoding"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/creating-ingest-profiles-dynamic-delivery.html",
+      "oldURL": "/creating-ingest-profiles-dynamic-delivery"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/salesforce/creating-salesforce-object-pardot.html",
+      "oldURL": "/creating-salesforce-object-pardot"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/experiences/creating-slide-sync-experience.html",
+      "oldURL": "/creating-slide-sync-experience"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/creating-social-media-publishing-destinations.html",
+      "oldURL": "/creating-social-media-publishing-destinations"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/creating-video-clip-using-brightcove-social.html",
+      "oldURL": "/creating-video-clip-using-brightcove-social"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/creating-video-clip-using-live-module.html",
+      "oldURL": "/creating-video-clip-using-live-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/deep-linking.html",
+      "oldURL": "/deep-linking"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/delivering-live-streams.html",
+      "oldURL": "/delivering-live-streams"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/help/destinations.html",
+      "oldURL": "/destinations"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/help/detail.html",
+      "oldURL": "/detail"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/domains-and-ports-must-be-accessible-video-cloud.html",
+      "oldURL": "/domains-and-ports-must-be-accessible-video-cloud"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/driving-video-views-through-email.html",
+      "oldURL": "/driving-video-views-through-email"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/content-protection/drm-output-protection-settings.html",
+      "oldURL": "/drm-output-protection-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/dynamic-overlays.html",
+      "oldURL": "/dynamic-overlays"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/dynamically-assigning-videos-player.html",
+      "oldURL": "/dynamically-assigning-videos-player"
   },
 
   {
@@ -20,8 +505,68 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/eloqua/eloqua-integration-testing-guide.html",
+      "oldURL": "/eloqua-integration-testing-guide"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/third-party/embedding-brightcove-player-google-sites-page.html",
+      "oldURL": "/embedding-brightcove-player-google-sites-page"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/embedding-form-video.html",
+      "oldURL": "/embedding-form-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/eloqua/embedding-video-cloud-video-eloqua-landing-page.html",
+      "oldURL": "/embedding-video-cloud-video-eloqua-landing-page"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/media/embedding-videos-web.html",
       "oldURL": "/embedding-videos-web"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/enabling-longer-videos-youtube.html",
+      "oldURL": "/enabling-longer-videos-youtube"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/enabling-server-side-ads.html",
+      "oldURL": "/enabling-server-side-ads"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/experiences/experiences-overview.html",
+      "oldURL": "/experiences-overview"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/admin/exporting-campaign-data-campaign-module.html",
+      "oldURL": "/exporting-campaign-data-campaign-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/admin/exporting-gallery-lead-data.html",
+      "oldURL": "/exporting-gallery-lead-data"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/fallback-hdcp.html",
+      "oldURL": "/fallback-hdcp"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/fields-custom-live-ingest-profiles.html",
+      "oldURL": "/fields-custom-live-ingest-profiles"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/forensic-watermarking-live.html",
+      "oldURL": "/forensic-watermarking-live"
   },
 
   {
@@ -30,8 +575,33 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/generating-channel-embed-code.html",
+      "oldURL": "/generating-channel-embed-code"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/generating-player-embed-code.html",
+      "oldURL": "/generating-player-embed-code"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/analytics/getting-started-analytics.html",
       "oldURL": "/getting-started-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/getting-started-brightcove-social.html",
+      "oldURL": "/getting-started-brightcove-social"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/get-started/getting-started-campaign-module.html",
+      "oldURL": "/getting-started-campaign-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/getting-started/getting-started-interactivity.html",
+      "oldURL": "/getting-started-interactivity"
   },
 
   {
@@ -40,8 +610,68 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/players/module/getting-started-players-module.html",
+      "oldURL": "/getting-started-players-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/hard-start.html",
+      "oldURL": "/hard-start"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/web-conferencing/host-avaya-conference-brightcove-live.html",
+      "oldURL": "/host-avaya-conference-brightcove-live"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/web-conferencing/host-cisco-webex-conference-brightcove-live.html",
+      "oldURL": "/host-cisco-webex-conference-brightcove-live"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/web-conferencing/host-inxpo-live.html",
+      "oldURL": "/host-inxpo-live"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/web-conferencing/host-zoom-conference-brightcove-live.html",
+      "oldURL": "/host-zoom-conference-brightcove-live"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/how-campaign-module-identifies-viewers.html",
+      "oldURL": "/how-campaign-module-identifies-viewers"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/how-vbs-calculated.html",
+      "oldURL": "/how-vbs-calculated"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/hubspot/hubspot-rest-api-integration-testing-guide.html",
+      "oldURL": "/hubspot-rest-api-integration-testing-guide"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/icons.html",
       "oldURL": "/icons"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/implementing-server-side-ads-live-module.html",
+      "oldURL": "/implementing-server-side-ads-live-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/import-captions.html",
+      "oldURL": "/import-captions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/projects/in-video-branching.html",
+      "oldURL": "/in-video-branching"
   },
 
   {
@@ -55,32 +685,12 @@
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/analytics/",
+      "newURL": "https://mstudio.support.brightcove.com/social/help/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://mstudio.support.brightcove.com/release-notes/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/get-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://mstudio.support.brightcove.com/media/",
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/templates/",
       "oldURL": "/index"
   },
 
@@ -90,8 +700,343 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/experiences/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/analytics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/content-protection/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/projects/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/release-notes/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/third-party/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/web-conferencing/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/module/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/eloqua/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/properties/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/salesforce/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/marketo/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/help/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/hubspot/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/non-map/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/ingest-profiles-best-practices.html",
+      "oldURL": "/ingest-profiles-best-practices"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/non-map/integrating-campaign-single-sign.html",
+      "oldURL": "/integrating-campaign-single-sign"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-client-side-apis.html",
+      "oldURL": "/integrating-video-cloud-hubspot-using-client-side-apis"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/hubspot/integrating-video-cloud-hubspot-using-rest-apis.html",
+      "oldURL": "/integrating-video-cloud-hubspot-using-rest-apis"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/marketo/integrating-video-cloud-marketo-using-munchkin.html",
+      "oldURL": "/integrating-video-cloud-marketo-using-munchkin"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/marketo/integrating-video-cloud-marketo-using-rest-apis.html",
+      "oldURL": "/integrating-video-cloud-marketo-using-rest-apis"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/eloqua/integrating-video-cloud-oracle-eloqua.html",
+      "oldURL": "/integrating-video-cloud-oracle-eloqua"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/salesforce/integrating-video-cloud-salesforce.html",
+      "oldURL": "/integrating-video-cloud-salesforce"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/getting-started/interactive-video-types.html",
+      "oldURL": "/interactive-video-types"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/known-issues-studio-brightcove-player-and-apis.html",
       "oldURL": "/known-issues-studio-brightcove-player-and-apis"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/language-settings.html",
+      "oldURL": "/language-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/help/layers.html",
+      "oldURL": "/layers"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/live-drm.html",
+      "oldURL": "/live-drm"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/live-module-guidelines-and-best-practices.html",
+      "oldURL": "/live-module-guidelines-and-best-practices"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/live-redundancy.html",
+      "oldURL": "/live-redundancy"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/live-settings.html",
+      "oldURL": "/live-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/live-video-glossary.html",
+      "oldURL": "/live-video-glossary"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/looping-back-in-a-video.html",
+      "oldURL": "/looping-back-in-a-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/making-your-video-content-indexable.html",
+      "oldURL": "/making-your-video-content-indexable"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-account-information.html",
+      "oldURL": "/managing-account-information"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-account-settings.html",
+      "oldURL": "/managing-account-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-api-authentication-credentials.html",
+      "oldURL": "/managing-api-authentication-credentials"
   },
 
   {
@@ -100,8 +1045,38 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-ingest-profiles.html",
+      "oldURL": "/managing-ingest-profiles"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-live-settings.html",
+      "oldURL": "/managing-live-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-media-sharing-settings.html",
+      "oldURL": "/managing-media-sharing-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-playback-rights.html",
+      "oldURL": "/managing-playback-rights"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/admin/managing-profile-information.html",
       "oldURL": "/managing-profile-information"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/managing-programs.html",
+      "oldURL": "/managing-programs"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/managing-slates.html",
+      "oldURL": "/managing-slates"
   },
 
   {
@@ -115,8 +1090,18 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/admin/managing-users.html",
+      "oldURL": "/managing-users"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/media/managing-videos.html",
       "oldURL": "/managing-videos"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/admin/managing-viewer-data.html",
+      "oldURL": "/managing-viewer-data"
   },
 
   {
@@ -130,6 +1115,36 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/marketo/marketo-rest-integration-testing-guide.html",
+      "oldURL": "/marketo-rest-integration-testing-guide"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/media-sharing.html",
+      "oldURL": "/media-sharing"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/mid-roll-ad-insertion.html",
+      "oldURL": "/mid-roll-ad-insertion"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/migration-dynamic-delivery.html",
+      "oldURL": "/migration-dynamic-delivery"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/moving-to-dynamic-delivery.html",
+      "oldURL": "/moving-to-dynamic-delivery"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/multi-language-audio.html",
+      "oldURL": "/multi-language-audio"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/online-training-courses.html",
       "oldURL": "/online-training-courses"
   },
@@ -140,8 +1155,113 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/optimal-video-dimensions.html",
+      "oldURL": "/optimal-video-dimensions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/overview-context-aware-encoding.html",
+      "oldURL": "/overview-context-aware-encoding"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/content-protection/overview-digital-rights-management-drm-video-cloud.html",
+      "oldURL": "/overview-digital-rights-management-drm-video-cloud"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/overview-dynamic-delivery.html",
+      "oldURL": "/overview-dynamic-delivery"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/overview-hosting-platforms.html",
+      "oldURL": "/overview-hosting-platforms"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/get-started/overview-video-content-types.html",
+      "oldURL": "/overview-video-content-types"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/playback-restrictions-live-module.html",
+      "oldURL": "/playback-restrictions-live-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/player-settings.html",
+      "oldURL": "/player-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ingest-profiles/profiles-list.html",
+      "oldURL": "/profiles-list"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/content-protection/protecting-videos-hls-encryption.html",
+      "oldURL": "/protecting-videos-hls-encryption"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/third-party/publishing-brightcove-player-wordpress-page.html",
+      "oldURL": "/publishing-brightcove-player-wordpress-page"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/third-party/publishing-brightcove-players-facebook-instant-articles.html",
+      "oldURL": "/publishing-brightcove-players-facebook-instant-articles"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/third-party/publishing-brightcove-players-joomla.html",
+      "oldURL": "/publishing-brightcove-players-joomla"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/publishing-live-event-facebook.html",
+      "oldURL": "/publishing-live-event-facebook"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/publishing-live-event-youtube.html",
+      "oldURL": "/publishing-live-event-youtube"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/publishing-video-email-using-campaign-module.html",
+      "oldURL": "/publishing-video-email-using-campaign-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/publishing-video-email.html",
+      "oldURL": "/publishing-video-email"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/publishing-videos-and-playlists-media-module.html",
+      "oldURL": "/publishing-videos-and-playlists-media-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/publishing/publishing-videos-page-experience.html",
+      "oldURL": "/publishing-videos-page-experience"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/publishing-videos-social-media-platforms.html",
+      "oldURL": "/publishing-videos-social-media-platforms"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/media/publishing-videos-social.html",
       "oldURL": "/publishing-videos-social"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/reducing-latency-live-streams.html",
+      "oldURL": "/reducing-latency-live-streams"
   },
 
   {
@@ -150,13 +1270,33 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ingest-profiles/renditions-list.html",
+      "oldURL": "/renditions-list"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/reset-support-portal-password.html",
       "oldURL": "/reset-support-portal-password"
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/resetting-your-studio-password.html",
+      "oldURL": "/resetting-your-studio-password"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/reviewing-annotations.html",
+      "oldURL": "/reviewing-annotations"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-individual-viewers-analytics.html",
       "oldURL": "/reviewing-individual-viewers-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/reviewing-live-analytics.html",
+      "oldURL": "/reviewing-live-analytics"
   },
 
   {
@@ -170,13 +1310,158 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/social/reviewing-social-analytics.html",
+      "oldURL": "/reviewing-social-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/reviewing-social-engagement-analytics.html",
+      "oldURL": "/reviewing-social-engagement-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/reviewing-social-views-analytics.html",
+      "oldURL": "/reviewing-social-views-analytics"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/analytics/reviewing-web-analytics.html",
       "oldURL": "/reviewing-web-analytics"
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/scheduling-clips.html",
+      "oldURL": "/scheduling-clips"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/scheduling-live-event.html",
+      "oldURL": "/scheduling-live-event"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/search.html",
       "oldURL": "/search"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/searching-for-channels.html",
+      "oldURL": "/searching-for-channels"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/properties/setting-player-information-properties.html",
+      "oldURL": "/setting-player-information-properties"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/properties/setting-player-properties.html",
+      "oldURL": "/setting-player-properties"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/properties/setting-player-update-mode-and-version.html",
+      "oldURL": "/setting-player-update-mode-and-version"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/setting-privacy-status-video.html",
+      "oldURL": "/setting-privacy-status-video"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/sharing-videos-twitter-player-cards.html",
+      "oldURL": "/sharing-videos-twitter-player-cards"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ingest-profiles/simple-editor.html",
+      "oldURL": "/simple-editor"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ssai-settings.html",
+      "oldURL": "/ssai-settings"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
+      "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/standard-live-ingest-profiles.html",
+      "oldURL": "/standard-live-ingest-profiles"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/static-image-overlays.html",
+      "oldURL": "/static-image-overlays"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/step-step-live-srt.html",
+      "oldURL": "/step-step-live-srt"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/step-step-using-live-module-open-broadcaster-software-obs.html",
+      "oldURL": "/step-step-using-live-module-open-broadcaster-software-obs"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/get-started/step-step-using-live-module-telestream-wirecast.html",
+      "oldURL": "/step-step-using-live-module-telestream-wirecast"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/step-step-using-players-module-create-and-publish-player.html",
+      "oldURL": "/step-step-using-players-module-create-and-publish-player"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/studio-system-requirements.html",
+      "oldURL": "/studio-system-requirements"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/appearance/styling-players.html",
+      "oldURL": "/styling-players"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/general/supported-encoders-live-events.html",
+      "oldURL": "/supported-encoders-live-events"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/supported-video-and-audio-formats-codecs-and-containers.html",
+      "oldURL": "/supported-video-and-audio-formats-codecs-and-containers"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/getting-started/terminology.html",
+      "oldURL": "/terminology"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/content-protection/tls-media-player-and-api-urls.html",
+      "oldURL": "/tls-media-player-and-api-urls"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/admin/troubleshooting-campaign-issues.html",
+      "oldURL": "/troubleshooting-campaign-issues"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/updating-player-embed-code-after-migrating-videos.html",
+      "oldURL": "/updating-player-embed-code-after-migrating-videos"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/upload-settings.html",
+      "oldURL": "/upload-settings"
   },
 
   {
@@ -190,13 +1475,163 @@
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/user-management.html",
+      "oldURL": "/user-management"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/using-auto-sync-synchronize-videos-social-media-accounts.html",
+      "oldURL": "/using-auto-sync-synchronize-videos-social-media-accounts"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/integrations/non-map/using-campaign-module-track-viewers.html",
+      "oldURL": "/using-campaign-module-track-viewers"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/using-channel-actions.html",
+      "oldURL": "/using-channel-actions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/using-custom-metrics-and-events.html",
+      "oldURL": "/using-custom-metrics-and-events"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/annotations/using-custom-transitions-with-animate-css.html",
+      "oldURL": "/using-custom-transitions-with-animate-css"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/interactivity/platform/custom-annotations/using-custom-widget-library.html",
+      "oldURL": "/using-custom-widget-library"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/using-directed-migration-tool-migrate-brightcove-smart-players.html",
+      "oldURL": "/using-directed-migration-tool-migrate-brightcove-smart-players"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/get-started/using-hud.html",
+      "oldURL": "/using-hud"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/using-live-rtmp-outputs-stream-facebook-and-youtube.html",
+      "oldURL": "/using-live-rtmp-outputs-stream-facebook-and-youtube"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/using-multiple-players-one-page.html",
+      "oldURL": "/using-multiple-players-one-page"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/publish/general/using-reference-ids.html",
+      "oldURL": "/using-reference-ids"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/media/using-the-caption-editor.html",
       "oldURL": "/using-the-caption-editor"
   },
 
   {
+      "newURL": "https://mstudio.support.brightcove.com/players/general/v5-players-support.html",
+      "oldURL": "/v5-players-support"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/video-cloud-architecture-overview.html",
+      "oldURL": "/video-cloud-architecture-overview"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/architecture/video-cloud-studio-cookies.html",
+      "oldURL": "/video-cloud-studio-cookies"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/video-fields.html",
+      "oldURL": "/video-fields"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/help/ingest-profiles/video-renditions.html",
+      "oldURL": "/video-renditions"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/video-source-file-specifications-and-recommendations.html",
+      "oldURL": "/video-source-file-specifications-and-recommendations"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/help/videos.html",
+      "oldURL": "/videos"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/admin/viewing-billing-information.html",
+      "oldURL": "/viewing-billing-information"
+  },
+
+  {
       "newURL": "https://mstudio.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/cloud-playout/viewing-channel-output-and-analytics.html",
+      "oldURL": "/viewing-channel-output-and-analytics"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/viewing-player-events-campaign-module.html",
+      "oldURL": "/viewing-player-events-campaign-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/viewing-video-activity.html",
+      "oldURL": "/viewing-video-activity"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/social/viewing-videos-published-social-media.html",
+      "oldURL": "/viewing-videos-published-social-media"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/viewing-viewer-profile-information.html",
+      "oldURL": "/viewing-viewer-profile-information"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/working-360deg-videos.html",
+      "oldURL": "/working-360deg-videos"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/working-audio-content.html",
+      "oldURL": "/working-audio-content"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/general/references/working-multiple-video-cloud-accounts.html",
+      "oldURL": "/working-multiple-video-cloud-accounts"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/campaign/general/working-utm-fields-campaign-module.html",
+      "oldURL": "/working-utm-fields-campaign-module"
+  },
+
+  {
+      "newURL": "https://mstudio.support.brightcove.com/live/live-module/zoom-live-integration.html",
+      "oldURL": "/zoom-live-integration"
   },
 ]
 

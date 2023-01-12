@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Implementing Server-Side Ads in the Live Module (SSAI)</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <span class="product-logo">
+      <a href="https://support.brightcove.com/"><img src="/assets/s-site-assets-images/blogo-svg/black.svg" alt="Documentation Home" style="max-width: 2rem;min-width: 1rem;margin-right: 1rem;"></a>
+      <a href="/"><img src="/assets/s-site-assets-images/MarketingStudio_H_K.svg" alt="Brightcove" style="max-width: 200px;min-width: 100px;"></a>
+    </span>
+    <select id="site_select" class="bcls-select" style="margin-left: 1rem;max-width: 250px;">
+      <option value="">Other Brightcove Docs</option>
+      
+        
+          <option value="https://support.brightcove.com">Documentation Home</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+        
+      
+        
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+      
+        
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+      
+        
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+      
+        
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+        
+      
+    </select>
+
+<!-- GTranslate: https://gtranslate.io/ -->    
+<select class="bcls-select" onchange="doGTranslate(this);"><option value="">Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script translate="no">
+/* <![CDATA[ */  
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+<!-- &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span> -->
+    <br>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
+      
+        <li class="breadcrumb-item"><a href="/live/">Live</a></li>
+      
+    
+      
+        <li class="breadcrumb-item"><a href="/live/live-module/">Live module</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Implementing Server-Side Ads in the Live Module (SSAI)</li>
+      
+    
+  </nav>
+</header>
+<main>
+<div class="container">
+  <div id="bc_veggie_burger_wrapper" style="margin-top: .5rem;margin-bottom: 1rem;z-index: 9999"><img id="bc_veggie_burger" src="/assets/images/s-feather-img/x.svg" alt="Navigation Menu" aria-expanded="false" aria-label="Menu" aria-controls="mainnav" style="min-height: 30px;z-index:99999"></div>
+
+  <!-- <div id="side_nav" class="col-sm-3 left-side-bar" style="margin-left: -500px; margin-right: 6em;">
+  <div id="side_nav" class="col-sm-3 left-side-bar"> -->
+
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em;display: inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+      
+        <nav class="sidenav" aria-label="Main">
+          
+            
+              
+              <h5><a href="/">Home</a></h5>
+              
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Getting Started</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/get-started/getting-started-marketing-studio.html">Getting Started with Marketing Studio</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/marketing-studio-training-videos.html">Marketing Studio Training Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Uploading and Publishing Your First Video</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Managing Videos</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details.html">Editing Video Details</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details-using-quick-edit.html">Editing Video Details using Quick Edit</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/embedding-videos-web.html">Embedding a Video on a Webpage</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-audio-tracks.html">Managing Text and Audio Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-tracks.html">Managing Text Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-videos.html">Managing Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/publishing-videos-social.html">Publishing Videos to Social Media</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/reviewing-social-activity.html">Reviewing Social Activity</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/uploading-videos.html">Uploading Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Reviewing Analytics</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/analytics/getting-started-analytics.html">Getting Started with Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-individual-viewers-analytics.html">Reviewing Individual Viewers Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-social-analytics.html">Reviewing Social Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-web-analytics.html">Reviewing Web Analytics</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administering Accounts</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/admin/managing-profile-information.html">Managing Profile Information</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Release Notes</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/release-notes/marketing-studio-release-notes.html">Marketing Studio Release Notes</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Support</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" id="main_content">
+  <!-- bootstrap layout -->
+
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;margin-left:3em;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>Implementing Server-Side Ads in the Live Module</h1>
+  <summary>In this topic you will learn how to implement server-side advertising in the Live module.</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>The Live module supports Server-Side Ad Insertion (SSAI) so server-side ads can be requested and displayed during a live stream. SSAI provides these main features during live events:</p>
+    <ul>
+      <li>Since ads are stitched into the live video stream on the server side, they are not affected by ad blockers</li>
+      <li>Ads are inserted at cue points sent from your encoder or you can create an instant cue point using the&nbsp;Live module Control Room</li>
+      <li>You can configure&nbsp;<a href="#fill_slate">fill slates</a>&nbsp;to fill any unused ad time</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information">
+      <ul>
+        <li>Before you can use SSAI, your Brightcove account needs to be configured for Dynamic Delivery and enabled for SSAI. Contact your Customer Success Manager for details.</li>
+        <li>The Live SSAI + DRM feature is not enabled at the moment.</li>
+        <li>SSAI for encrypted (AES) live streams uses <strong>segment-accurate</strong> (not frame-accurate) ad insertion by default. If you require frame-accurate ad insertion, you must contact Support to have your account configured for it.</li>
+      </ul>
+    </aside>
+    <p>This topic focuses on the settings required and the process to request a server-side ad during a live event.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Configuring_the_server_side_ad_settings">Configuring the server-side ad settings</h2>
+    <p>Before server-side ads can be delivered, server-side ad settings must be configured. The server-side ad settings define various aspects of ad playback, including ad calls, timing, beacons and other ad configuration options. These settings are configured as part of the Server-Side Ad Settings in the Admin module. In this example, a simple ad tag is defined.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/live-ad-config.png" /></figure>
+    <p>For more information, see <a href="/admin/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="fill_slate">Configuring the fill slate</h2>
+    <p>Fill slates are videos that will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter than the ad break time, the fill slate will be displayed so viewers don't see a blank player. You should configure at least one fill slate before requesting a server-side ad. Ad slates are configured as part of the Live Settings in the Admin module. In this example, a fill slate that displays the Brightcove logo was defined.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/fill-slate.png" /></figure>
+    <p>For information on creating ad slates, see <a href="/admin/managing-live-settings.html">Managing Live Settings</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Creating_a_live_event_that_supports_server_side_ads">Creating a live event that supports server-side ads</h2>
+    <p>In order for a live event to display server-side ads, the <strong>Enable Server Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created. For complete information on creating a live event using the Live module, see <a href="creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">You should have configured the Server-Side Ad Settings and added at least one fill slate before creating an event.</aside>
+    <p>To create a new live event that supports server-side ads, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the Live module.</li>
+      <li>From the Manage Events page click <span class="button-blue">Create Event</span>.</li>
+      <li>Enter the event details as needed.</li>
+      <li>Click <strong>Advanced Options</strong> to expand the advanced options.</li>
+      <li>Check <strong>Enable Server Side Ad Insertion (SSAI)</strong>. This will enable server side ad insertion.</li>
+      <li>Select a <strong>Fill Slate</strong>. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad.</li>
+      <li>When the <strong>Ad Audio</strong> setting is checked, the audio levels on ads will be normalized based on the adjustment that is set. This can be used as a way to help make sure ads aren’t significantly louder than the content. Brightcove recommends selecting this option.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/event-ssai-settings.png" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Create Event</span>.</li>
+      <li>The&nbsp;Control Room page&nbsp;will open with details about the live event including the&nbsp;<strong>Streaming Endpoint (RTMP URL)</strong>&nbsp;and&nbsp;<strong>Stream Name</strong>. These values will be used by the encoder.</li>
+      <li>Configure the encoder and start the live stream.</li>
+      <li>By default, &nbsp;the Control Room preview player shows the ad-free stream. Ads will not be shown in the Control Room unless a Live ad configuration is selected. Use the dropdown below to the player to select an ad configuration.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/select-ad-config2.png" /></figure>
+      </li>
+      <li><strong>(Optional)</strong> Click the plus button (<img alt="" src="/assets/images/s-live-img/live-module/implement-ssai/plus-icon.png" width="15" height="15" />) to select an additional ad configuration. Doing this will add another preview player on the Control Room page.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/two-preview-players.png" /></figure>
+        <p>Click the volume button below the preview player to control which player audio stream is active.</p>
+        <p>Use cases for using an additional preview player include:</p>
+        <ul>
+          <li>To preview two ad configurations</li>
+          <li>To see the un-altered feed (non-SSAI) alongside the feed with ads (SSAI)</li>
+        </ul>
+      </li>
+    </ol>
+    
+    <aside class="bcls-aside bcls-aside--information">If the event is using RTMP outputs, ads will not be streamed to the RTMP output. The ad-free stream will be streamed instead.</aside>
+    <aside class="bcls-aside bcls-aside--information">If the event is being used by the  Live to Facebook feature in the Social module, ads will not be streamed to Facebook. The ad-free stream will be streamed instead.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Requesting_an_ad">Requesting an ad</h2>
+    <p>To request an ad, click <span class="button-blue">Go To Ad ˇ</span>. When clicked, the length of the ad break can be selected.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/goto-ad.png"  /></figure>
+    <p>Click <span class="button-blue">Insert</span> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate (selected when the event was created) will be displayed. Ads will be seen in the Control Room preview player and in players that are published using the Live module. This example shows 2 ads being displayed in the Control Room.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/two-ad-preview.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Publishing_the_live_event">Publishing the live event</h2>
+    <p>Live streams with server-side ads cannot be published using the Media module, they must be published using the Live Module.</p>
+    <p>To generate the embed code for a live event with server-side ads, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on an event to open the Control Room page.</li>
+      <li>Click<strong> Publish and Embed</strong> in the left navigation.</li>
+      <li>Select an <strong>Available Player</strong>.
+        <aside class="bcls-aside bcls-aside--information">If the event is configured to enable server-side ads (SSAI), DVR or multi-CDN, Brightcove Player version 6.18.3 and above must be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
+      </li>
+      <li>Select the <strong>Ad Configuration</strong> to use with the player. The ad configuration will determine which ad(s) appear in the player.</li>
+      <li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-live-img/live-module/implement-ssai/publish.png" /></figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Publishing_a_remote_live_event">Publishing a remote live event</h2>
+    <p>If you want to publish a remote live event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>After creating your live event by following the steps <a href="#Creating_a_live_event_that_supports_server_side_ads">listed above</a>, return to the <strong>Live</strong> module's <strong>Control Room</strong>. 
+      </li>
+      <li>If you know the value of your ad config id, then you can insert it into the playlist URL.
+        <p>In the <strong>Live</strong> module's <strong>Control Room</strong>, copy the <strong>Playback URL</strong>.</p>
+        <p></p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Playback URL" src="/assets/images/s-live-img/live-module/implement-ssai/playback-url.png" />
+          <figcaption class="bcls-caption--image">Playback URL</figcaption>
+        </figure>
+        <p>Next, insert the ad config id (045f90cfd55187ff6e60c8) that you want to use to the URL as follows:</p>
+        <pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/<span class="bcls-highlight">045f90cfd55187ff6e60c8/</span>playlist.m3u8</code></pre>
+        <p>Then, rename the playlist from <code translate="No">playlist.m3u8</code> to <code translate="No">playlist_ssaiM.m3u8</code>. The remote asset should look similar to this:</p>
+        <pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/045f90cfd55187ff6e60c8/<span class="bcls-highlight">playlist_ssaiM.m3u8</span></code></pre>
+        <p>Skip to step 6 and use this playlist URL.</p>
+      </li>
+      <li>If you don't know the value of your ad config id, you can get the complete playlist URL as follows. Select the ad configuration that you want to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Select ad config" src="/assets/images/s-live-img/live-module/implement-ssai/select-ad-config.png" />
+          <figcaption class="bcls-caption--image">Select ad config</figcaption>
+        </figure>
+      </li>
+      <li>For your browser, open the network console tab. In this case, we are using the Chrome browser.
+      </li>
+      <li>In the network console, search for "playlist_ssaiM". Copy the URL that ends with "playlist_ssaiM.m3u8". You may have to refresh the page and re-open your network tab.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Network console" src="/assets/images/s-live-img/live-module/implement-ssai/network-console.png" />
+          <figcaption class="bcls-caption--image">Network console</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">Since the ad config id is contained within the URL, your SSAI URL will be different depending on the ad config you have selected.</aside>
+        <p>In this example, the URL is:</p>
+        <pre>
+<code class="language-html" translate="No">https://bcovlive-a.akamaihd.net/21e83ff8c229478e8c81416838eb6e1f/us-west-2/NA/582ea6fafea84bf595f610b8ebbeeda8/playlist_ssaiM.m3u8</code></pre>
+      </li>
+      <li>In Studio, navigate to the <strong>Media</strong> module and create a new Remote asset pointing to the playlist URL from the previous step. In the left-side menu, select <strong>+ Add Remote Video</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video" src="/assets/images/s-live-img/live-module/implement-ssai/add-remote-video.png" />
+          <figcaption class="bcls-caption--image">Add Remote Video</figcaption>
+        </figure>
+      </li>
+      <li>In the <strong>Add Remote Video</strong> enter a <strong>Video Name</strong> and the playlist URL. Select the <strong>Save</strong> button.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Add Remote Video dialog" src="/assets/images/s-live-img/live-module/implement-ssai/remote-dialog.png" />
+          <figcaption class="bcls-caption--image">Add Remote Video dialog</figcaption>
+        </figure>
+      </li>
+      <li>You now have a video Id pointing to your remote live stream. You can use this with any player in your account to stream live content with server-side ads.
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Troubleshooting_live_stream_issues">Troubleshooting live stream issues</h2>
+    <p>If you need further help getting your live event to work, you can <a href="https://supportportal.brightcove.com/">contact us</a>. To make sure you get the fastest response possible, below is a list of what support will need to solve the problem.</p>
+    <ul>
+      <li>The specific symptoms the stream is having. For example, does it not play at all or does it stutter or freeze?</li>
+      <li>Whether this stream worked correctly in the past</li>
+      <li>The entry point URL you are using in your encoder</li>
+      <li>The encoding software and hardware are you using</li>
+      <li>The URL to the player to which you have published the live event</li>
+      <li>The video ID of your live asset</li>
+      <li>The results of a trace-route from your encoder to the publishing point host</li>
+    </ul>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 13 Jul 2022
+</div>
+
+
+
+</main>
+<div class="footer-container">
+  <footer class="bcls-footer" role="contentinfo">
+    <div class="row">
+      <div class="region region-footer-top-center col-md-12">
+        <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+          <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
+  
+          <h2>Brightcove Support</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://status.brightcove.com">System Status</a>
+            </li>
+            <li>
+              <a href="https://supportportal.brightcove.com">Contact Support</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/search.html">Search all Documentation</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+  
+          <h2>Training</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online Courses</a>
+            </li>
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a>
+            </li>
+            <li>
+              <a href="https://university.brightcove.com/">Brightcove University</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+  
+          <h2>Brightcove</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://www.brightcove.com">Brightcove.com</a>
+            </li>
+            <li>
+              <a href="https://community.brightcove.com/s/">Bright Spot Community Forum</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/product-updates.html">Product Release Notes</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/doc-updates.html">Documentation Updates</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="region region-footer-bottom-center col-md-12">
+        <div class="bcls-copyright footer-menu">
+          <table>
+            <tr>
+              <td>
+                <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              </td>
+              <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+              <td>
+                <div class="gf-links-cols footer-menu">
+                  <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

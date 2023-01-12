@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic you will learn how to create publishing destinations using Brightcove Social.">
+  
+  <title>Creating Social Media Publishing Destinations</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+  <link href="/assets/s-site-assets-stylesheets/fonts/public-sans.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+  <link href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+<script translate="no">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBJC11HF8Z');
+</script>
+  <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+  <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <span class="product-logo">
+      <a href="https://support.brightcove.com/"><img src="/assets/s-site-assets-images/blogo-svg/black.svg" alt="Documentation Home" style="max-width: 2rem;min-width: 1rem;margin-right: 1rem;"></a>
+      <a href="/"><img src="/assets/s-site-assets-images/MarketingStudio_H_K.svg" alt="Brightcove" style="max-width: 200px;min-width: 100px;"></a>
+    </span>
+    <select id="site_select" class="bcls-select" style="margin-left: 1rem;max-width: 250px;">
+      <option value="">Other Brightcove Docs</option>
+      
+        
+          <option value="https://support.brightcove.com">Documentation Home</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD --</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://mstudio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO ESSENTIALS --</option>
+        
+      
+        
+          <option value="https://audience-insights.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+        
+      
+        
+          <option value="https://beacon-help.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+        
+      
+        
+          <option value="https://corptv.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+        
+      
+        
+          <option value="https://support.brightcove.com/">-- VIDEO CLOUD ADD-ONS --</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com/social/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+        
+      
+        
+          <option value="https://interactivity.support.brightcove.com/index.html">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+        
+      
+    </select>
+
+<!-- GTranslate: https://gtranslate.io/ -->    
+<select class="bcls-select" onchange="doGTranslate(this);"><option value="">Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script translate="no">
+/* <![CDATA[ */  
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+<!-- &nbsp;<span class="secondary-nav"><a href="https://support.brightcove.com/product-updates.html">Product Updates</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://supportportal.brightcove.com">Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">System Status</a></span> -->
+    <br>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+    
+    <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+    
+      
+        <li class="breadcrumb-item"><a href="/social/">Social</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Creating Social Media Publishing Destinations</li>
+      
+    
+  </nav>
+</header>
+<main>
+<div class="container">
+  <div id="bc_veggie_burger_wrapper" style="margin-top: .5rem;margin-bottom: 1rem;z-index: 9999"><img id="bc_veggie_burger" src="/assets/images/s-feather-img/x.svg" alt="Navigation Menu" aria-expanded="false" aria-label="Menu" aria-controls="mainnav" style="min-height: 30px;z-index:99999"></div>
+
+  <!-- <div id="side_nav" class="col-sm-3 left-side-bar" style="margin-left: -500px; margin-right: 6em;">
+  <div id="side_nav" class="col-sm-3 left-side-bar"> -->
+
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em;display: inline-block;border-right: 1px solid #e5e5e6;padding-right: 1em;">
+      
+        <nav class="sidenav" aria-label="Main">
+          
+            
+              
+              <h5><a href="/">Home</a></h5>
+              
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Getting Started</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/get-started/getting-started-marketing-studio.html">Getting Started with Marketing Studio</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/marketing-studio-training-videos.html">Marketing Studio Training Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Uploading and Publishing Your First Video</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/media/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Managing Videos</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details.html">Editing Video Details</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/editing-video-details-using-quick-edit.html">Editing Video Details using Quick Edit</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/embedding-videos-web.html">Embedding a Video on a Webpage</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/generating-captions-videos.html">Generating Captions for Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-audio-tracks.html">Managing Text and Audio Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-text-tracks.html">Managing Text Tracks</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/managing-videos.html">Managing Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/publishing-videos-social.html">Publishing Videos to Social Media</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/reviewing-social-activity.html">Reviewing Social Activity</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/uploading-videos.html">Uploading Videos</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/media/using-the-caption-editor.html">Using the Caption Editor</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Reviewing Analytics</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/analytics/getting-started-analytics.html">Getting Started with Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-individual-viewers-analytics.html">Reviewing Individual Viewers Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-social-analytics.html">Reviewing Social Analytics</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/analytics/reviewing-web-analytics.html">Reviewing Web Analytics</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Administering Accounts</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/admin/managing-profile-information.html">Managing Profile Information</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Release Notes</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/release-notes/marketing-studio-release-notes.html">Marketing Studio Release Notes</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Support</a></h5>
+              <ul role="list" class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+                    
+                  
+                
+                  
+                    
+                    <li><a href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+                    
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" id="main_content">
+  <!-- bootstrap layout -->
+
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;margin-left:3em;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/s-feather-img/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>Creating Social Media Publishing Destinations</h1>
+  <summary>In this topic you will learn how to create publishing destinations using Brightcove Social.</summary>
+  <section class="bcls-section"> 
+    <p>A publishing destination is a social media account/page that you wish to publish Marketing Studio videos to. Before you can publish videos to social media accounts using Brightcove Social, you have to create at least one destination. Destinations can be created to publish videos to YouTube, Facebook, Twitter and LinkedIn.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="youtube">Creating a YouTube destination</h2>
+    <p>Create a YouTube destination when you want to publish videos to a YouTube channel. Before creating a YouTube destination, you may want to <a href="https://www.youtube.com/verify">verify your YouTube account</a>. Once you've verified your account, you will be able to upload videos longer than 15 minutes.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: If the <a href="https://support.google.com/youtube/answer/55759#zippy=%2Chide-your-channel-temporarily" target="_blank">YouTube channel is hidden</a>, the destination won't work. You will need to reactivate the channel in YouTube to see the videos uploaded and re-connect the Marketing Studio destination to send videos. </aside>
+    <p>To create a YouTube destination, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the<strong> Social </strong>Module.</li>
+      <li>Click <strong>Destinations</strong> in the left navigation.</li>
+      <li>Click <span class="button-blue">Add Destination</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-add-destination.png" /></figure>
+      </li>
+      <li>Click <strong>Sign in with YouTube</strong>.</li>
+      <li>You will be prompted to login to your Google account (if not already signed in). If you have multiple accounts, make sure you login to the account associated with your YouTube channel.</li>
+      <li>A dialog will open requesting permission to manage your YouTube account. Check the upper right of the dialog to confirm you are using the correct Google account. If not, use the drop down to select the Google account you want to distribute videos to. Click <strong>Allow</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-yt-dest.png" /></figure>
+      </li>
+      <li>Give the destination a unique, descriptive name. Click <span class="button-blue">Add</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-name-yt-dest.png" /></figure>
+      </li>
+      <li>Basic information and the destination defaults will be displayed. Click the <span class="button-blue">Edit</span> button in the <strong>Basic info</strong> section to edit the destination name. See the <a href="#youtube_defaults">Setting YouTube defaults</a> section for information on configuring default values.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-yt-dest-created.png" /></figure>
+      </li>
+      <li>Click <strong>Destinations</strong> in the left margin and confirm that the destination appears in the list of destinations. The value below the destination name is the destination ID.</li>
+    </ol>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-yt-dest-added.png" /></figure>
+    <p>Click the <strong>Destination Name</strong> to edit the destination. Click the link in the <strong>Channel/Page</strong> column to open the YouTube channel in another browser tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="youtube_defaults">Setting YouTube defaults</h2>
+    <p>The destination default values will be used as the default video properties when <a href="/social/publishing-videos-social-media-platforms.html">publishing videos to social platforms</a>. To configure publishing defaults for YouTube destination, click on the destination name and then click <span class="button-blue">Edit</span> in the <strong>Defaults for this destination</strong> section. The following video properties can be configured:</p>
+    <ul>
+      <li><a href="#ytpostinfo">Post Info</a></li>
+      <li><a href="#ytschedule">Schedule</a></li>
+      <li><a href="#ytcaptions">Captions</a></li>
+      <li><a href="#ytvisibility">Visibility</a></li>
+      <li><a href="#ytlicense">License</a></li>
+      <li><a href="#ytlive">Live</a></li>
+    </ul>
+    <div id="ytpostinfo" class="BCL-subsection">
+      <h3>Configuring the Post Info properties</h3>
+      <p>Click on the <strong>Post Info</strong> link. The following YouTube video properties can be set:</p>
+      <ul>
+        <li><strong>Description</strong> - Options to use the Marketing Studio short or long description or to enter a default description to use</li>
+        <li><strong>Original Language Code</strong> - Used to add translated video titles and descriptions to videos; Enter a 2 letter language code and select from the list</li>
+        <li><strong>YouTube Category</strong> - Content category for the video</li>
+        <li><strong>Tags</strong> - Option to include, or exclude, Marketing Studio tags</li>
+        <li><strong>Include Marketing Studio metadata as YouTube tags</strong> - Option to include the video ID and reference ID as YouTube tags</li>
+        <li><strong>Additional Tags</strong> - Option to enter additional tags for videos</li>
+        <li><strong>Thumbnail Source</strong> - Options to use the YouTube thumbnail, the Marketing Studio thumbnail or to upload your own thumbnail image</li>
+      </ul>
+    </div>
+    <div id="ytschedule" class="BCL-subsection">
+      <h3>Configuring the Schedule properties</h3>
+      <p>Click on the <strong>Schedule</strong> link and select a schedule setting:</p>
+      <ul>
+        <li><strong>Publish immediately</strong> - To publish the video immediately</li>
+        <li><strong>Use Video Cloud start date</strong> - To use the Video Cloud start date set for the video. In this case, we tell YouTube to make the video public as of the 'Scheduled Start Date' specified in Video Cloud. If that date is in the past, YouTube makes the video public immediately.</li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--information">Note: To have the <a href="#ytvisibility">video visibility</a> set to <strong>Unlisted</strong> or <strong>Private</strong>, set the <strong>Schedule</strong> option to <strong>Publish immediately</strong> and set the <strong>Visibility</strong> option to <strong>Unlisted</strong> or <strong>Private</strong>.</aside>
+    </div>
+    <div id="ytcaptions" class="BCL-subsection">
+      <h3>Configuring the Captions properties</h3>
+      <p>Click on the <strong>Captions</strong> link and select an option:</p>
+      <ul>
+        <li><strong>Use Video Cloud captions</strong> - The Social module will attempt to distribute the captions associated with the video to YouTube. The Social module will attempt to access captions files no matter where they are. If a remote URL is used to specify the location of the caption files and the files are accessible (e.g., not geo-restricted in such a way that we can't get to them) then Social will distribute them to YouTube.</li>
+        <li><strong>No captions</strong> - No captions are used</li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--information">Note: For information on working with captions in Video Cloud, see <a href="/media/captions/overview-adding-captions-video.html">Overview: Adding Captions to a Video</a>.</aside>
+    </div>
+    <div id="ytvisibility" class="BCL-subsection">
+      <h3>Configuring the Visibility properties</h3>
+      <p>Click on the <strong>Visibility</strong> link and select a Privacy setting for the video. The following Privacy settings are available:</p>
+      <ul>
+        <li><strong>Public</strong> - Anyone can view the video</li>
+        <li><strong>Unlisted</strong> - Anyone who has the link to the video can view it</li>
+        <li><strong>Private</strong> - Video can only be seen by you and the users you select</li>
+        <li><strong>Use YT_Privacy_Status Custom Field</strong> - Dynamically assigns the privacy setting using a custom field associated with the video. For information, see <a href="/social/setting-privacy-status-video.html">Setting the Privacy Status for a Video</a>.</li>
+      </ul>
+      <p>There is also a setting to <strong>Notify subscribers when video is posted to YouTube</strong>. If checked, your subscribers will see your videos in their Subscriptions feed and may receive a notification that the video was uploaded.</p>
+      <aside class="bcls-aside bcls-aside--information">Note: For more information on the YouTube Privacy settings, see the <a href="https://support.google.com/youtube/answer/157177">YouTube documentation</a>.</aside>
+    </div>
+    <div id="ytlicense" class="BCL-subsection">
+      <h3>Configuring the License properties</h3>
+      <p>Click on the <strong>License</strong> link and select a License and Rights Ownership setting for the video. The following settings are available:</p>
+      <ul>
+        <li>Standard YouTube License</li>
+        <li>Creative Commons - Attribution</li>
+      </ul>
+      <aside class="bcls-aside bcls-aside--information">Note: For more information on YouTube License and Rights Ownership, see the <a href="https://support.google.com/youtube/answer/2797468">YouTube documentation</a>.</aside>
+    </div>
+    <div id="ytlive" class="BCL-subsection">
+      <h3>Configuring the Live properties</h3>
+      <p>Click on the <strong>Live</strong> link and select the <strong>DVR</strong> setting for the video. The following settings are available:</p>
+      <ul>
+        <li>Enable</li>
+        <li>Disable</li>
+      </ul>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="facebook">Creating a Facebook destination</h2>
+    <p>Create a Facebook destination when you want to publish videos to a Facebook page. Note that videos can only be distributed to Facebook pages, not personal profile pages. To create a Facebook destination, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the<strong> Social </strong>Module.</li>
+      <li>Click <strong>Destinations</strong> in the left navigation.</li>
+      <li>Click <span class="button-blue">Add Destination</span>.</li>
+      <li>Click<strong> Sign in with Facebook</strong>.</li>
+      <li>A dialog will open requesting you to login to your Facebook account. Enter your credentials and click <strong>Log In</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-fb-dest.png" /></figure>
+      </li>
+      <li>A dialog will open confirming what Brightcove Social is allowed to do. Edit the settings as needed and then click <strong>Done</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-fb-dest1.png" /></figure>
+      </li>
+      <li>A dialog will open confirming that Brightcove Social is linked to Facebook. Click <strong>OK</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-fb-dest2.png" /></figure>
+      </li>
+      <li>Give the destination a unique, descriptive name. If you have multiple Facebook pages, select the page to publish to using the dropdown list and then click <span class="button-blue">Add</span>.
+        <aside class="bcls-aside bcls-aside--information">Note: You can't publish videos to personal profile pages.</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-name-fb-dest.png" /></figure>
+      </li>
+      <li>Basic information and the destination defaults will be displayed. Click <span class="button-blue">Edit</span> in the <strong>Basic info</strong> section to edit the destination name. See the <a href="#facebook_defaults">Setting Facebook defaults</a> section for information on configuring default values.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-fb-dest-created.png" /></figure>
+      </li>
+      <li>Click <strong>Destinations</strong> in the left margin and confirm that the destination appears in the list of destinations. The value below the destination name is the destination id.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-fb-dest-added.png" /></figure>
+      </li>
+    </ol>
+    <p>Click the destination name to edit the destination. Click the link in the Channel/Page column to open the Facebook page in another browser tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="facebook_defaults">Setting Facebook defaults</h2>
+    <p>The destination default values will be used as the default video properties when <a href="/social/publishing-videos-social-media-platforms.html">publishing videos to social platforms</a>. To configure publishing defaults for Facebook destinations, click on the destination name and then click <span class="button-blue">Edit</span> in the <strong>Defaults for this destination</strong> section. The following Facebook video properties can be configured:</p>
+    <ul>
+      <li><a href="#fbpostinfo">Post Info</a></li>
+      <li><a href="#fbschedule">Schedule</a></li>
+      <li><a href="#fbcaptions">Captions</a></li>
+      <li><a href="#fbtargeting">Target</a></li>
+      <li><a href="#fbmonetize">Monetize</a></li>
+      <li><a href="#fbrights">Rights</a></li>
+      <li><a href="#fbdistribution">Distribution</a></li>
+      <li><a href="#fbtracking">Tracking</a></li>
+      <li><a href="#fblive">Live</a></li>
+    </ul>
+    <div id="fbpostinfo" class="BCL-subsection">
+      <h3>Configuring the Post Info properties</h3>
+      <p>Click on the <strong>Post Info</strong> link. The following Facebook video properties can be set:</p>
+      <ul>
+        <li><strong>Status Message</strong> - Options to use the Video Cloud short or long description or to enter a default description to use</li>
+        <li><strong>Tags</strong> - Tags to help people discover your videos</li>
+        <li><strong>Facebook Category</strong> - Content category for the video</li>
+        <li><strong>Thumbnail Source</strong> - Options to use the Facebook thumbnail, the Video Cloud thumbnail or to upload your own thumbnail image</li>
+      </ul>
+    </div>
+    <div id="fbschedule" class="BCL-subsection">
+      <h3>Configuring the Schedule properties</h3>
+      <p>Click on the <strong>Schedule</strong> link. Select <strong>Publish immediately</strong> to publish the video immediately or select <strong>Use Video Cloud start date</strong> to use the start date set for the video. You can also <strong>Never expire posts </strong>or have <strong>Posts expire on Video Cloud end date</strong>.</p>
+    </div>
+    <div id="fbcaptions" class="BCL-subsection">
+      <h3>Configuring the Captions properties</h3>
+      <p>Click on the <strong>Captions</strong> link. Select <strong>Use Video Cloud captions</strong> to use the captions associated with the video or <strong>No captions</strong> to not use captions.</p>
+      <aside class="bcls-aside bcls-aside--information">Note: For information on working with captions in Video Cloud, see <a href="/media/captions/overview-adding-captions-video.html">Overview: Adding Captions to a Video</a>.</aside>
+    </div>
+    <div id="fbtargeting" class="BCL-subsection">
+      <h3>Configuring the Target properties</h3>
+      <p>Click on the<strong> Target </strong>link. The following properties can be set:</p>
+      <ul>
+        <li><strong>Audience Optimization Interests</strong> - Add tags to describe the interests of people who are most likely to enjoy your post. For information, see the <a href="https://www.facebook.com/facebookmedia/get-started/audience-optimization">Facebook documentation</a>.</li>
+        <li><strong>Location Restrictions</strong> - Add countries to include or exclude from seeing the post</li>
+      </ul>
+    </div>
+    <div id="fbmonetize" class="BCL-subsection">
+      <h3>Configuring the Monetize properties</h3>
+      <p>Click on the<strong> Monetize </strong>link. The following properties can be set:</p>
+      <ul>
+        <li><strong>Who is your business partner for posts to this destination?</strong> - Add a business partner for branded content posts. As you type, a list of matching businesses will appear. For information on Facebook branded content, see the <a href="https://www.facebook.com/business/help/788160621327601">Facebook documentation</a>.</li>
+        <li><strong>Allow business partner to boost posts</strong></li>
+      </ul>
+    </div>
+    <div id="fbrights" class="BCL-subsection">
+      <h3>Configuring the Rights properties</h3>
+      <aside class="bcls-aside bcls-aside--information">Note: Your Facebook account must have access to the Facebook Rights Manager for the Rights option to appear.</aside>
+      <p>Click on the<strong> Rights </strong>link. The following properties can be set:</p>
+      <ul>
+        <li><strong>Detect Matching Content</strong> - Check to enable Facebook rights management. For information, see the <a href="https://rightsmanager.fb.com">Facebook documentation</a>.</li>
+        <li><strong>Specify Ownership</strong> - Specify copyright ownership on video, audio, or both</li>
+        <li><strong>Country Selection</strong> - Select <strong>Worldwide</strong>, <strong>Include Countries</strong> or <strong>Exclude Countries</strong>. If include or exclude is selected, then add the <strong>Location Restrictions</strong>.</li>
+        <li><strong>Apply Match Rule</strong> - Select a rule. The <strong>Match Rule</strong> determines what automatic actions happen when people upload matched videos. Match Rules are managed inside of Facebook.</li>
+        <li><strong>Grant Permission</strong> - Authorize certain people or Pages or Instagram accounts to have permission to post videos matching your content.</li>
+      </ul>
+    </div>
+    <div id="fbdistribution" class="BCL-subsection">
+      <h3>Configuring the Distribution properties</h3>
+      <p>Click on the <strong>Distribution</strong> link to set where the video can be seen. The following <strong>Custom Distribution and Moderation </strong>options are available:</p>
+      <ul>
+        <li><strong>Show in News Feed</strong> - Shows video in News Feed</li>
+        <li><strong>Allow Embedding</strong> - Allow video embeds on third-party sites</li>
+        <li><strong>Add as Secret Video</strong> - Videos will be accessible only via a direct URL and are not searchable for people on Facebook
+          <ul>
+            <li><strong>Turn off Reactions, Comments and Shares</strong> - Disallows likes and comments</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="fbtracking" class="BCL-subsection">
+      <h3>Configuring the Tracking properties</h3>
+      <p>Click on the <strong>Tracking</strong> link to assign a universal ID to track the video across systems. The following <strong>Universal ID</strong> options are available:</p>
+      <ul>
+        <li>Leave Blank</li>
+        <li>Use Video ID from Marketing Studio</li>
+        <li>Use Reference ID from Marketing Studio, if present</li>
+      </ul>
+    </div>
+    <div id="fblive" class="BCL-subsection">
+      <h3>Configuring the Live properties</h3>
+      <p>Click on the <strong>Live</strong> link to configure the Facebook Live Video Settings. Enable <strong>Allow embedding</strong> to allow the video to be embedded on third-party websites.</p>
+      <p>Click on the <strong>Live</strong> link to configure the Facebook Live Video Settings. Enable <strong>Allow embedding</strong> to allow the video to be embedded on third-party websites.</p>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="twitter">Creating a Twitter destination</h2>
+    <p>Create a Twitter destination when you want to publish videos to a Twitter feed. To create a Twitter destination, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the<strong> Social </strong>Module.</li>
+      <li>Click <strong>Destinations</strong> in the left navigation.</li>
+      <li>Click <span class="button-blue">Add Destination</span>.</li>
+      <li>Select <strong>Sign in with Twitter</strong>.</li>
+      <li>You will be prompted to login to your Twitter account and authorize Brightcove Social to use your account. Login to the account you want to post videos to. If you are not prompted to login, you may be logged into a Twitter account. Make sure you are logged into the correct account before proceeding. Click <strong>Authorize App</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-twitter-dest.png" /></figure>
+      </li>
+      <li>Give the destination a unique, descriptive name. Click <span class="button-blue">Add</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-name-twitter-dest.png" /></figure>
+      </li>
+      <li>Basic information and the destination defaults will be displayed. Click <span class="button-blue">Edit</span> in the <strong>Basic info</strong> section to edit the destination name. See the <a href="#twitter_defaults">Setting Twitter defaults</a> section for information on configuring default values.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-twitter-dest-created.png" /></figure>
+      </li>
+      <li>Click <strong>Destinations</strong> in the left margin and confirm that the destination appears in the list of destinations. The value below the destination name is the destination id.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-twitter-dest-added.png" /></figure>
+      </li>
+    </ol>
+    <p>Click the destination name to edit the destination. Click the link in the Channel/Page column to open the Twitter account in another browser tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="twitter_defaults">Setting Twitter defaults</h2>
+    <p>The destination default values will be used as the default video properties when <a href="/social/publishing-videos-social-media-platforms.html">publishing videos to social platforms</a>. To configure publishing defaults for Twitter destinations, click on the destination name and then click <span class="button-blue">Edit</span> in the <strong>Defaults for this destination</strong> section.</p>
+    <p>Configure the default <strong>Tweet Content</strong>:</p>
+    <ul>
+      <li>Use the video's name from Video Cloud</li>
+      <li>Use the TW_Tweet custom field from Video Cloud</li>
+      <li>Set a custom default Tweet</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="linkedin">Creating a LinkedIn destination</h2>
+    <p>Create a LinkedIn destination when you want to publish videos to LinkedIn. To create a LinkedIn destination, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the<strong> Social </strong>Module.</li>
+      <li>Click <strong>Destinations</strong> in the left navigation.</li>
+      <li>Click <span class="button-blue">Add Destination</span>.</li>
+      <li>Click<strong> Sign in with LinkedIn</strong>.</li>
+      <li>A dialog will open requesting you to login to your LinkedIn account. Enter your credentials and click <strong>Sign In</strong>.
+        <aside class="bcls-aside bcls-aside--information">Note: When creating a LinkedIn destination, sign in using a LinkedIn organizational account or an account that has at least one LinkedIn page.</aside>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-linkedin-dest.png" /></figure>
+      </li>
+      <li>A dialog will open confirming what Brightcove Social is allowed to do. Click <strong>Allow</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-auth-linkedin-dest1.png" /></figure>
+      </li>
+      <li>Give the destination a unique, descriptive name. If you have multiple LinkedIn organizations, select the page to publish to using the dropdown list and then click <span class="button-blue">Add</span>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-name-linkedin-dest.png" /></figure>
+      </li>
+      <li>Basic information and the destination defaults will be displayed. Click <span class="button-blue">Edit</span> in the <strong>Basic info</strong> section to edit the destination name. See the <a href="#linkedin_defaults">Setting Linkedin defaults</a> section for information on configuring default values.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-linkedin-dest-created.png" /></figure>
+      </li>
+      <li>Click <strong>Destinations</strong> in the left margin and confirm that the destination appears in the list of destinations. The value below the destination name is the destination id.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-linkedin-dest-added.png" /></figure>
+      </li>
+    </ol>
+    <p>Click the destination name to edit the destination. Click the link in the Channel/Page column to open the LinkedIn page in another browser tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="linkedin_defaults">Setting LinkedIn defaults</h2>
+    <p>The destination default values will be used as the default video properties when <a href="/social/publishing-videos-social-media-platforms.html">publishing videos to social platforms</a>. To configure publishing defaults for LinkedIn destinations, click on the destination name and then click <span class="button-blue">Edit</span> in the <strong>Defaults for this destination</strong> section. The following LinkedIn video properties can be configured:</p>
+    <ul>
+      <li><a href="#linkedinpostinfo">Post Info</a></li>
+      <li><a href="#linkedinvisibility">Visibility</a></li>
+      <li><a href="#linkedincaptions">Captions</a></li>
+    </ul>
+    <div id="linkedinpostinfo" class="BCL-subsection">
+      <h3>Configuring the Post Info properties</h3>
+      <p>Click on the <strong>Post Info</strong> link. The following LinkedIn video properties can be set:</p>
+      <ul>
+        <li><strong>Commentary</strong> - Options to use the Video Cloud short or long description or to enter a default description to use</li>
+        <li><strong>Thumbnail Source</strong> - Options to use the Video Cloud thumbnail or the the LinkedIn thumbnail</li>
+      </ul>
+    </div>
+    <div id="linkedinvisibility" class="BCL-subsection">
+      <h3>Configuring the Visibility properties</h3>
+      <p>Click on the <strong>Visibility</strong> link and select a Visibility setting for the video. The following settings are available:</p>
+      <ul>
+        <li><strong>PUBLIC</strong> - Anyone can view the video</li>
+        <li><strong>LOGGED IN</strong> - Anyone who is logged in  can view the video </li>
+      </ul>
+    </div>
+    <div id="linkedincaptions" class="BCL-subsection">
+      <h3>Configuring the Captions properties</h3>
+      <p>Click on the <strong>Captions</strong> link. Select <strong>Use Video Cloud captions</strong> to use the captions associated with the video or <strong>No captions</strong> to not use captions.</p>
+      <aside class="bcls-aside bcls-aside--information">Note: For information on working with captions in Video Cloud, see <a href="/media/captions/overview-adding-captions-video.html">Overview: Adding Captions to a Video</a>.</aside>
+    </div>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete">Deleting a destination</h2>
+    <p>To delete a destination, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the<strong> Social </strong>Module.</li>
+      <li>Click <strong>Destinations</strong> in the left navigation. A list of destinations will appear.</li>
+      <li>Click the destination name to delete.</li>
+      <li>The destination details will be displayed. Click <span class="button-blue"><i data-feather="trash-2"></i> Delete</span><strong> </strong>and then click <span class="button-red-text-border">Delete</span> to confirm the deletion.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">Note: The delete button will not appear if there are Auto Sync jobs created that use the destination. You must remove the Auto Sync jobs before deleting the destination.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="reconnect">Reconnecting to a destination</h2>
+    <p>Brightcove Social will display an error message if any destinations have issues.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-social-img/node16345-error-message.png" /></figure>
+    <p>An error icon (<img alt="" src="/assets/images/s-social-img/node16345-error-icon.png" />) will be displayed next to the destination name. This can happen if the Brightcove permissions are removed from the social media account or when the credentials used when creating the destination are no longer valid. To resolve the issue:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click the destination name.</li>
+      <li>Click the <strong>Reconnect</strong> link at the top of the page.</li>
+      <li>You may be prompted to re-authenticate with the social media account.</li>
+    </ol>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 09 May 2022
+</div>
+
+
+
+</main>
+<div class="footer-container">
+  <footer class="bcls-footer" role="contentinfo">
+    <div class="row">
+      <div class="region region-footer-top-center col-md-12">
+        <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+          <img src="https://support.brightcove.com/site-assets/images/site/SVG/COVE004_Brightcove_Logo_093020_RGB_KO.svg" class="bc-footer-logo" alt="Brightcove">
+  
+          <h2>Brightcove Support</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://status.brightcove.com">System Status</a>
+            </li>
+            <li>
+              <a href="https://supportportal.brightcove.com">Contact Support</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/search.html">Search all Documentation</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+  
+          <h2>Training</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online Courses</a>
+            </li>
+            <li>
+              <a href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a>
+            </li>
+            <li>
+              <a href="https://university.brightcove.com/">Brightcove University</a>
+            </li>
+          </ul>
+  
+        </nav>
+        <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+  
+          <h2>Brightcove</h2>
+  
+          <ul class="menu">
+            <li>
+              <a href="https://www.brightcove.com">Brightcove.com</a>
+            </li>
+            <li>
+              <a href="https://community.brightcove.com/s/">Bright Spot Community Forum</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/product-updates.html">Product Release Notes</a>
+            </li>
+            <li>
+              <a href="https://support.brightcove.com/doc-updates.html">Documentation Updates</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="region region-footer-bottom-center col-md-12">
+        <div class="bcls-copyright footer-menu">
+          <table>
+            <tr>
+              <td>
+                <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+              </td>
+              <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+              <td>
+                <div class="gf-links-cols footer-menu">
+                  <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" target="_blank" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" target="_blank" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" target="_blank" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
