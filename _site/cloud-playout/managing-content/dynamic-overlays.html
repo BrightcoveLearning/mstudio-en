@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Using Channel Actions</title>
+        <title>Adding Dynamic Overlays</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how to use channel actions to activate, play, or stop a Cloud Playout channel.">
+        <meta name="description" content="This topic explains how to add dynamic (motion image) overlays to your Cloud Playout channels. Also see Adding Static Image Overlays.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -425,7 +425,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Using Channel Actions</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/cloud-playout/managing-content/">Managing content</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Adding Dynamic Overlays</li>
             
             
           </ol>
@@ -446,44 +450,140 @@
       <br>
       
       
-<h1>Using Channel Actions</h1>
+<h1>Adding Dynamic Overlays</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how to use channel actions to activate, play, or stop a Cloud Playout channel.</summary>
+  <summary>This topic explains how to add dynamic (motion image) overlays to your Cloud Playout channels. Also see <a href="{{ site.cloud_playout_path }}static-image-overlays.html">Adding Static Image Overlays</a>.</summary>
+  <p>Also see <a href="managing-content/static-image-overlays.html">Adding Static Image Overlays</a>.</p>
   <section class="bcls-section">
-    <h2 id="actions">Using channel actions</h2>
-    <p>Depending on the status of the channel, various channel action buttons will be available on the channel settings page. Access the channel action buttons by clicking on the channel name to view the channel details. The following channel action buttons are available:</p>
-    <ul>
-      <li><img src="/assets/images/s-cloudplayout-img/cloudplayout-activate-button.webp" alt="activate" class="ui-image"> - Activating a channel makes it available for streaming. You must add videos and/or live events to the channel and click <img src="/assets/images/s-cloudplayout-img/cloudplayout-save-button.webp" alt="save" class="ui-image"> before the Activate button will appear.</li>
-      <li><img src="/assets/images/s-cloudplayout-img/cloudplayout-play-now-button.webp" alt="play now" class="ui-image"> - Click <strong>Play Now</strong> to start streaming the channel. This option is only available for channels that have an upcoming start time. The channel will start at the scheduled start time automatically.</li>
-      <li><img src="/assets/images/s-cloudplayout-img/playout-stop-now.webp" alt="stop now" class="ui-image"> - Click <strong>Stop Now</strong> to stop a running channel. This will stop the channel and end the live stream. If the channel is looping, and has an end date/time, the channel will stop at that time automatically. This option gives you a way to stop it early.</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--warning language-editable">Note: these actions take some time to perform - do not click the button repeatedly if it does not respond immediately, as this may cause the action to fail.</aside>
+    <h2 id="Introduction">Introduction</h2>
+    <p>You can use the dynamic overlays (Motion Graphics) feature to superimpose a motion image onto the video in a Cloud Playout channel. The dynamic overlay is based on an HTML5 motion graphic asset.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="Resource_deallocation_on_channel_stop">Resource de-allocation on channel stop</h2>
-    <p>The following happens when you stop a channel:</p>
-    <ol>
-      <li>A Cloud Playout channel when stopped will enter in to a <strong>DRAFT</strong> state which will enable users to modify the channel settings again.</li>
-      <li>This will also clear-up the chained BC Live events if there are any.</li>
-      <li>The channel will have to be <strong>Activated</strong> again so that the resources will get allocated and the channel put into a <strong>SCHEDULED</strong> state.</li>
-      <li>If the Cloud Playout channel is enabled for a Live streams, it will show a <strong>static entry point for RTMP ingest</strong> that will remain static throughout the lifetime of the channel irrespective of how many times the channel is stopped and started again.
+    <h2 id="Implementation">Implementation</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        To set up for dynamic overlay, enable the option while creating a Cloud Playout channel. You can toggle this option only when a channel is in DRAFT state:
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/static-entry-point-for-rtmp-ingest.webp" alt="Static Entry Point for RTMP Ingest">
-          <figcaption class="bcls-caption--image">Static Entry Point for RTMP Ingest</figcaption>
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/enable-dynamic-overlays.webp" alt="Enable Dynamic Overlays">
+          <figcaption class="bcls-caption--image">Enable Dynamic Overlays</figcaption>
         </figure>
-        <p>This entry point will be able to start accepting input once the channel starts up and is running.</p>
-      </li>
-      <li>If Cloud Playout is not able to provide a static RTMP ingest point due to an internal issue, we will attempt to show an IP-address-based ingest point. If this happens, we recommend that you check regularly for a change in the RTMP ingest point for the channel.</li>
-      <li>
-        <aside class="bcls-aside bcls-aside--information">Note: After activating the channel, it takes an average of 1-2 minutes for Cloud Playout to publish the new IP address for the static ingest point. So, if a channel is started immediately after activation within 1-2 minutes, and the Live Event happens to be the first asset in the channel’s playlist, then there is a possibility that the ingest point will be unresolvable. It will become resolvable as soon as the IP address for static ingest point is published.</aside>
       </li>
       <li>
-        <aside class="bcls-aside bcls-aside--information">Note: In a case where the channel ran with Live Input for the first run and stopped, and you then turn off the Live Input for the channel, the existing program might still have Live events that will fail. If you decide to disable live streams for the channel after stopping it, you should remove any live events from the channel content before restarting it.</aside>
+        Then you choose an HTML5 authoring system. Use this authoring system to prepare an HTML5 asset, and you must continually publish the asset to a location outside of Cloud Playout.
+        <ul>
+          <li>It can be any HTML5 authoring system that uses standard browser-based rendering techniques.</li>
+          <li>It can use any HTML5 tags except video and audio.</li>
+          <li>Publish the dynamic overlay asset to a source URL that is accessible via a public IP address. Assets protected by credentials are not accepted.</li>
+          <li><strong>Remember that the URL should be valid, accessible and should be returning a HTML content with content-type text/html.</strong></li>
+        </ul>
+      </li>
+      <li>
+        Add the HTML5 authoring asset to your account using the <strong>Overlays</strong> page:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-dynamic-overlay-to-account.webp" alt="Add HTML5 Asset">
+          <figcaption class="bcls-caption--image">Add HTML5 Asset</figcaption>
+        </figure>
+      </li>
+      <li>
+        The Dynamic Overlay can then be associated with a channel:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-for-channel-button.webp" alt="Add Channel Overlays">
+          <figcaption class="bcls-caption--image">Add Channel Overlays</figcaption>
+        </figure>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/dynamic-overlays-for-channel.webp" alt="Overlays for Channel">
+          <figcaption class="bcls-caption--image">Overlays for Channel</figcaption>
+        </figure>
+      </li>
+      <li>
+        You can configure each dynamic overlay with a start time and duration:
+        <ul>
+          <li>The duration when specified, should be a maximum of 24 hours. If left empty, that is considered as 24*7 and the overlay will continue to be shown until deactivated.</li>
+          <li>The Start time must always be a future time.</li>
+          <li>Use Current time if you want to start it immediately. Note that this option is useful only when the channel is currently running.</li>
+        </ul>
       </li>
     </ol>
+    
   </section>
+  <section class="bcls-section">
+    <h2 id="State_transitions">State transitions</h2>
+    <p>State transitions for overlay schedules</p>
+    <ul>
+      <li>
+        <strong>INACTIVE</strong>
+        <ul>
+          <li>A newly created schedule (or)</li> 
+          <li>A schedule that has already completed the run (or)</li>
+          <li>A schedule that is already deactivated.</li> 
+          <li>You can change the start time to bring it back to SCHEDULED state with the same or updated overlay configuration.</li>
+          <li>Delete - if you will no longer use this configuration.</li>
+          <li>Modify for any configuration changes.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>SCHEDULED</strong>
+        <ul>
+          <li>Scheduled to start at the specified start time.</li> 
+          <li>Delete if you no longer need this schedule.</li>
+          <li>Modify for any configuration changes.</li> 
+        </ul>
+      </li>
+      <li>
+        <strong>ACTIVE</strong>
+        <ul>
+          <li>A schedule that is currently in progress.</li> 
+          <li>Deactivate when you need to stop the overlay.</li>
+          <li>Modify any configuration except layer and start_time.</li> 
+          <li>Deletion not allowed. You need to deactivate first.</li>
+        </ul>
+      </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--information language-editable">You can edit the overlays at any time. However, the start time cannot be changed for an ACTIVE overlay. You can still change the image itself on an active overlay.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Contextual_Overlay_Launch">Contextual Launch point</h2>
+    <p>For ease of access, if you want the overlay to appear for a specific video in the playlist, you can mouse hover the video in the playlist and click on the <strong>Add Overlay icon</strong> ( <img src="/assets/images/s-cloudplayout-img/overlay-icon.svg" alt="overlay icon"> ), the UI will launch the Add Overlays modal, with the start time and duration of the selected video.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-overlay-to-particular-videos.webp" alt="Add Overlay to Specific Video">
+      <figcaption class="bcls-caption--image">Add Overlay to Specific Video</figcaption>
+    </figure>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-dynamic-overlay-to-channel.webp" alt="Set Overlay Properties">
+      <figcaption class="bcls-caption--image">Set Overlay Properties</figcaption>
+    </figure>
+    <h3>Notes</h3>
+    <ol>
+      <li>This will create a schedule for the selected video’s start time and it’s not attached to the video itself. In other words, if the video is re-ordered (or) deleted (or) start time changed due to various changes to the EPG schedule, the overlay schedule will still remain on the originally scheduled start time.</li>
+      <li>This Add Overlay in context to the video is recommended to be used on a Running channel rather than on a channel in DRAFT or SCHEDULED state - because the running channel is more time accurate (powered by EPG) than the channels in other states.</li>
+      <li>On a running channel, this option is available on all videos following the current playing video.</li>
+      <li>This option is not available for Ad placeholder videos on SSAI channel.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Image_handling">Overlay handling</h2>
+    <ul>
+      <li>Any Javascript authored to interact with a backend system will be stripped off while streaming out of Cloud Playout.</li>
+      <li>The overlays are applied to the source MP4 video before encoding.</li>
+      <li>You should size the overlay content to match the width and height of the largest source video rendition (the progressive MP4 sources) in your channel. </li>
+      <li>Cloud Playout cannot change the resolution of the overlay content to fill the frame (no upscaling), although it will resize content down to fit a smaller video rendition without cropping.</li>
+    </ul>
+  </section>
+  <!-- <section class="bcls-section">
+    <h2 id="Known_issues">Known issues</h2>
+    <ol>
+      <li>
+        There is an existing issue in enabling both Dynamic Overlays and Live Input on a channel.
+        <p><strong>Workaround</strong></p>
+        <ul>
+          <li>When both (Dynamic Overlays and Live Input) are enabled on a channel, Cloud Playout will not use the Live monitoring & failover capability. </li>
+          <li>Therefore, when Live feed is not available to this channel, Cloud Playout will not switch to the failover MP4 slate. Instead it will just emit black frames. However there should not be any issues if the channel continues to receive Live feed.</li>
+          <li>Also Cloud Playout will not monitor for Live feed availability and the camera icon on UI that visualizes the Live feed availability will remain grey.</li>
+        </ul>
+      </li>
+    </ol>
+  </section> -->
 </article>
-
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -513,7 +613,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       

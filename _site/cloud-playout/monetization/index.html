@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Using Live Redundancy with Channels</title>
+        <title>Monetizing Channels</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Cloud Playout allows you to make use of Live Redundancy using either Studio module or Channels API. This topic covers Live redundancy integration using Studio.">
+        <meta name="description" content="Monetize your channels with server-side ads.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -425,7 +425,7 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Using Live Redundancy with Channels</li>
+            <li class="breadcrumb-item active" aria-current="page">Monetizing Channels</li>
             
             
           </ol>
@@ -438,54 +438,24 @@
   <div class="container">
     <div class="docs-overview py-5">
       
-      <div class="centered-inpage-nav" id="centered_inpage_nav">
-        <nav id="centered_toc">
-          <select id="centered_in_page_toc" class="form-select select-focus"></select>
-        </nav>
-      </div>
-      <br>
       
-      
+<!-- Template for sub-section that has just pages -->
 
-<h1>Using Live Redundancy with Channels</h1>
-<article class="bcls-article">
-  <summary>Cloud Playout allows you to make use of Live Redundancy using either Studio module or Channels API. This topic covers Live redundancy integration using Studio.</summary>
-  <section class="bcls-section">
-    <h2 id="live_redundancy">Live redundancy</h2>
-    <p>Live redundancy allows you to combine two or more live jobs into a single stream with automatic failover for uninterrupted, reliable playback.</p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that integration with Live Redundancy is not turned by default. If you would like to have it turned on for your account, contact your Customer Success Manager.</aside>
-    <p>The simplest way to get redundancy is to let Cloud Playout create the group:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/create-redundancy-group.webp" alt="Cloud Playout Creates Redundant Group">
-      <figcaption class="bcls-caption--image">Cloud Playout Creates Redundant Group</figcaption>
-    </figure>
-    <p>If you prefer to create the redundant group yourself, see <a href="https://live.support.brightcove.com/live-module/live-redundancy.html">Using Live Redundancy</a>. Once redundant groups are created using the above document you can use them in Cloud Playout.</p>
-    <h3>Redundant groups eligibility criteria</h3>
-    <aside class="bcls-aside bcls-aside--information language-editable">Note that if you have Cloud Playout create the redundant group, it will meet the necessary criteria automatically.</aside>
-    <p>To be available for use as a Cloud Playout channel destination, a redundant group must meet the following criteria:</p>
-    <ul>
-      <li>The redundant group should contain exactly 2 live jobs.</li>
-      <li>Both live jobs in the redundant group must be of <strong>Static Entry Point</strong> type.</li>
-      <li>Set the region for <strong>one</strong> of the jobs to the region that you think will be closest to the majority of your viewers. This will be the "primary region", which you should also select as the <strong>Output Region</strong> in the Destination settings when you create the channel. Brightcove will automatically set the region for the 2nd live job to the region closest to the primary region.</li>
-      <li>The redundant group (and the jobs in it) must be in <strong>standby</strong> state.</li>
-      <li>If the Cloud Playout channel is SSAI-enabled then the redundant group must also be SSAI-enabled with <strong>RTP-FEC</strong> protocol. See <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">Implementing Server-Side Ads in the Live Module</a> for more information.</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="">Using Live redundancy with a channel</h2>
-    <p>A redundant group can be set as the destination for a channel either in the <strong>New Channel</strong> dialog when you create a new channel, or in the <strong>Edit Channel</strong>:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/live-redundancy-destination.webp" alt="Destination: Redundant Group">
-      <figcaption class="bcls-caption--image">Destination: Redundant Group</figcaption>
-    </figure>
-  </section>
-</article>
-<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
-  <nav class="right-side-nav" id="right_side_nav">
-    <h6 class="toc">Page Contents</h6>
-    <ul id="in_page_nav" class="list-none"></ul>
-  </nav>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
 <!-- </div> -->
 </div>
@@ -509,7 +479,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       

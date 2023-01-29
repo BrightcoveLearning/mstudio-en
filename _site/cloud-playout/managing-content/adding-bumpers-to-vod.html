@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Creating a Cloud Playout Channel</title>
+        <title>Adding Bumpers to Cloud Playout</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how a collection of VOD videos and live events can be streamed as a live linear channel.">
+        <meta name="description" content="In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -425,7 +425,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Creating a Cloud Playout Channel</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/cloud-playout/managing-content/">Managing content</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Adding Bumpers to Cloud Playout</li>
             
             
           </ol>
@@ -446,203 +450,74 @@
       <br>
       
       
-<h1>Creating a Cloud Playout Channel</h1>
+<h1>Adding Bumpers to Cloud Playout</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how a collection of VOD videos and live events can be streamed as a live linear channel.</summary>
-
-  
-
+  <summary>In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>The Cloud Playout module enables broadcasters and media publishers to use a collection of VOD videos and live streams and then stream them as a linear channel. The channel can be streamed to Brightcove Live, Amazon S3 or a specified RTMP URL.</p>
-    
-    <p>See <a href="/channels/Marketing Studio-channels/creating-a-channel.html">Creating a Marketing Studio Channel</a> to see how you add a Cloud Playout channel to your Marketing Studio app.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloud-playout-in-navigaton.webp" alt="Go to Cloud Playout">
-      <figcaption class="bcls-caption--image">Creating a Cloud Playout Channel</figcaption>
-    </figure>
-    
-    <p>To access the Cloud Playout module, click <strong>Cloud Playout</strong> in the navigation menu. A list of all Cloud Playout channels that have been created will be displayed (if any).</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playout channel list" src="/assets/images/s-cloudplayout-img/playout-channel-list.webp" /></figure>
-    <p>The page will display the following information:</p>
-    <ul>
-      <li><strong>Channel Name</strong> - Name of the channel</li>
-      <li><strong>Start Time</strong> - Start time for the channel</li>
-      <li><strong>End Time</strong> - End time for the channel</li>
-      <li><strong>Looping</strong> - Indicates whether the program will loop</li>
-      <li><strong>Destination</strong> - Target destination for the channel</li>
-      <li><strong>Date Created</strong> - Date the channel was created</li>
-      <li><strong>Last Updated</strong> - Date the channel was last updated</li>
-      <li><strong>Status</strong> - Channel status
-        <ul>
-          <li><strong>DRAFT</strong> - Channel has been created but not activated</li>
-          <li><strong>CREATING</strong> - Channel is in the process of being activated</li>
-          <li><strong>SCHEDULED</strong> - Channel is active and ready to stream</li>
-          <li><strong>STARTING</strong> - Channel starting process to begin streaming</li>
-          <li><strong>RUNNING</strong> - Channel is actively streaming</li>
-          <li><strong>STOPPING</strong> - Channel streaming is stopping</li>
-          <li><strong>IDLE</strong> - Channel successfully ran and has been stopped</li>
-          <li><strong>DELETING</strong> - Channel is being deleted</li>
-          <li><strong>ERROR</strong> - An error occurred while creating or activating the channel</li>
-        </ul>
-      </li>
-    </ul>
+    <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
+    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created. This applies to all channels, including those enabled for Live streams or SSAI</p>
+    <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
+    <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
   </section>
   <section class="bcls-section">
-    <h2 id="channel">Creating a channel</h2>
-    <p>To create a new Cloud Playout channel, follow these steps. </p>
-    <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>Click <strong>Cloud Playout</strong> in the navigation header.</li>
+    <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
+    <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
+    <ul>
+      <li><code translate="no">cp-preroll-bumper</code></li>
+      <li><code translate="no">cp-postroll-bumper</code></li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--warning">Potential problems:
+      <ul>
+        <li>If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</li>
+        <li>Similarly, for SSAI-enabled channels, ad placeholders are treated as post-roll ads. You should not have a pre-roll bumper followed by an ad placeholder, as this effectively creates a pre-roll<i data-feather="arrow-right"></i>post-roll sequence that will cause the EPG to be inaccurate.</li>
+      </ul>
+      </aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="inserting-bumpers">Inserting bumpers</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>Before you can insert bumpers, you must <a href="getting-started/cloud-playout-stream-vod.html#add_videos">add videos and/or live events to the channel</a> and <strong>save</strong> the changes.</li>
+      <li>Go to <strong>Program Items</strong> (if this is <a href="managing-content/managing-programs.html">non-looping channel with multiple programs</a>, you will need to select the program you want to edit).</li>
       <li>
-        Click <span class="button-blue">Add New</span>:
-      </li>
-      <li>Enter the channel <strong>Identification</strong> details:
-        <ul>
-          <li><strong>Name</strong> - Name for the channel. The name must have English characters and the following special characters are allowed:   _ . : / = + - </li>
-          <li><strong>Description</strong> - Channel description</li>
-          <li><strong>Image URL</strong> - URL to an image file for the channel; meant to be a channel image that could be retrieved as part of the channel's metadata</li>
-        </ul>
-      </li>
-      <li>Enter the channel <strong>Schedule</strong> details.
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: the channel schedule reflects the OS timezone of the user who is currently editing it. If you will be deploying the channel in a region that has a different timezone, you will need to adjust the schedule for the difference between the two timezones.</aside>
-        <ul>
-          <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow. See the <a href="#looping">Creating a looping program</a> section below.</li>
-          <li><strong>Ad Insertion</strong> - If on, allows ads to be displayed during channel playback. If this option is selected, you can only output to a <strong>Brightcove Live Event</strong> or <strong>Amazon S3 Bucket</strong>. See <a href="monetization/enabling-server-side-ads.html">Monetizing Content</a>.</li>
-          <li>
-            <strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.
-            <aside class="bcls-aside bcls-aside--warning language-editable">Note: it takes 1-2 minutes for the initial startup of a channel, so if the start is time-sensitive, schedule it for 2 minutes before the time you want to initiate playback. To ensure a precise startup time, use the <a href="publishing/hard-start.html">Hard Start</a> feature.</aside>
-          </li>
-          <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
-        </ul>
-      </li>
-      <li>If you will be using Live inputs, set <strong>Live Input</strong> to On, and enter a Slate URL, unless you are going to use the default Brightcove MP4 for you slate. The slate MP4 will play whenever Live input is stopped because the encoder is stopped or some technical issue blocks the live stream. <strong>Note that <strong>the Slate URL must be a static URL that is always available</strong> (short-lived CDN URLs are not allowed).</strong></li>
-      <li>
-        Import closed captions is enabled by default; if you do not want to import captions, disable it now or while the channel is in DRAFT state:
+        Select one or more videos and/or live events and click <span class="button-blue-text-bordered">Insert Bumpers</span>.<sup><strong><a href="#note1-1">[1-1]</a></strong></sup>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/import-captions.webp" alt="Import Captions">
-          <figcaption class="bcls-caption--image">Import Captions</figcaption>
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/select-videos-for-bumper.webp" alt="Select Videos for Bumper">
+          <figcaption class="bcls-caption--image">Select Videos for Bumper</figcaption>
         </figure>
       </li>
       <li>
-        
-        Enter the channel <strong>Destination</strong> details. For channels to work in Marketing Studio apps, you must select <strong>Brightcove Live Event</strong> as the destination.
-        
-        <ul>
-          <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
-            <ul>
-              <li><strong>Mobile &amp; Web</strong> - If checked, HD Output (RTMP or HLS single bitrate)</li>
-              <li><strong>Smart TV</strong> - If checked, full HD Output (RTMP or HLS single bitrate)</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected.
-            <p>There are some additional factors that will govern the region selection</p>
-            <ul>
-              <li>Since Cloud Playout pulls MP4 from the configured CDN, the MP4 must be available/accessed from the selected region.</li>
-              <li>If there are true Live segments provisioned on hte Cloud Playout channel, the region must be closer to your contribution encoder.</li>
-              <li>Select a region closer to the origin (or audience) from where the Live stream will be delivered for playback.</li>
-              <li>If you have a CDN with geo-restriction for for VOD, the region used needs to be within the allowed countries/regions under geo-restriction.</li>
-            </ul>
-          </li>
-          <li><strong>Output to</strong> - Select an output method for the channel
-            <ul>
-              <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.
-                <aside class="bcls-aside bcls-aside--information language-editable">If you are using Brightcove Live, you can also set the destination as a redundant group to get automatic failover for uninterrupted, reliable playback. See <a href="general/channel-live-redundancy.html">Using Live Redundancy with Channels</a> for more details.</aside>
-              </li>
-              <li>
-                <strong>RTMP</strong>
-                
-                <aside class="bcls-aside bcls-aside--warning language-editable">This destination is <strong>not compatible with Marketing Studio.</strong></aside>
-                
-              </li>
-              <li><strong>Amazon S3 Bucket </strong> - You can select this destination <strong>in addition to Brightcove Live Event, but not as the only destination</strong>. This option will push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key. The bucket should be public and writeable.</li>
-            </ul>
-            <aside class="bcls-aside bcls-aside--information">Note that outputting to <strong>Brightcove Live Event</strong> will automatically generate live hours for your account, which are billable. There is no addition charge for using Cloud Playout, but normal charges for live streaming hours apply.
-            </aside>
-          </li>
-        </ul>
+        In the <strong>Bumpers</strong> dialog select <strong>Pre-Roll</strong> or <strong>Post-Roll</strong> and then click <span class="button-blue">Insert</span> beside the bumper video you want to insert.<sup><strong><a href="#note1-2">[1-2]</a></strong></sup>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-dialog.webp" alt="Bumper Dialog">
+          <figcaption class="bcls-caption--image">Bumper Dialog</figcaption>
+        </figure>
       </li>
-      <li>Click <span class="button-blue">Add New</span>. The new channel will be created with a status of <strong>DRAFT</strong>.</li>
+      <li>
+        You will now see the bumpers appear in the program list:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-in-program-list.webp" alt="Bumper in Program List">
+          <figcaption class="bcls-caption--image">Bumper in Program List</figcaption>
+        </figure>
+      </li>
     </ol>
+    <h3>Notes</h3>
+    <ul style="list-style: none;">
+      <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> If you select multiple items, the same bumper will be added to each one. If you want different bumpers for different items, add them one by one.</li>
+      <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> Remember that only videos that have been <a href="#Enabling_bumper_content">tagged as bumpers</a> will appear in the list.</li>
+  </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="add_content">Adding content to a channel</h2>
-    <p>See <a href="managing-content/cloud-playout-add-content.html">Managing the Channel Program</a> for information on how to add VOD content, playlists, and live events to your channel.</p>
-    <p>Also see:</p> 
-    <ul>
-      <li><a href="managing-content/static-image-overlays.html">Adding Static Image Overlays</a></li>
-      <!-- <li><a href="managing-content/static-image-overlays.html">Adding Dynamic Overlays</a></li> -->
-      <li><a href="managing-content/adding-bumpers-to-vod.html">Adding Bumpers to Content</a></li>
-    </ul>
-    <p>After videos and live events have been added to a channel, click <strong>Activate</strong> to activate the channel. A channel must be activated before streaming can begin. See the <a href="publishing/using-channel-actions.html">Using channel actions</a> for more information.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To change the order of the videos in a program, click on a video and drag it to a new position.</aside>
-    <p>When videos are added to a channel, a system-generated playlist will be created and visible in the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/s-cloudplayout-img/playout-playlist-created.webp" /></figure>
-    <p>We strongly recommend that you make any changes to the channel in the Cloud Playout module, and <strong>do not edit the generated playlist in any way</strong>.</p>
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="getting_the_rtmp_ingest_point">Getting the RTMP ingest point</h2>
-    <aside class="bcls-aside bcls-aside--information language-editable">This section only applies if you are including live events in your channel.</aside>
-    <p>For your live encoder, you will need the RTMP ingest point for your channel. To find it, open the channel, go to <strong>Settings</strong>:</p>
+    <h2 id="removing_bumpers">Moving or removing bumpers</h2>
+    <p>Drag and drop bumpers to move them to new locations in the program list.</p>
+    <p>To remove a bumper, just select it, click <strong>Delete</strong>, and then click <strong>Delete</strong> again in the confirmation dialog.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-rtmp-ingest-point.webp" alt="Ingest Point">
-      <figcaption class="bcls-caption--image">Ingest Point</figcaption>
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/delete-bumper.webp" alt="Delete Bumper">
+      <figcaption class="bcls-caption--image">Delete Bumper</figcaption>
     </figure>
-    <aside class="bcls-aside bcls-aside--warning language-editable">
-      Please note that Cloud Playout uses a CNAME mapping for the ingest point but in rare cases this mapping may not be complete and the channel may temporarily show an IP Address such as <code translate="No">54.144.15.162:1935</code>. Check the live job before starting a live stream to the channel and wait until the Ingest Point shows a CNAME if you see an IP address.
-    </aside>
-
-    <p>Depending on the encoder you are using, you may need to enter both the RTMP ingest point and the stream name. The stream name for the channel is the <strong>Channel ID</strong>, which is also the last part of the Ingest Point address.</p>
-    <aside class="bcls-aside bcls-aside--information">Note that if you are using the OBS software encoder, you will need to specify a <strong>Custom...</strong> service, and will need to input a <strong>Server</strong> and <strong>Stream Key</strong>. The <strong>Server</strong> will be the entire <strong>Ingest Point</strong>, and the <strong>Steam Key</strong> will be the Cloud Playout Channel id, as shown in the example below:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-rtmp-ingest-point.webp" alt="Cloud Playout Ingest Point">
-        <figcaption class="bcls-caption--image">Cloud Playout Ingest Point</figcaption>
-      </figure>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-obs-setup.webp" alt="OBS Setup">
-        <figcaption class="bcls-caption--image">OBS Setup</figcaption>
-      </figure>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit_delete">Editing a channel</h2>
-    <h3>For channels in DRAFT or SCHEDULED state</h3>
-    <p>To edit a draft or scheduled Cloud Playout channel:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click the channel name to open the channel details.</li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-edit-button.webp" class="ui-image" alt="edit button"></li>
-      <li>Make the appropriate edits in the dialog and then click <span class="button-blue">Update Channel</span></li>
-    </ol>
-    <p>Note that the Destination properties cannot be edited once a channel has been created.</p>
-    <h3>For a running channel</h3>
-    <p>To edit a running channel: </p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click the channel name to open the channel details.</li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-settings.webp" alt="settings" class="ui-image"></li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-edit-button.webp" class="ui-image" alt="edit button"></li>
-      <li>The channel settings dialog will open - some options that can't be changed will not be available.</li>
-      <li>Make changes and click <span class="button-blue">Update Channel</span></li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="looping">Creating a looping program</h2>
-    <p>To create a program that loops, when creating the channel, set the <strong>Loop Playout Content</strong> setting to <strong>On</strong>. As videos are added to the program, the program listing will update to display the series of videos with associated start/end times to fill the entire channel scheduled time. When you change the duration of a live event, the duration of events that have already passed will remain unchanged, but any future plays of the event will use the new duration.</p>
-    <p>In the example below, the looping channel is running:</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/s-cloudplayout-img/cloudplayout-looping-channel.webp" /></figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="epg">Working with an electronic program guide</h2>
-    <p>Brightcove generates the EPG for Cloud Playout channels and Marketing Studio will handle that for you.</p>
-    <p>If you want to see the program data for the EPG, an API is available to retrieve the EPG. For more information see the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Overview: EPG API</a> topic.</p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="deleting_a_channel">Deleting a channel</h2>
-    <p>To delete a Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>.</p>
   </section>
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -672,7 +547,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       

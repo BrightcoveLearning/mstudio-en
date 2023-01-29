@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Adding Bumpers to Cloud Playout</title>
+        <title>Overview: Cloud Playout</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.">
+        <meta name="description" content="This topic provides an overview of Cloud Playout, which allows you to compile and schedule a combination of videos-on-demand and live feeds as a live linear channel.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -425,7 +425,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Adding Bumpers to Cloud Playout</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/cloud-playout/getting-started/">Getting started</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Overview: Cloud Playout</li>
             
             
           </ol>
@@ -446,72 +450,86 @@
       <br>
       
       
-<h1>Adding Bumpers to Cloud Playout</h1>
+<h1>Overview: Cloud Playout</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn how add bumpers (in-house ads) to VOD videos and live events in a Cloud Playout channel.</summary>
+  <summary>This topic provides an overview of Cloud Playout, which allows you to compile and schedule a combination of videos-on-demand and live feeds as a live linear channel.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
-    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created. This applies to all channels, including those enabled for Live streams or SSAI</p>
-    <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
-    <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
-    <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
+    <p>Brightcove Cloud Playout is a Studio module that enables you to program a scheduled playout of items from your VOD catalogue, combined with live feeds, and stream it as a Linear Channel all with the reliability and scalability of Brightcove Live.</p>
+    
+    <p>You can then use the Cloud Playout channel as a Marketing Studio Channel by entering information about it in creating a <a href="/channels/Marketing Studio-channels/creating-a-channel.html">Marketing Studio Channel</a>. One major advantage to using Cloud Playout channels is that you will not need to find and integrate a 3rd party EPG provider, since an EPG service is built into Cloud Playout.</p>
+    
+    <p>Cloud Playout offers a powerful, end-to-end solution for channels of scheduled programming, including:</p>
     <ul>
-      <li><code translate="no">cp-preroll-bumper</code></li>
-      <li><code translate="no">cp-postroll-bumper</code></li>
+      <li>24x7 Linear Channels</li>
+      <li>Pop-Up / Virtual Channels</li>
+      <li>Simulated Live Events</li>
     </ul>
-    <aside class="bcls-aside bcls-aside--warning">Potential problems:
-      <ul>
-        <li>If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</li>
-        <li>Similarly, for SSAI-enabled channels, ad placeholders are treated as post-roll ads. You should not have a pre-roll bumper followed by an ad placeholder, as this effectively creates a pre-roll<i data-feather="arrow-right"></i>post-roll sequence that will cause the EPG to be inaccurate.</li>
-      </ul>
-      </aside>
+    <p>Cloud Playout helps you increase audience engagement and create new revenue opportunities through a broadcast-like, Live TV experience leveraging pre-recorded content. Use existing VOD assets and add live events (optionally) to create scheduled live channels.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="inserting-bumpers">Inserting bumpers</h2>
+    <h2 id="Features">Features</h2>
+    <p>Features of Cloud Playout include:</p>
+    <ul>
+      <li>Import VOD assets from your Video Cloud Media library.</li>
+      <li>Switch between VOD assets and scheduled live feeds.</li>
+      <li>React in real time to last minute schedule changes in an easy, quick, and reliable manner.</li>
+      <li>Monetize your channel content with server-side ad insertion (SSAI).</li>
+      <li>Configure your channel to loop your program.</li>
+      <li>Optimize playout by device.</li>
+      <li>Drag and drop to re-order the program schedule at any moment, even in Running state.</li>
+      <!-- <li>Push a channel to your owned and operated properties via Brightcove Live, an Amazon S3 bucket, or a 3rd party destination via RTMP output.</li> -->
+      <li>API to retrieve the EPG (electronic program guide) for a channel</li>
+    </ul>
+  </section>
+  
+  <section class="bcls-section">
+    <h2 id="workflow_overview">Workflow overview</h2>
+    <p>There are four parts to creating a Cloud Playout channel and adding it to your Marketing Studio app:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Before you can insert bumpers, you must <a href="getting-started/cloud-playout-stream-vod.html#add_videos">add videos and/or live events to the channel</a> and <strong>save</strong> the changes.</li>
-      <li>Go to <strong>Program Items</strong> (if this is <a href="managing-content/managing-programs.html">non-looping channel with multiple programs</a>, you will need to select the program you want to edit).</li>
-      <li>
-        Select one or more videos and/or live events and click <span class="button-blue-text-bordered">Insert Bumpers</span>.<sup><strong><a href="#note1-1">[1-1]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/select-videos-for-bumper.webp" alt="Select Videos for Bumper">
-          <figcaption class="bcls-caption--image">Select Videos for Bumper</figcaption>
-        </figure>
-      </li>
-      <li>
-        In the <strong>Bumpers</strong> dialog select <strong>Pre-Roll</strong> or <strong>Post-Roll</strong> and then click <span class="button-blue">Insert</span> beside the bumper video you want to insert.<sup><strong><a href="#note1-2">[1-2]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-dialog.webp" alt="Bumper Dialog">
-          <figcaption class="bcls-caption--image">Bumper Dialog</figcaption>
-        </figure>
-      </li>
-      <li>
-        You will now see the bumpers appear in the program list:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-in-program-list.webp" alt="Bumper in Program List">
-          <figcaption class="bcls-caption--image">Bumper in Program List</figcaption>
-        </figure>
-      </li>
+      <li>In <strong>Marketing Studio Studio</strong>, create the channel.</li>
+      <li>In <strong>Marketing Studio Classic</strong>, create a new Marketing Studio channel that uses the Cloud Playout channel as its source.</li>
+      <li>In <strong>Marketing Studio Studio</strong>, add the channel to a playlist.</li>
+      <li>In <strong>Marketing Studio Studio</strong>, add the playlist to page.</li>
     </ol>
-    <h3>Notes</h3>
-    <ul style="list-style: none;">
-      <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> If you select multiple items, the same bumper will be added to each one. If you want different bumpers for different items, add them one by one.</li>
-      <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> Remember that only videos that have been <a href="#Enabling_bumper_content">tagged as bumpers</a> will appear in the list.</li>
-  </ul>
+    <p>These tasks are detailed in the <a href="#Related_topics">Related topics</a></p>
   </section>
+  
   <section class="bcls-section">
-    <h2 id="removing_bumpers">Moving or removing bumpers</h2>
-    <p>Drag and drop bumpers to move them to new locations in the program list.</p>
-    <p>To remove a bumper, just select it, click <strong>Delete</strong>, and then click <strong>Delete</strong> again in the confirmation dialog.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/delete-bumper.webp" alt="Delete Bumper">
-      <figcaption class="bcls-caption--image">Delete Bumper</figcaption>
-    </figure>
+    <h2 id="limitations">Limitations</h2>
+    <p>The following assumptions and limitations apply.</p>
+    <ul>
+      <li>Your videos must be ingested or re-transcoded using a Dynamic Delivery profile and <strong>must have an MP4 rendition</strong>:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mp4-in-ingest-profile.webp" alt="Ingest Profiles with MP4">
+          <figcaption class="bcls-caption--image">Ingest Profiles with MP4</figcaption>
+        </figure>
+      </li>
+      <li>For channels to work in Marketing Studio, you need to <strong>specify Brightcove Live as the destination</strong>.</li>
+      <li>
+        The Live job used for the channel destination should be in the same account as the channel. It is possible to use a live job from another account, but you will need to add <code translate="No">/alive</code> to the RTMP address - for example:
+<pre><code class="language-http" translate="No">rtmp://26bb68b0769682e7edbe6d4c55478818.sep.bcovlive.io:1935/26bb68b9682e7ec554dbe6d407678818<span class="bcls-highlight">/alive</span></code></pre>
+      </li>
+      <li>The maximum input bitrate and resolution supported for Cloud Playout is 20MBPS/1080p for VOD and live inputs.</li>
+      <li>Brightcove recommends using videos with at least a 2 minute duration to ensure a correct transition between videos and electronic program guide accuracy</li>
+      <li>Captions (text tracks) added to videos currently will display in Cloud Playout channels if you have <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">requested closed captions</a> for MP4 renditions.</li>
+      <li>The minimum length for Live events is 5 minutes.</li>
+      <li>Every Live Event in Cloud Playout shares an 1:1 relation with a Video Cloud remote asset. This remote asset cannot be re-used in other channels. If the live event is removed from the channel, the associated remote asset will be automatically deleted. When a channel is deleted, any associated remote assets will also be deleted automatically.</li>
+      <li>Videos <strong>shared</strong> to the account from another account currently cannot be added to a Cloud Playout channel.</li>
+      <li>When a live event is currently playing, but no active feed is available, the slate content will be played in a loop until the live feed resumes or the event ends. There will be a delay of approximately 30 seconds before the slate MP4 starts playing.</li>
+      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
+      <li>If the Video Cloud account is configured for geo-restriction, then the channel <strong>Output Region</strong> should be created in a  region compatible with the Video Cloud geo-restriction policy.</li>
+      <li>For the best experience, Brightcove recommends using the Google Chrome browser.</li>
+      <li>
+        For SSAI-enabled channels, the destination must be set to an ad-enabled RTP live event:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/advanced-options-for-live-job.webp" alt="Live Settings for SSAI Channel">
+          <figcaption class="bcls-caption--image">Live Settings for SSAI Channel</figcaption>
+        </figure>
+      </li>
+    </ul>
   </section>
+  
 </article>
 
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
@@ -543,7 +561,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       

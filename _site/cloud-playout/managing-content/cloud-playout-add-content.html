@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Setting a Hard Start for a Channel</title>
+        <title>Managing the Channel Program</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The Cloud Playout Hard Start feature allows you to specify a time when the first item in your channel will begin playing, and will automatically play slate content until that time is reached.">
+        <meta name="description" content="In this topic you will learn how manage the channel program and add VOD items, live events, and playlists to your Cloud Playout Channel.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -425,7 +425,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Setting a Hard Start for a Channel</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/cloud-playout/managing-content/">Managing content</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Managing the Channel Program</li>
             
             
           </ol>
@@ -446,107 +450,224 @@
       <br>
       
       
-<h1>Setting a Hard Start for a Channel</h1>
+<h1>Managing the Channel Program</h1>
 <article class="bcls-article">
-  <summary>The Cloud Playout Hard Start feature allows you to specify a time when the first item in your channel will begin playing, and will automatically play slate content until that time is reached.</summary>
+  <summary>In this topic you will learn how manage the channel program and add VOD items, live events, and playlists to your Cloud Playout Channel.</summary>
+  <p>Also see <a href="managing-content/adding-bumpers-to-vod.html">Adding Bumpers to Content</a> for adding bumpers to VOD or live event items.</p>
+
   <section class="bcls-section">
-    <h2 id="introduction">Introduction</h2>
-    <p>Sometimes it is critical to set the exact time that your channel content will begin playing. The <strong>Hard Start</strong> feature allows you to do this, and Brightcove will automatically fill the time between the start of the channel and the hard start time by looping slate content - either the default slate or your own <a href="general/managing-slates.html">custom slate</a>.</p>
-    <h3>Notes</h3>
+    <h2 id="Introduction">Introduction</h2>
+    <p>Your Cloud Playout channel can contain up to 1000 content items in a program. Here we will see how to manage the program, including how to add and re-order content items.</p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Note that you can find the playlist associated with a program in the Media module and add content directly there - <strong>but we strongly advise against doing that</strong>. When you add content in the Cloud Playout module, using the methods detailed here, there is an automatic check to ensure that videos have an MP4 rendition necessary for Cloud Playout. There is no check when you add content directly to the playlist in the media module, which means that some videos you add may not play.</aside>
+
+    <p>The sections below will guide you through:</p>
     <ul>
-      <li>The hard start time must be greater than the channel start time.</li>
-      <li>When you use Hard Start, you must specify a slate - either the default one or your own <a href="general/managing-slates.html">custom slate</a>. Also remember that your custom slate video must be on a public and permanent URL (short-lived CDN URLs are not allowed). </li>
-      <li>The channel will start at the channel start time, and the slate will begin playing immediately, looping until the hard start time.</li>
+      <li>Understanding and switching between the <a href="#Schedule_and_Program_views">Schedule and Program views</a></li>
+      <li><a href="#add_videos">Adding VOD content</a></li>
+      <li><a href="#add_playlists">Importing playlists</a></li>
+      <li><a href="#Add_Live_events">Adding Live events</a></li>
+      <li><a href="#Reordering_Videos">Reordering Program items</a></li>
     </ul>
   </section>
+  <p>Also see:</p>
+  <ul>
+    <li><a href="managing-content/adding-bumpers-to-vod.html">Adding Bumpers to Content</a> for adding bumpers to VOD or live event items</li>
+    <li><a href="managing-content/static-image-overlays.html">Static Image Overlays</a> for adding image overlays</li>
+    <li><a href="managing-content/dynamic-overlays.html">Dynamic Overlays</a> for adding Dynamic Overlays such as news headlines or weather conditions.</li>
+    <li><a href="monetization/enabling-server-side-ads.html">Enabling Server-Side Ads</a> and <a href="publishing/using-channel-actions.html">Midroll Ad Insertion</a> for adding ads.</li>
+  </ul>
 
   <section class="bcls-section">
-    <h2 id="Using_hard_start">Using Hard Start</h2>
-    <p>Hard Start can be set after you have created the channel configuration by clicking the <strong>Quick Edit</strong> icon (<i data-feather="edit-3"></i>) that appears on the channel details and channel running pages:</p>
+    <h2 id="Schedule_and_Program_views">Schedule and Program views</h2>
+    <p>You can easily switch between <strong>Schedule</strong> and <strong>Program</strong> views by clicking the corresponding tab. The Schedule view will present the complete schedule of the channel with video start time, end time and duration. In the Program Items view, you can add videos, import playlists, insert bumpers, insert ads, add live events, and reorder the program items (if this is <a href="managing-content/managing-programs.html">non-looping channel with multiple programs</a>, you will need to select the program you want to edit).</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/channel-quick-edit.webp" alt="Channel Quick Edit">
-      <figcaption class="bcls-caption--image">Channel Quick Edit</figcaption>
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/schedule-program-views-draft.webp" alt="Program View in Draft State">
+      <figcaption class="bcls-caption--image">Program View in Draft State</figcaption>
     </figure>
-    <p>That will bring up the <strong>Edit Schedule</strong> dialog where you can enter the Hard Start time and select a slate:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/edit-scheule.webp" alt="Channel Edit Schedule">
-      <figcaption class="bcls-caption--image">Channel Edit Schedule</figcaption>
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/schedule-program-views-running.webp" alt="Schedule View in Running State">
+      <figcaption class="bcls-caption--image">Schedule View in Running State</figcaption>
     </figure>
-    <h3>Notes for Channels in a DRAFT or SCHEDULED state</h3>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Adding_content">Adding content</h2>
+    <p>Depending on how you configured your Cloud Playout channel, you can add content of various kinds. VOD content and playlists can be added to any channel. In addition, you can add live events if you configured the channel to support that. The following sections provide steps for adding each kind of content.</p>
+    <aside class="bcls-aside bcls-aside--information">Note that you can also <a href="managing-content/adding-bumpers-to-vod.html">add bumpers</a> to your channel, and <a href="monetization/enabling-server-side-ads.html">server-side ads</a>, if the channel was configured for that. See those topics for details on how to do that.</aside>
+  </section>
+  
+  <section class="bcls-section">
+    <h2 id="add_videos">Adding VOD content</h2>
+    <!-- <div style="position: relative; display: block; max-width: 707px;"><div style="padding-top: 76.38%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6263404274001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div> -->
+    <p>After you create your channel, or when you go to the channel details, the screen will show the channel settings. You can edit details, but the main next step is to add content to the channel.</p>
+    <h3>Add videos (VOD) steps</h3>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Go to the <strong>Program Items</strong> tab (if this is <a href="managing-content/managing-programs.html">non-looping channel with multiple programs</a>, you will need to select the program you want to edit).</li>
+      <li>Click <span class="button-blue">Add Videos</span> (If you are on the channel list page, click the  channel name to open the channel settings page and then click <span class="button-blue">Add Videos</span>).</li>
+      <li>
+        If you have already added other content to the channel, select <strong><em>one</em></strong> video that you want the new video(s) to be inserted after:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.webp" alt="Select Insertion Point">
+          <figcaption class="bcls-caption--image">Select Insertion Point</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
+      </li>
+      <li>
+        Use <strong>Search</strong> to find videos you want. In addition to searching on general terms, you can also search by field and use a <i data-feather="plus" class="button-icon"></i> sign at the beginning of the search string to limit results to videos that match. The fields you can search on are <code translate="No">name</code>, <code translate="No">tags</code>, and <code translate="No">custom_fields</code>. For example:
+        <ul>
+          <li><code translate="no">+tags:bird</code></li>
+          <li><code translate="no">+name:"blue heron"</code></li>
+        </ul>
+      </li>
+      <li>Click the checkbox next to the videos you want to add to the channel.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select videos" src="/assets/images/s-cloudplayout-img/playout-select-videos.webp" /></figure>
+      </li>
+      <li>Click <span class="button-blue">Add Videos</span>)</li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>
+        Newly added videos will appear in the program with an <span class="button-blue">Added</span> label beside the titles:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/newly-added-videos.webp" alt="Added Videos">
+          <figcaption class="bcls-caption--image">Added Videos</figcaption>
+        </figure>
+        <p>Note that start and end times are automatically calculated from the video durations. You can drag and drop videos in the list to reorder them, and the start/end times will be automatically adjusted.</p>
+      </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">
+      Also note that the <strong translate="no">video ID</strong> appears under the title of each video in case you need to check your video library to make sure you have the correct one in the program:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-ids-in-program-list.webp" alt="Video IDs">
+        <figcaption class="bcls-caption--image">Video IDs</figcaption>
+      </figure>
+    </aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="add_playlists">Importing playlists</h2>
+    <p>You can also import whole playlists into you channel. Note the following conditions:</p>
     <ul>
-      <li>The Hard Start time must be at least 10 minutes after the Channel Start Date Time.</li>
-      <li>The Hard Start time must <strong>not</strong> be later than the Channel End Date Time (if any).</li>
-      <li>When a Hard Start is added, a slate must always be added as well (there is a default slate if you haven't created a custom one).</li>
-      <li>To remove the Hard Start, delete it in the Edit Schedule dialog and remove the slate.</li>
-      <li>You can update both the Hard Start time and the slate.</li>
+      <li>You can import both EXPLICIT (manual) and smart playlists.</li>
+      <li>A <strong>snapshot</strong> of the playlist in its current state will be imported (meaning that future changes to the playlist will <strong>not</strong> be reflected in the channel contents).</li>
+      <li>Only one playlist can be imported at a time.</li>
+      <li>If the imported playlist contains a Live event, an identical new Live event with same name, description & duration will be created. This is because a Live event always shares an 1:1 relationship with the channel.</li>
+      <li>The videos in the playlist will be added <strong>to the end</strong> of the current channel program.</li>
+      <li>You can add VOD content as well as playlists, and duplicates are allowed.</li>
+      <li>There is a validation check on the total asset limit (1000). If the import will exceed 1000 asset limit, the import will fail.</li>
+      <li>If Live input is not enabled for the channel, you can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</li>
+      <li>If this is an SSAI-enabled channel, live events are not allowed. You can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</li>
+      <li>Only the eligible assets with an MP4 rendition will be allowed. A warning indicates what assets will be ineligible for import - upon confirmation, only the eligible assets will be imported.</li>
     </ul>
-    <h3>Notes for Channels in a RUNNING state, but content playback hasn't started</h3>
+    <h3>Add playlist steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        If you have already added other content to the channel, select <strong><em>one</em></strong> video that you want the new video(s) to be inserted after:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.webp" alt="Select Insertion Point">
+          <figcaption class="bcls-caption--image">Select Insertion Point</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
+      </li>
+      <li>There is a validation check on the total asset limit (100). If the import will exceed 100 asset limit, the import will fail.</li>
+      <li>
+        <aside class="bcls-aside bcls-aside--information">Note: If Live input is not enabled for the channel, you can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</aside>
+      </li>
+      <li>
+        <aside class="bcls-aside bcls-aside--information">Note: If this is an SSAI-enabled channel, live events are not allowed. You can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</aside>
+      </li>
+      <li>
+        <aside class="bcls-aside bcls-aside--information">Note: Only the eligible assets with an MP4 rendition will be allowed. A warning indicates what assets will be ineligible for import - upon confirmation, only the eligible assets will be imported.</aside>
+      </li>
+    </ul>
+    <h3>Add playlist steps</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <span class="button-blue">Import Playlists</span>.</li>
+      <li>Click <span class="blue-button">Import</span> for the playlist you want to import.</li>
+      <li>
+        If messages appear indicating that some items in the playlist cannot be imported, click <span class="blue-button">Proceed</span> if you want to import the supported videos.
+        <aside class="bcls-aside bcls-aside--information language-editable">If you want all the videos in playlist to be imported, stop here and <a href="/media/manage/retranscoding-videos-using-media-module.html">retranscode the videos</a> that do not have MP4 renditions to add at least one.</aside>
+      </li>
+      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>
+        If the import was successful, you will see the videos in your program list with an <span class="button-blue">Imported</span> label beside the titles:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-imported-from-playlist.webp" alt="Videos Imported from Playlist">
+          <figcaption class="bcls-caption--image">Videos Imported from Playlist</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Add_Live_events">Adding Live events</h2>
+    <p>Note: this only applies if the channel is enabled for live events.</p>
+    <ol class="bcls-tasklist">
+      <li>
+        If you have already added other content to the channel, select <strong><em>one</em></strong> video that you want the new video(s) to be inserted after:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.webp" alt="Select Insertion Point">
+          <figcaption class="bcls-caption--image">Select Insertion Point</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
+      </li>
+        <li>Click <span class="button-blue-text-bordered">Add Live Event</span></li>
+        <li>
+          In the Add Live Event dialog, enter the <strong>Name</strong>, <strong>Duration</strong>, and <strong>Description</strong> for the live event:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-add-live-event.webp" alt="Add Live Event">
+            <figcaption class="bcls-caption--image">Add Live Event</figcaption>
+          </figure>
+          <p>Note that the minimum duration for a live event is 5 minutes, and the duration can be incremented or decremented in 5 minute intervals only - If needed the duration can be edited in-line on the textbox to adjust the granularity of time. The duration of a live event can be modified at any time, even while it is currently playing.</p>
+        </li>
+        <li>
+          After you add live events, they will appear in the program list along with VOD items:
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/live-event-added-to-program.webp" alt="Live Event Added">
+            <figcaption class="bcls-caption--image">Live Event Added</figcaption>
+          </figure>
+        </li>
+        <li>You can drag live events to reorder the list just as you can videos. You can also use the <span class="button-blue-text-bordered">Quick Edit</span> button to modify the duration of a live event.</li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Reordering_Videos">Reordering Program items</h2>
+    <p>There are two ways to reorder items in the program:</p>
     <ul>
-      <li>You can update the Hard Start time, but you cannot remove it.</li>
-      <li>You can set the Hard Start time to an earlier time, as long as it is later than the current time.</li>
-      <li>The slate cannot be updated.</li>
+      <li>If you are just moving an item to a nearby location, you can use drag and drop.</li>
+      <li>If you are moving an item to a distant location in a large program, you do by changing the <strong>order number.</strong>.</li>
     </ul>
-    <h3>Notes for Channels in a RUNNING state where content playback has started</h3>
-    <ul>
-      <li>You cannot add or update a Hard Start time.</li>
-    </ul>
+    <h3>Reordering using drag and drop</h3>
+    <h4>Channels that are not running</h4>
+    <div style="position: relative; display: block; max-width: 588px;"><div style="padding-top: 57.31%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6263404043001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
+    <h5>Steps</h5>
+    <ol class="bcls-tasklist-restart">
+      <li>Click and drag the <strong>::</strong> icon to the left of the thumbnail image and drag it to the desired location in the list.</li>
+    </ol>
+    <h4>Channels that are running</h4>
+    <!-- <div style="position: relative; display: block; max-width: 896px;"><div style="padding-top: 57.31%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6264486040001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div> -->
+    <h5>Steps</h5>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <span class="button-blue">Edit Program</span>.</li>
+      <li>Click and drag the <strong>::</strong> icon to the left of the thumbnail image and drag it to the desired location in the list.</li>
+    </ol>
+    <h3>Reordering by order number</h3>
+    <p>
+      Notice that the order number of the program items appears on the left side of the list:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/order-of-videos-in-program.webp" alt="Order Number">
+        <figcaption class="bcls-caption--image">Order Number</figcaption>
+      </figure>
+    </p>
+    <p>
+      You can also also move a video in the program by clicking the order number and entering a new one. In the example below, we are moving the video at position 2 to position 6 in the program:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/reorder-item-from-700-5.webp" alt="Reorder by Changing the Order Number">
+        <figcaption class="bcls-caption--image">Reorder by Changing the Order Number</figcaption>
+      </figure>
+    </p>
   </section>
-
-  <section class="bcls-section">
-    <h2 id="hard_start_indicators">Hard Start indicators</h2>
-    <p>If Hard Start is not available for the channel, the Hard Start label will be gray:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/hard-start-gray.webp" alt="Hard Start Unavailable">
-      <figcaption class="bcls-caption--image">Hard Start Unavailable</figcaption>
-    </figure>
-    <p>If Hard Start is available for the channel, the Hard Start label will be green:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/hard-start-green.webp" alt="Hard Start Available">
-      <figcaption class="bcls-caption--image">Hard Start Available</figcaption>
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Overriding Hard Start">Overriding Hard Start</h2>
-    <h3>Channel in a SCHEDULED state</h3>
-    <p>If the channel is scheduled, and you wish to start it immediately, playing the channel playlist instead of the hard start slate, click <span class="button-red-text-border">Play Now</span>:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-scheduled.webp" alt="Override Hard Start (Scheduled Channel)">
-      <figcaption class="bcls-caption--image">Override Hard Start (Scheduled Channel)</figcaption>
-    </figure>
-    <p>Note that the EPG will also be updated automatically to reflect the actual start time:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-epg-update.webp" alt="EPG Updated for Override">
-      <figcaption class="bcls-caption--image">EPG Updated for Override</figcaption>
-    </figure>
-
-    <h3>Channel in a RUNNING state (with the <strong>slate</strong> playing)</h3>
-    <p>If the channel has started, but the Hard Start time has not been reached, you can stop the slate and start the channel content immediately by selecting a video in the playlist and clicking the <strong>play</strong> button on the video thumbnail:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-running.webp" alt="Override Hard Start Running Channel">
-      <figcaption class="bcls-caption--image">Override Hard Start Running Channel</figcaption>
-    </figure>
-    <p>The selected video will start immediately and the Hard Start time for the channel will be updated to the current time:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-time-updated.webp" alt="Hard Start Time Updated by Override">
-      <figcaption class="bcls-caption--image">Hard Start Time Updated by Override</figcaption>
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="rerunning_a_stopped_channel">Rerunning a stopped channel</h2>
-    <p>A channel with a Hard Start time retains that information after it has stopped. Therefore, if you want the channel to play again, you will need to edit the schedule to set future date/times.</p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="notes_and_known_issues">Notes and known issues</h2>
-    <ul>
-      <li>If you need to start the channel immediately while retaining the hard start time (you want to get the channel started, but with the hard start slate), we recommend that you edit the schedule and update the channel start time to a nearby time, instead of using Play Now on the channel.</li>
-      <li>When choosing a custom slate, be sure that the URL for the MP4 will be always available in a region close the to the selected region for the channel. If the slate is not accessible from the Cloud Playout channel, this may cause the destinations (BC Live, etc.) to close the connections since they won’t be receiving any feeds. </li>
-      <li>Once the channel is stopped and the channel is in DRAFT state, currently the EPG is faultily constructed from the hard start time as if it’s a fresh channel, instead of showing the actual as-run record of played assets.</li>
-    </ul>
-  </section>
+    
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -576,7 +697,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       

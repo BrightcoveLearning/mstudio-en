@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
-        <title>Viewing Channel Output and Analytics</title>
+        <title>Generating the Channel Embed Code</title>
         
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="In this topic you will learn to view the output and analytics for a running Cloud Playout channel.">
+        <meta name="description" content="In this topic you will learn how get the embed code to play a Cloud Playout channel in the Brightcove Player. The embed code can be placed in any web page.">
         
         <!-- Google Font -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
@@ -425,7 +425,11 @@
             
             
             
-            <li class="breadcrumb-item active" aria-current="page">Viewing Channel Output and Analytics</li>
+            <li class="breadcrumb-item"><a class="theme-link" href="/cloud-playout/publishing/">Publishing</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Generating the Channel Embed Code</li>
             
             
           </ol>
@@ -446,77 +450,35 @@
       <br>
       
       
-<h1>Viewing Channel Output and Analytics</h1>
+<h1>Generating the Channel Embed Code</h1>
 <article class="bcls-article">
-  <summary>In this topic you will learn to view the output and analytics for a running Cloud Playout channel.</summary>
+  <summary>In this topic you will learn how get the embed code to play a Cloud Playout channel in the Brightcove Player. The embed code can be placed in any web page.</summary>
   <section class="bcls-section">
-    <h2 id="analytics">Viewing channel output and analytics</h2>
-    <p>While the channel is in a <strong>RUNNING</strong> state, it is possible to view channel output and analytics. Click on the channel on the <strong>Channels</strong> page to open the channel details.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-cloudplayout-img/cloudplayout-program-analytics.webp" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: The preview image is updated every three seconds.</aside>
-    <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner. Also notice the <strong>Status</strong> notification in the upper right, and the <img src="/assets/images/s-cloudplayout-img/cloudplayout-video-icon.webp" alt="Live icon"> that will be green if there is a live feed available. Otherwise it will be red if a live event is currently playing, or gray if VOD content is playing.</p>
-    <p>The following analytics values will be displayed:</p>
+    <h2 id="publish">Generating the embed code for a Cloud Playout channel</h2>
+    <p>To generate the embed code for a Cloud Playout channel, you will use the Live module. For full details on using the Live module, see <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html">Creating and Managing Live Events using the Live Module</a>.</p>
+    <p>Two types of embed code are available:</p>
     <ul>
-      <li><strong>Network In</strong> - Average bytes per second in the last minute</li>
-      <li><strong>Network Out</strong> - Average bytes per second in the last minute</li>
-      <li><strong>Frames Dropped</strong> - Percent of frames dropped in the last minute - The <strong>Frames Dropped</strong> shows you when the Cloud Playout encoder is unable to keep up with the live input stream in real time</li>
+      <li><strong>Standard</strong> - iframe embed code. Recommended for most cases. This type places the player inside an &lt;iframe&gt; tag.</li>
+      <li><strong>Advanced</strong> - In-page embed code. Allows the player to exist in the HTML page directly, not in an iframe. This offers developers the benefits of ease of accessing the player and associated properties and events.</li>
     </ul>
-    <p>The <strong>Network In</strong> analytics are particularly useful for detecting when the stream for a live event has failed (you should also see the slate video playing in the output rather than the live stream):
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-network-in-analytics.webp" alt="Network In Analytics">
-        <figcaption class="bcls-caption--image">Network In Analytics</figcaption>
-      </figure>
-    </p>
+    <p>You also have the ability to get the URL to the published player. This is useful for viewing the event in a browser.</p>
+    <p>To generate the embed code for a live event, follow these steps:</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Open the Live module.</li>
+      <li>Locate the live event the channel will be streaming to. Typically, the event will be located in the <strong>Standby</strong> tab and have a name of <strong>Channel</strong> unless you selected a specific event to stream to when the channel was created.</li>
+      <li>Click on the event name to open the <strong>Control Room</strong> page.</li>
+      <li>Click <strong>Publish and Embed &gt; Player Configuration</strong> in the left navigation.
+        <aside class="bcls-aside bcls-aside--information">Note: If the channel is configured to enable server-side ads (SSAI),  Brightcove Player version 6.18.3 and above <strong>must</strong> be used. Only version 6.18.3 and above players will appear in the dropdown list.</aside>
+      </li>
+      <li>Click the <strong>Player URL</strong> to preview the event in a browser or copy the appropriate embed code to use.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-cloudplayout-img/playout-embed-code.webp" /></figure>
+      </li>
+    </ol>
+    <p>If the program was create with <strong>Ad Insertion</strong> option set to <strong>On</strong>, the publishing options will include a <strong>Select Ad Configuration</strong> dropdown where the ad configuration to use can be selected.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/s-cloudplayout-img/playout-embed-code-ads.webp" /></figure>
   </section>
-  <section class="bcls-section">
-    <h2 id="live_stream_indicator">Live stream indicator</h2>
-    <p>While the channel is playing, a live stream indicator shows whether the channel is receiving live input for any schedule live events in the program:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/live-stream-indicator.webp" alt="Live Stream Indicator">
-      <figcaption class="bcls-caption--image">Live Stream Indicator</figcaption>
-    </figure>
-    <p>The background color for the indicator changes according to the state:</p>
-    <div style="overflow-x: scroll;">
-      <table class="bcls-table">
-          <caption class="bcls-caption--table">Live Indicator Meaning</caption>
-          <thead class="bcls-table__head">
-              <tr>
-                  <th>Live Indicator</th>
-                  <th>Meaning</th>
-              </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-              <tr>
-                  <td>
-                    <img src="/assets/images/s-cloudplayout-img/live-icon-grey.webp" alt="Live Indicator Gray" />
-                  </td>
-                  <td>No live stream received but no live event is currently playing</td>
-              </tr>
-              <tr>
-                  <td>
-                    <img src="/assets/images/s-cloudplayout-img/live-icon-green.webp" alt="Live Indicator Green" />
-                  </td>
-                  <td>The channel is receiving a live stream input - a live event may or may not be playing</td>
-              </tr>
-              <tr>
-                  <td>
-                    <img src="/assets/images/s-cloudplayout-img/live-icon-red.webp" alt="Live Indicator Gray" />
-                  </td>
-                  <td>A scheduled live event is playing, but no live input stream is being received (therefore the slate is being displayed)</td>
-              </tr>
-          </tbody>
-      </table>
-      </div>
-  </section>
-    <section class="bcls-section">
-      <h2 id="Playing_a_program-item_next">The currently playing item</h2>
-      <p>In the <strong>Schedule</strong> beneath the analytics, you can click <span class="button-blue-text-bordered">Show Playing Now</span> to see the item that is currently playing:</p>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/playing-now-item.webp" alt="Item Playing Now">
-        <figcaption class="bcls-caption--image">Item Playing Now</figcaption>
-      </figure>
-    </section>
 </article>
+
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
   
   <nav class="right-side-nav" id="right_side_nav">
@@ -546,7 +508,7 @@
           <ul class="list-unstyled text-small">
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
             <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
-            <li><a class="a-text" href="https://university.brightcove.com/">Brightcove Academy</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
           </ul>
         </div>
       
