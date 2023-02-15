@@ -6,6 +6,7 @@ git submodule add https://github.com/BrightcoveLearning/s-jekyll-page-includes
 git submodule add https://github.com/BrightcoveLearning/s-support
 git submodule add https://github.com/BrightcoveLearning/s-template-page-includes
 git submodule add https://github.com/BrightcoveLearning/s-admin
+git submodule add https://github.com/BrightcoveLearning/s-analytics
 git submodule add https://github.com/BrightcoveLearning/s-cloudplayout
 git submodule add https://github.com/BrightcoveLearning/s-social
 git submodule add https://github.com/BrightcoveLearning/s-players
