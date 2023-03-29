@@ -510,6 +510,7 @@
         <li><strong>File upload</strong> - Click <strong>+ Add</strong> &gt; <strong>Select files</strong>. Use the file picker to select one or more caption files.</li>
         <li><strong>Upload from URL</strong> - Click <strong>+ Add</strong> &gt; <strong>Upload from URL</strong>. Enter the <strong>URL</strong> to the caption file location.</li>
         <li><strong>Remote URL</strong> - Click <strong>+ Add</strong> &gt; <strong>Remote URL</strong>. Enter the <strong>Remote URL</strong> to the caption file location.</li>
+        <li><strong>Auto caption</strong> - Click <strong>+ Add</strong> &gt; <strong>Auto caption</strong>. See the <a href="#auto-captioning">auto captioning</a> section below.</li>
       </ul>
       <li>Select the <strong>Language</strong> of the track text data.</li>
       <li>Enter the appropriate <strong>Label</strong> for the caption file. The label is displayed inside the player and allows the viewer to select a language. The label value will default to the code for the language that was selected.</li>
@@ -530,12 +531,30 @@
       <li>Click <span class="button-blue">Add</span>.</li>
     </ol>
   </section>
+<section class="bcls-section">
+    <h2 id="auto-captioning">Using auto captioning</h2>
+    <p>The auto captioning feature can be used to generate  caption files for  videos.  To generate a caption file for an existing video, follow these steps.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <strong>+ Add</strong> &gt; <strong>Auto caption</strong>.</li>
+      <li>Select the <strong>Language</strong> to generate the captions in. If a <strong>Language</strong> is not selected, the video language is auto-detected. Selecting a language will improve the caption file generation time and may improve overall accuracy.</li>
+      <li>Enter a <strong>Label</strong>. The label is typically set to the language used in the video. The label will be displayed in the CC dropdown in the video player and will be used by viewers to select the captions to be displayed.</li>
+      <li>Select a <strong>Status</strong>.
+      <ul>
+        <li><strong>Draft</strong> - Captions will be displayed in the player</li>
+        <li><strong>Published</strong> - Captions will not be displayed in the player</li>
+      </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/managing-text-tracks/auto-caption.png" /></figure>
+</li>
+      <li>Click <span class="button-blue">Add</span>.</li>
+    </ol>
+    <p>The caption generation process will begin. After the captions are generated, Brightcove recommends <a href="#edit">reviewing the captions</a>.</p>
+  </section>
   <section class="bcls-section">
     <h2 id="publish">Publishing and unpublishing text tracks</h2>
-    <p>Text tracks with a status of <strong>Published</strong> will appear in Brightcove Players. Text tracks with a status of <strong>Unpublished</strong> will not appear in Brightcove Players. You may want to set the status to Unpublished until you've had a chance to review the text track. To change the status of a text track, follow these steps:</p>
+    <p>Text tracks with a status of <strong>Published</strong> will appear in  players. Text tracks with a status of <strong>Draft</strong> will not appear in  players. You may want to set the status to Draft until you've had a chance to review the text track. To change the status of a text track, follow these steps:</p>
     <ol  class="bcls-tasklist-restart">
       <li>Click the action menu (...) associated with the text track.</li>
-      <li>Click <strong>Publish</strong> or <strong>Unpublish</strong>.</li>
+      <li>Click <strong>Published</strong> or <strong>Draft</strong>.</li>
     </ol>
   </section>
   <section class="bcls-section">
