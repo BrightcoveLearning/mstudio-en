@@ -158,9 +158,9 @@
           
         </select>
 
-        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+        <!-- <select id="language_select" class="form-select select-focus" style="width: 10%;"
           onchange="doGTranslate(this);" translate="no">
-          <!-- <option value="">Select Language</option> -->
+          <option value="">Select Language</option>
           <option value="en|en" translate="No">English</option>
           <option value="en|zh-TW" translate="No">繁體中文</option>
           <option value="en|fr" translate="No">Français</option>
@@ -171,10 +171,10 @@
         </select>
 
         <script translate="no">
-          /* <![CDATA[ */
+          
           function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-          /* ]]> */
-        </script>
+          
+        </script> -->
       </div>
     </div>
   </div>
@@ -444,6 +444,7 @@
 <article class="bcls-article">
   <h1>Live DRM</h1>
   <summary>In this topic, you will learn how to enable content protection for your live stream.</summary>
+  <aside class="bcls-aside bcls-aside--information language-editable">Live DRM is an add-on feature, not active by default. <br> If you would like access to this feature, please contact your Customer Success Manager.</aside>
   <section class="bcls-section">
     <h2 id="create">Enabling DRM for Live content</h2>
     <aside class="bcls-aside bcls-aside--information">

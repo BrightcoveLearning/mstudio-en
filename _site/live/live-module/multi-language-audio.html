@@ -158,9 +158,9 @@
           
         </select>
 
-        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+        <!-- <select id="language_select" class="form-select select-focus" style="width: 10%;"
           onchange="doGTranslate(this);" translate="no">
-          <!-- <option value="">Select Language</option> -->
+          <option value="">Select Language</option>
           <option value="en|en" translate="No">English</option>
           <option value="en|zh-TW" translate="No">繁體中文</option>
           <option value="en|fr" translate="No">Français</option>
@@ -171,10 +171,10 @@
         </select>
 
         <script translate="no">
-          /* <![CDATA[ */
+          
           function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-          /* ]]> */
-        </script>
+          
+        </script> -->
       </div>
     </div>
   </div>
@@ -556,6 +556,8 @@
       <li>Creating clips from multi-audio live events is not supported at this time</li>
       <!-- <li>Multi-Audio + DRM is not supported at this time. </li> -->
       <li>It is not possible to create DRM live jobs with multi-language audio tracks from Live Module UI. This is only available via the<a href="https://apis.support.brightcove.com/live-api/guides/live-multi-language-audio.html"> Live API</a></li>
+      <li>RTMP outputs created from SEPs will contain only video and no audio when selecting a transcoded output profile. A turnaround would be to use a transmuxed output rather than a transcoded output by selecting the <strong>Source</strong> rendition in the Live Module in Studio or omitting the <code translate="no">output_label</code> in the <a href="https://apis.support.brightcove.com/live-api/references/reference.html#tag/RTMP-Outputs/operation/CreateRTMPOutput">API call</a> when creating an RTMP output. This provides both video and audio.</li>
+      <li>Audio tracks can only be defined for a new live job. Currently, it is not possible to update the audio tracks for existing live events.</li>
     </ul>
   </section>
 </article>

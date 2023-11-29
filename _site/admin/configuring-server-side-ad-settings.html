@@ -158,9 +158,9 @@
           
         </select>
 
-        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+        <!-- <select id="language_select" class="form-select select-focus" style="width: 10%;"
           onchange="doGTranslate(this);" translate="no">
-          <!-- <option value="">Select Language</option> -->
+          <option value="">Select Language</option>
           <option value="en|en" translate="No">English</option>
           <option value="en|zh-TW" translate="No">繁體中文</option>
           <option value="en|fr" translate="No">Français</option>
@@ -171,10 +171,10 @@
         </select>
 
         <script translate="no">
-          /* <![CDATA[ */
+          
           function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-          /* ]]> */
-        </script>
+          
+        </script> -->
       </div>
     </div>
   </div>
@@ -519,7 +519,7 @@
       </li>
       <li>Enter the<strong> Ad Tag</strong>.</li>
       <!-- <li>(Optional) Enable <strong>Ad Tracking</strong>. This feature must be configured with the help of Brightcove Support. The Ad Tracking % gives you the ability to select a &quot;sample rate&quot;, this can be useful when you just need to view averages.</li> -->
-      <li>(Optional) Enable <strong>Client Options</strong>. For information, see the <a href="#player-ssai">Player Enhancements for Live SSAI</a> section below.</li>
+      <!-- <li>(Optional) Enable <strong>Client Options</strong>. For information, see the <a href="#player-ssai">Player Enhancements for Live SSAI</a> section below.</li> -->
       <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
     <p>To edit an ad configuration, click the ad name, make the changes and then click <strong>Save</strong>. To delete an ad config, check the box next to the ad and then click <strong>Delete</strong>. To duplicate an ad config, check the box next to the ad and then click <strong>Duplicate</strong>.</p>
@@ -541,9 +541,9 @@
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Create Live ad configuration" src="/assets/images/s-admin-img/general/node18748-create-live-ad.png" /></figure>
       </li>
       <li>Enter the data as described in the <a href="#live">add a Live ad configuration</a> steps above.</li>
-      <li>Select <strong>Client Options Enabled</strong> to see a list of feature options.
+      <!-- <li>Select <strong>Client Options Enabled</strong> to see a list of feature options.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Client Options Enabled" src="/assets/images/s-admin-img/general/node18748-client-options-enabled.png" /></figure>
-      </li>
+      </li> -->
       <li>Select the client-side components that you want to add to your live stream.</li>
       <li>Click <span class="button-blue">Save</span>.</li>
     </ol>
