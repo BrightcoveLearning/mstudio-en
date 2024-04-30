@@ -5,7 +5,7 @@
   name: 'Getting Started'
   url: '/get-started/'
   description: 'Guides to help you get started.'
-  icon: fa-regular fa-map-pin
+  icon: fa-solid fa-map-pin
   docs:
     - name: 'Getting Started with Marketing Studio'
       url: '/get-started/getting-started-marketing-studio.html'
@@ -17,7 +17,7 @@
   name: 'Managing Videos'
   url: '/media/'
   description: 'Learn how to manage the videos in your account.'
-  icon: fa-regular fa-photo-film
+  icon: fa-solid fa-photo-film
   docs:
     - name: 'Editing Video Details'
       url: '/media/editing-video-details.html'
@@ -45,7 +45,7 @@
   name: 'Reviewing Analytics'
   url: '/analytics/'
   description: 'Learn how to use video analytics to check the performance and engagement of your videos.'
-  icon: fa-regular fa-gear
+  icon: fa-solid fa-gear
   docs:
     - name: 'Getting Started with Analytics'
       url: '/analytics/getting-started-analytics.html'
@@ -59,7 +59,7 @@
   name: 'Administering Accounts'
   url: '/admin/'
   description: 'Learn how to manage account settings.'
-  icon: fa-regular fa-gear
+  icon: fa-solid fa-gear
   docs:
     - name: 'Managing Profile Information'
       url: '/admin/managing-profile-information.html'
@@ -67,7 +67,7 @@
   name: 'Release Notes'
   url: '/release-notes/'
   description: 'Learn about the changes and new features added to Marketing Studio.'
-  icon: fa-regular fa-memo-pad
+  icon: fa-solid fa-book
   docs:
     - name: 'Marketing Studio Release Notes'
       url: '/release-notes/marketing-studio-release-notes.html'
@@ -75,7 +75,7 @@
   name: 'Support'
   url: '/support/'
   description: 'Learn how to get help from Brightcove Support.'
-  icon: fa-regular fa-comments-question-check
+  icon: fa-regular fa-comments
   docs:
     - name: 'Viewing the Brightcove System Status Page'
       url: '/support/viewing-brightcove-system-status-page.html'
